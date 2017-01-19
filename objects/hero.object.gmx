@@ -103,8 +103,6 @@ if abs(tyanka.y - hero.y) &gt; 70
 {
 tyanka.sprite_index = tyan
 }
-ПИЗДАААА
-
 </string>
           </argument>
         </arguments>
