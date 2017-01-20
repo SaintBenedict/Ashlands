@@ -18,6 +18,13 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+<<<<<<< HEAD
+=======
+  <scripts name="scripts"/>
+  <fonts name="fonts">
+    <font>fonts\font_base</font>
+  </fonts>
+>>>>>>> origin/master
   <objects name="objects">
     <object>objects\obj_hero</object>
     <object>objects\obj_npc_1</object>
