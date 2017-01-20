@@ -15,9 +15,7 @@
     <sprite>sprites\spr_floor_stone</sprite>
     <sprite>sprites\spr_npc_1_q</sprite>
   </sprites>
-  <backgrounds name="background">
-    <background>background\background0</background>
-  </backgrounds>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts"/>
   <objects name="objects">
