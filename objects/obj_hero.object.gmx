@@ -80,7 +80,7 @@ if keyboard_check(vk_right)
    image_speed = 0.5;
    }
 
-if tyanka.y &gt; hero.y
+if obj_npc_1.y &gt; obj_hero.y
 {
 depth = 10;
 }
@@ -88,20 +88,20 @@ else
 {
 depth = -10;
 }
-if abs(tyanka.x - hero.x) &lt; 70 
+if abs(obj_npc_1.x - obj_hero.x) &lt; 70 
 {
-    if abs(tyanka.y - hero.y) &lt; 70
+    if abs(obj_npc_1.x - obj_hero.x) &lt; 70
     {
-    tyanka.sprite_index = spr_npc_1_q
+    obj_npc_1.sprite_index = spr_npc_1_q
     }
 }
-if abs(tyanka.x - hero.x) &gt; 70 
+if abs(obj_npc_1.x - obj_hero.x) &gt; 70 
 {
-tyanka.sprite_index = spr_npc_1
+obj_npc_1.sprite_index = spr_npc_1
 }
-if abs(tyanka.y - hero.y) &gt; 70 
+if abs(obj_npc_1.x - obj_hero.x) &gt; 70 
 {
-tyanka.sprite_index = spr_npc_1
+obj_npc_1.sprite_index = spr_npc_1
 }
 </string>
           </argument>
