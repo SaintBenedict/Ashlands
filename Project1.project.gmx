@@ -16,6 +16,7 @@
     <sprite>sprites\spr_npc_1_q</sprite>
     <sprite>sprites\spr_enemy</sprite>
   </sprites>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\font_base</font>
@@ -26,6 +27,7 @@
     <object>objects\obj_floor_grass</object>
     <object>objects\obj_floor_stone</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_init</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_start</room>
