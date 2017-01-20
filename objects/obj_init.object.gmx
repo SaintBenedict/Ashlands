@@ -52,7 +52,7 @@ global.max_hp = 38;
             <kind>1</kind>
             <string>global.npc_text[0] = obj_npc_1;
 global.npc_text_text[0] = "YA NE POMOGU";
-global.npc_text[1] = obj_enemy;
+global.npc_text[1] = obj_npc_2;
 global.npc_text_text[1] = "TOBI PIZDA";
 </string>
           </argument>
@@ -133,6 +133,45 @@ if global.xcheck = 1
         draw_text(global.npc_text[global.npc_i].x-65,global.npc_text[global.npc_i].y-55,global.npc_text_text[global.npc_i]);
         }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="88">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.xcheck = 1
+{
+    if global.npc_i = 0
+        {
+        instance_create(irandom_range(64,704), irandom_range(64,576), obj_enemy);
+    instance_create(irandom_range(64,704), irandom_range(64,576), obj_bomb);
+    instance_create(irandom_range(64,704), irandom_range(64,576), obj_bomb);
+    instance_create(irandom_range(64,704), irandom_range(64,576), obj_bomb);
+    }
+    }
+if global.xcheck = 1
+{
+    if global.npc_i = 1
+        {
+    global.total_hero_hp = global.max_hero_hp;
+    }
+    }
 </string>
           </argument>
         </arguments>
