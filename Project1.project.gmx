@@ -21,6 +21,7 @@
     <sprite>sprites\spr_hp</sprite>
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_mouseclick</sprite>
+    <sprite>sprites\spr_fireball</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -40,6 +41,7 @@
     <object>objects\obj_projectile_h</object>
     <object>objects\obj_bomb</object>
     <object>objects\obj_mouseclick</object>
+    <object>objects\obj_fireball</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>

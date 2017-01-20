@@ -101,7 +101,7 @@ global.pressedx = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="53">
+    <event eventtype="6" enumb="51">
       <action>
         <libid>1</libid>
         <id>404</id>
