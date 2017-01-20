@@ -155,10 +155,24 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>current_val_emeny_hp -= global.dmg_fireball;
+            <string>current_val_enemy_hp -= global.dmg_fireball;
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>obj_fireball</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="8" enumb="0">
