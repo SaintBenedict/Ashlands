@@ -16,6 +16,7 @@
     <sprite>sprites\spr_npc_1_q</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_projectile</sprite>
+    <sprite>sprites\spr_blank</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -31,6 +32,9 @@
     <object>objects\obj_init</object>
     <object>objects\obj_projectile</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tml_hero_damage</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\room_start</room>
   </rooms>
