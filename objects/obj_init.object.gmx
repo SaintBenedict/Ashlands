@@ -26,8 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>global.player = obj_hero;
-global.npc_text = obj_npc_1;
+global.npc_text[0] = obj_npc_1;
+global.npc_text[1] = obj_enemy;
 global.pressedx = 0;
+global.pressx = 0;
 </string>
           </argument>
         </arguments>
@@ -50,32 +52,35 @@ global.pressedx = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if abs(obj_npc_1.x - global.player.x) &lt; 70 
+            <string>for (i=0;i&lt;2;i+=1)
 {
-    if abs(obj_npc_1.y - global.player.y) &lt; 70
+if abs(global.npc_text[i].x - global.player.x) &lt; 70 
+{
+    if abs(global.npc_text[i].y - global.player.y) &lt; 70
     {
     global.pressx = 1;
     if (global.pressedx = 1)
         {
-        draw_text(obj_npc_1.x-65,obj_npc_1.y-55,"PRESS HIMSELF, BITCH!");
+        draw_text(global.npc_text[i].x-65,global.npc_text[i].y-55,"PRESS HIMSELF, BITCH!");
         global.pressx = 0;
         }
     }
 }
-if abs(obj_npc_1.x - global.player.x) &gt; 70 
+if abs(global.npc_text[i].x - global.player.x) &gt; 70 
 {
-global.pressx = 0;
+//global.pressx = 0;
 global.pressedx = 0;
 }
-if abs(obj_npc_1.y - global.player.y) &gt; 70 
+if abs(global.npc_text[i].y - global.player.y) &gt; 70 
 {
-global.pressx = 0;
+//global.pressx = 0;
 global.pressedx = 0;
 }
 
 if global.pressx = 1
 {
-draw_text(obj_npc_1.x-58,obj_npc_1.y-40,"&gt;&gt;Press X&lt;&lt;");
+draw_text(global.npc_text[i].x-58,global.npc_text[i].y-40,"&gt;&gt;Press X&lt;&lt;");
+}
 }
 </string>
           </argument>
