@@ -26,6 +26,48 @@
           <argument>
             <kind>1</kind>
             <string>global.player = obj_hero;
+global.npc_text = obj_npc_1;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if abs(obj_npc_1.x - global.player.x) &lt; 70 
+{
+    if abs(npc_text.y - global.player.y) &lt; 70
+    {
+    draw_set_alpha(0);
+    draw_text(npc_text.x,npc_text.y,"&gt;&gt;Press X&lt;&lt;");
+    }
+}
+if abs(npc_text.x - global.player.x) &gt; 70 
+{
+    draw_set_alpha(1);
+    draw_text(npc_text.x,npc_text.y,"&gt;&gt;Press X&lt;&lt;");
+}
+if abs(npc_text.y - global.player.y) &gt; 70 
+{
+    draw_set_alpha(1);
+    draw_text(npc_text.x,npc_text.y,"&gt;&gt;Press X&lt;&lt;");
+}
 </string>
           </argument>
         </arguments>
