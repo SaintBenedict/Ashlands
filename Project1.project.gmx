@@ -29,6 +29,7 @@
     <object>objects\obj_floor_stone</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_init</object>
+    <object>objects\obj_projectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_start</room>
