@@ -61,19 +61,19 @@ if abs(global.npc_text[i].x - global.player.x) &lt; 70
     global.pressx = 1;
     if (global.pressedx = 1)
         {
-        draw_text(global.npc_text[i].x-65,global.npc_text[i].y-55,"PRESS HIMSELF, BITCH!");
+        draw_text(global.npc_text[i].x-65,global.npc_text[i].y-55,"PRESS YOURSELF, BITCH!");
         global.pressx = 0;
         }
     }
 }
 if abs(global.npc_text[i].x - global.player.x) &gt; 70 
 {
-//global.pressx = 0;
+global.pressx = 0;
 global.pressedx = 0;
 }
 if abs(global.npc_text[i].y - global.player.y) &gt; 70 
 {
-//global.pressx = 0;
+global.pressx = 0;
 global.pressedx = 0;
 }
 
