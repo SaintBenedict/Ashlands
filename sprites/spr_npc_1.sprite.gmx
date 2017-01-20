@@ -20,6 +20,6 @@
   <width>37</width>
   <height>56</height>
   <frames>
-    <frame index="0">images\tyan_0.png</frame>
+    <frame index="0">images\spr_npc_1_0.png</frame>
   </frames>
 </sprite>
