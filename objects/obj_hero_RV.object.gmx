@@ -25,6 +25,7 @@
         <arguments>
           <argument>
             <kind>5</kind>
+            <sprite>spr_hero_down</sprite>
           </argument>
           <argument>
             <kind>0</kind>
