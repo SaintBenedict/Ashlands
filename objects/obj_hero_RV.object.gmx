@@ -126,6 +126,32 @@ obj_npc_1.sprite_index = spr_npc_1
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>109</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move_to</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>600</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>600</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="10" enumb="40">
       <action>
         <libid>1</libid>
