@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>hero_down</sprite>
+            <sprite>spr_hero_down</sprite>
           </argument>
           <argument>
             <kind>0</kind>
@@ -58,25 +58,25 @@
             <string>if keyboard_check(vk_up)
    {
    y -= 4;
-   sprite_index = hero_up;
+   sprite_index = spr_hero_up;
    image_speed = 0.5;
    }
 if keyboard_check(vk_down)
    {
    y += 4;
-   sprite_index = hero_down;
+   sprite_index = spr_hero_down;
    image_speed = 0.5;
    }
 if keyboard_check(vk_left)
    {
    x -= 4;
-   sprite_index = hero_left;
+   sprite_index = spr_hero_left;
    image_speed = 0.5;
    }
 if keyboard_check(vk_right)
    {
    x += 4;
-   sprite_index = hero_right;
+   sprite_index = spr_hero_right;
    image_speed = 0.5;
    }
 
@@ -92,18 +92,52 @@ if abs(tyanka.x - hero.x) &lt; 70
 {
     if abs(tyanka.y - hero.y) &lt; 70
     {
-    tyanka.sprite_index = tyan1
+    tyanka.sprite_index = spr_npc_1_q
     }
 }
 if abs(tyanka.x - hero.x) &gt; 70 
 {
-tyanka.sprite_index = tyan
+tyanka.sprite_index = spr_npc_1
 }
 if abs(tyanka.y - hero.y) &gt; 70 
 {
-tyanka.sprite_index = tyan
+tyanka.sprite_index = spr_npc_1
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_floor_stone">
+      <action>
+        <libid>1</libid>
+        <id>121</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_potential_step</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -133,7 +167,7 @@ tyanka.sprite_index = tyan
           </argument>
           <argument>
             <kind>0</kind>
-            <string>4</string>
+            <string>0</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -159,7 +193,7 @@ tyanka.sprite_index = tyan
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>hero_down</sprite>
+            <sprite>spr_hero_down</sprite>
           </argument>
           <argument>
             <kind>0</kind>
@@ -213,7 +247,7 @@ tyanka.sprite_index = tyan
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>hero_right</sprite>
+            <sprite>spr_hero_right</sprite>
           </argument>
           <argument>
             <kind>0</kind>
@@ -267,7 +301,7 @@ tyanka.sprite_index = tyan
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>hero_up</sprite>
+            <sprite>spr_hero_up</sprite>
           </argument>
           <argument>
             <kind>0</kind>
@@ -321,7 +355,7 @@ tyanka.sprite_index = tyan
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>hero_left</sprite>
+            <sprite>spr_hero_left</sprite>
           </argument>
           <argument>
             <kind>0</kind>
