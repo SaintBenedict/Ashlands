@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>global.player = obj_hero;
 global.npc_text = obj_npc_1;
-
+global.pressedx = 0;
 </string>
           </argument>
         </arguments>
@@ -55,19 +55,28 @@ global.npc_text = obj_npc_1;
     if abs(obj_npc_1.y - global.player.y) &lt; 70
     {
     global.pressx = 1;
-    draw_text(obj_npc_1.x-58,obj_npc_1.y-40,"&gt;&gt;Press X&lt;&lt;");
+    if (global.pressedx = 1)
+        {
+        draw_text(obj_npc_1.x-65,obj_npc_1.y-55,"PRESS HIMSELF, BITCH!");
+        global.pressx = 0;
+        }
     }
 }
 if abs(obj_npc_1.x - global.player.x) &gt; 70 
 {
 global.pressx = 0;
+global.pressedx = 0;
 }
 if abs(obj_npc_1.y - global.player.y) &gt; 70 
 {
 global.pressx = 0;
+global.pressedx = 0;
 }
 
-
+if global.pressx = 1
+{
+draw_text(obj_npc_1.x-58,obj_npc_1.y-40,"&gt;&gt;Press X&lt;&lt;");
+}
 </string>
           </argument>
         </arguments>
