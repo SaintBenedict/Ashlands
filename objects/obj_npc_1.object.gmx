@@ -11,29 +11,23 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>5</kind>
-            <sprite>spr_npc_1</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>sprite_index = spr_npc_1;
+image_speed = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -55,30 +49,60 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if y &gt; obj_hero.y
+            <string>if y &gt; global.player.y
 {
-obj_hero.depth = 10;
+global.player.depth = 10;
 }
 else
 {
-obj_hero.depth = -10;
+global.player.depth = -10;
 }
-if abs(x - obj_hero.x) &lt; 70 
+if abs(x - global.player.x) &lt; 70 
 {
-    if abs(y - obj_hero.y) &lt; 70
+    if abs(y - global.player.y) &lt; 70
     {
     sprite_index = spr_npc_1_q
     }
 }
-if abs(x - obj_hero.x) &gt; 70 
+if abs(x - global.player.x) &gt; 70 
 {
 sprite_index = spr_npc_1
 }
-if abs(y - obj_hero.y) &gt; 70 
+if abs(y - global.player.y) &gt; 70 
 {
 sprite_index = spr_npc_1
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_hero">
+      <action>
+        <libid>1</libid>
+        <id>514</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_text</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>Press X, bitch</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
