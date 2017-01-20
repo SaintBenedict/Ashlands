@@ -55,29 +55,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(vk_up)
+            <string>var h_left = x - 4;
+var h_right = x + 4;
+var h_up = y - 4;
+var h_down = y + 4;
+
+if keyboard_check(vk_up)
    {
-      if place_empty(x, y-=4)
+    if place_free(x, h_up)
    {
    y -= 4;
+   }
    sprite_index = spr_hero_up;
    image_speed = 0.5;
    }
+   
 if keyboard_check(vk_down)
    {
+   if place_free(x, h_down)
+   {
    y += 4;
+   }
    sprite_index = spr_hero_down;
    image_speed = 0.5;
    }
 if keyboard_check(vk_left)
    {
+   if place_free(x, h_left)
+   {
    x -= 4;
+   }
    sprite_index = spr_hero_left;
    image_speed = 0.5;
    }
 if keyboard_check(vk_right)
    {
+   if place_free(x, h_right)
+   {
    x += 4;
+   }
    sprite_index = spr_hero_right;
    image_speed = 0.5;
    }
