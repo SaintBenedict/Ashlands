@@ -30,6 +30,47 @@ global.npc_text[0] = obj_npc_1;
 global.npc_text[1] = obj_enemy;
 global.pressedx = 0;
 global.pressx = 0;
+global.xcheck = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>for (i=0;i&lt;2;i+=1)
+{
+    if abs(global.npc_text[i].x - global.player.x) &lt; 70 
+    {
+        if abs(global.npc_text[i].y - global.player.y) &lt; 70
+        {
+        global.xcheck = 1;
+        global.npc_i = i;
+        break;
+        }
+    }
+    else
+    {
+        global.xcheck = 0;
+        global.pressedx = 0;
+    }
+}
+
 </string>
           </argument>
         </arguments>
@@ -52,35 +93,20 @@ global.pressx = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for (i=0;i&lt;2;i+=1)
-{
-if abs(global.npc_text[i].x - global.player.x) &lt; 70 
-{
-    if abs(global.npc_text[i].y - global.player.y) &lt; 70
+            <string>    if keyboard_check_pressed(ord('X'))
     {
-    global.pressx = 1;
-    if (global.pressedx = 1)
-        {
-        draw_text(global.npc_text[i].x-65,global.npc_text[i].y-55,"PRESS YOURSELF, BITCH!");
-        global.pressx = 0;
-        }
+    global.pressedx = 1
     }
-}
-if abs(global.npc_text[i].x - global.player.x) &gt; 70 
+if global.xcheck = 1
 {
-global.pressx = 0;
-global.pressedx = 0;
-}
-if abs(global.npc_text[i].y - global.player.y) &gt; 70 
-{
-global.pressx = 0;
-global.pressedx = 0;
-}
-
-if global.pressx = 1
-{
-draw_text(global.npc_text[i].x-58,global.npc_text[i].y-40,"&gt;&gt;Press X&lt;&lt;");
-}
+    if global.pressedx = 0
+        {
+        draw_text(global.npc_text[global.npc_i].x-58,global.npc_text[global.npc_i].y-40,"&gt;&gt;Press X&lt;&lt;");
+        }
+    if global.pressedx = 1
+        {
+        draw_text(global.npc_text[global.npc_i].x-65,global.npc_text[global.npc_i].y-55,"PRESS YOURSELF, BITCH!");
+        }
 }
 </string>
           </argument>
