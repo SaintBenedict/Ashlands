@@ -33,6 +33,7 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_init</object>
     <object>objects\obj_projectile</object>
+    <object>objects\obj_projectile_h</object>
     <object>objects\obj_bomb</object>
   </objects>
   <timelines name="timelines">
