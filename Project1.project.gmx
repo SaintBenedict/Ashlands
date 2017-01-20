@@ -19,11 +19,13 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\obj_hero</object>
     <object>objects\obj_npc_1</object>
     <object>objects\obj_floor_grass</object>
     <object>objects\obj_floor_stone</object>
+    <object>objects\obj_init</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_start</room>
