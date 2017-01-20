@@ -91,30 +91,6 @@ if keyboard_check(vk_right)
    sprite_index = spr_hero_right;
    image_speed = 0.5;
    }
-   
-if obj_npc_1.y &gt; obj_hero.y
-{
-depth = 10;
-}
-else
-{
-depth = -10;
-}
-if abs(obj_npc_1.x - obj_hero.x) &lt; 70 
-{
-    if abs(obj_npc_1.y - obj_hero.y) &lt; 70
-    {
-    obj_npc_1.sprite_index = spr_npc_1_q
-    }
-}
-if abs(obj_npc_1.x - obj_hero.x) &gt; 70 
-{
-obj_npc_1.sprite_index = spr_npc_1
-}
-if abs(obj_npc_1.y - obj_hero.y) &gt; 70 
-{
-obj_npc_1.sprite_index = spr_npc_1
-}
 </string>
           </argument>
         </arguments>
