@@ -17,6 +17,8 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_projectile</sprite>
     <sprite>sprites\spr_blank</sprite>
+    <sprite>sprites\spr_hp</sprite>
+    <sprite>sprites\spr_bomb</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -31,6 +33,7 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_init</object>
     <object>objects\obj_projectile</object>
+    <object>objects\obj_bomb</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>

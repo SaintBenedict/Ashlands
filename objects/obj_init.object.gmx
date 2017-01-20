@@ -29,6 +29,7 @@
 global.pressedx = 0;
 global.pressx = 0;
 global.xcheck = 0;
+global.max_hp = 38;
 </string>
           </argument>
         </arguments>
@@ -50,9 +51,9 @@ global.xcheck = 0;
           <argument>
             <kind>1</kind>
             <string>global.npc_text[0] = obj_npc_1;
-global.npc_text_text[0] = "ANUS SEBE 4EKNI";
+global.npc_text_text[0] = "YA NE POMOGU";
 global.npc_text[1] = obj_enemy;
-global.npc_text_text[1] = "POLU4I SUKA PO EBALU";
+global.npc_text_text[1] = "TOBI PIZDA";
 </string>
           </argument>
         </arguments>
