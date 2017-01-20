@@ -74,7 +74,7 @@ global.npc_text_text[1] = "TOBI PIZDA";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.dmg_fireball = 20;
+            <string>global.dmg_fireball = 1;
 
 </string>
           </argument>
@@ -265,7 +265,7 @@ if global.xcheck = 1
 {
     if global.npc_i = 1
         {
-    global.total_hero_hp = global.max_hero_hp;
+    global.current_val_hero_hp = global.max_val_hero_hp;
     }
     }
 </string>
