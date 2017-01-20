@@ -55,11 +55,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>irandom_range(64,704)</string>
+            <string>irandom_range(120,654)</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>irandom_range(64,576)</string>
+            <string>irandom_range(120,536)</string>
           </argument>
         </arguments>
       </action>

@@ -126,11 +126,13 @@ if global.xcheck = 1
 {
     if global.pressedx = 0
         {
-        draw_text(global.npc_text[global.npc_i].x-58,global.npc_text[global.npc_i].y-40,"&gt;&gt;Press X&lt;&lt;");
+        draw_set_font(font_base);
+        draw_text(global.npc_text[global.npc_i].x,global.npc_text[global.npc_i].y-40,"&gt;&gt;Press X&lt;&lt;");
         }
     if global.pressedx = 1
         {
-        draw_text(global.npc_text[global.npc_i].x-65,global.npc_text[global.npc_i].y-55,global.npc_text_text[global.npc_i]);
+        draw_set_font(font_base);
+        draw_text(global.npc_text[global.npc_i].x,global.npc_text[global.npc_i].y-55,global.npc_text_text[global.npc_i]);
         }
 }
 </string>
@@ -159,10 +161,10 @@ if global.xcheck = 1
 {
     if global.npc_i = 0
         {
-        instance_create(irandom_range(64,704), irandom_range(64,576), obj_enemy);
-    instance_create(irandom_range(64,704), irandom_range(64,576), obj_bomb);
-    instance_create(irandom_range(64,704), irandom_range(64,576), obj_bomb);
-    instance_create(irandom_range(64,704), irandom_range(64,576), obj_bomb);
+        instance_create(irandom_range(120,680), irandom_range(80,536), obj_enemy);
+    instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
+    instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
+    instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
     }
     }
 if global.xcheck = 1
