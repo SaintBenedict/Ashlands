@@ -52,22 +52,22 @@ global.npc_text = obj_npc_1;
             <kind>1</kind>
             <string>if abs(obj_npc_1.x - global.player.x) &lt; 70 
 {
-    if abs(npc_text.y - global.player.y) &lt; 70
+    if abs(obj_npc_1.y - global.player.y) &lt; 70
     {
-    draw_set_alpha(0);
-    draw_text(npc_text.x,npc_text.y,"&gt;&gt;Press X&lt;&lt;");
+    global.pressx = 1;
+    draw_text(obj_npc_1.x-58,obj_npc_1.y-40,"&gt;&gt;Press X&lt;&lt;");
     }
 }
-if abs(npc_text.x - global.player.x) &gt; 70 
+if abs(obj_npc_1.x - global.player.x) &gt; 70 
 {
-    draw_set_alpha(1);
-    draw_text(npc_text.x,npc_text.y,"&gt;&gt;Press X&lt;&lt;");
+global.pressx = 0;
 }
-if abs(npc_text.y - global.player.y) &gt; 70 
+if abs(obj_npc_1.y - global.player.y) &gt; 70 
 {
-    draw_set_alpha(1);
-    draw_text(npc_text.x,npc_text.y,"&gt;&gt;Press X&lt;&lt;");
+global.pressx = 0;
 }
+
+
 </string>
           </argument>
         </arguments>
