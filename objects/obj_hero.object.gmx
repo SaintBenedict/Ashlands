@@ -92,16 +92,16 @@ if abs(obj_npc_1.x - obj_hero.x) &lt; 70
 {
     if abs(obj_npc_1.x - obj_hero.x) &lt; 70
     {
-    obj_npc_1.sprite_index = spr_npc_1_q
+    obj_npc_1.sprite_index = spr_npc_1_q;
     }
 }
 if abs(obj_npc_1.x - obj_hero.x) &gt; 70 
 {
-obj_npc_1.sprite_index = spr_npc_1
+obj_npc_1.sprite_index = spr_npc_1;
 }
 if abs(obj_npc_1.x - obj_hero.x) &gt; 70 
 {
-obj_npc_1.sprite_index = spr_npc_1
+obj_npc_1.sprite_index = spr_npc_1;
 }
 </string>
           </argument>
