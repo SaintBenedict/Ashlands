@@ -29,7 +29,7 @@
 global.pressedx = 0;
 global.pressx = 0;
 global.xcheck = 0;
-global.max_hp = 38;
+global.max_pix_hp = 38;
 </string>
           </argument>
         </arguments>
@@ -118,7 +118,7 @@ global.pressedx = 0;
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>obj_mouseclick</object>
+            <object>-100</object>
           </argument>
           <argument>
             <kind>0</kind>
@@ -160,7 +160,7 @@ global.pressedx = 0;
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>obj_mouseclick</object>
+            <object>-100</object>
           </argument>
           <argument>
             <kind>0</kind>

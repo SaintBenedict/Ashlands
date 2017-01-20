@@ -193,7 +193,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.total_hero_hp -= 50;
+            <string>global.current_val_hero_hp -= 50;
 </string>
           </argument>
         </arguments>
