@@ -19,7 +19,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_hero</object>
-    <object>objects\obj_hero_RV</object>
+    <object>objects\obj_hero_rv</object>
     <object>objects\obj_npc_1</object>
     <object>objects\obj_floor_grass</object>
     <object>objects\obj_floor_stone</object>
