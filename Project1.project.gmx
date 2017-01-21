@@ -22,8 +22,11 @@
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_mouseclick</sprite>
     <sprite>sprites\spr_fireball</sprite>
+    <sprite>sprites\spr_floor_grass_big</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background1</background>
+  </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\font_base</font>
