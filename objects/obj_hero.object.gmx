@@ -52,48 +52,12 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var h_left = x - 4;
-var h_right = x + 4;
-var h_up = y - 4;
-var h_down = y + 4;
-
-if keyboard_check(vk_up)
-   {
-   if place_free(x, h_up)
-   {
-   y -= 4;
-   }
-   sprite_index = spr_hero_up;
-   image_speed = 0.5;
-   }
-   
-if keyboard_check(vk_down)
-   {
-   if place_free(x, h_down)
-   {
-   y += 4;
-   }
-   sprite_index = spr_hero_down;
-   image_speed = 0.5;
-   }
-if keyboard_check(vk_left)
-   {
-   if place_free(h_left, y)
-   {
-   x -= 4;
-   }
-   sprite_index = spr_hero_left;
-   image_speed = 0.5;
-   }
-if keyboard_check(vk_right)
-   {
-   if place_free(h_right, y)
-   {
-   x += 4;
-   }
-   sprite_index = spr_hero_right;
-   image_speed = 0.5;
-   }
+            <string>global.current_pix_hero_hp = round(global.current_val_hero_hp * global.max_pix_hp / global.max_val_hero_hp);
+if global.current_val_hero_hp &lt; 1
+{
+show_message("Поздравляю, вам пиздец.");
+game_end();
+}
 </string>
           </argument>
         </arguments>
@@ -114,95 +78,93 @@ if keyboard_check(vk_right)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.current_pix_hero_hp = round(global.current_val_hero_hp * global.max_pix_hp / global.max_val_hero_hp);
-if global.current_val_hero_hp &lt; 1
+            <string>if instance_number(obj_mouseclick)&gt;0
 {
-show_message("Поздравляю, вам пиздец.");
-game_end();
+mox = obj_mouseclick.x;
+moy = obj_mouseclick.y;
+hex = obj_hero.x;
+hey = obj_hero.y;
+if mox &gt; hex
+    {
+    if moy &gt; hey
+        {
+        if (moy-hey) &gt; (mox-hex)
+            {
+            sprite_index = spr_hero_down;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = spr_hero_right;
+            image_speed = 0.5;
+            }
+        }
+    else
+        {
+        if (hey-moy) &gt; (mox-hex)
+            {
+            sprite_index = spr_hero_up;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = spr_hero_right;
+            image_speed = 0.5;
+            }
+        }
+    }
+else
+    {
+    if moy &gt; hey
+        {
+        if (moy-hey) &gt; (hex-mox)
+            {
+            sprite_index = spr_hero_down;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = spr_hero_left;
+            image_speed = 0.5;
+            }
+        }
+    else
+        {
+        if (hey-moy) &gt; (hex-mox)
+            {
+            sprite_index = spr_hero_up;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = spr_hero_left;
+            image_speed = 0.5;
+            }
+        }
+    }
+
+
+move_towards_point(obj_mouseclick.x,obj_mouseclick.y,4);
+}
+else
+{
+image_speed = 0;
 }
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="4" ename="obj_mouseclick">
       <action>
         <libid>1</libid>
-        <id>404</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_number</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>-100</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>2</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>105</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_point</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>obj_mouseclick.x</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_mouseclick.y</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>4</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>421</id>
-        <kind>3</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <exetype>2</exetype>
         <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
@@ -210,16 +172,12 @@ game_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <string>image_index = 0;
+image_speed = 0;
+</string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="4" ename="obj_mouseclick">
       <action>
         <libid>1</libid>
         <id>101</id>
@@ -282,6 +240,124 @@ game_end();
     <event eventtype="4" ename="obj_floor_stone">
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index = 0;
+image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>101</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>000010000</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_npc_2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index = 0;
+image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>101</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>000010000</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_npc_1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index = 0;
+image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>101</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -308,29 +384,22 @@ game_end();
     <event eventtype="6" enumb="50">
       <action>
         <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>10</kind>
-            <object>obj_fireball</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_hero.x</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_hero.y</string>
+            <kind>1</kind>
+            <string>instance_create(obj_hero.x,obj_hero.y,obj_fireball);
+</string>
           </argument>
         </arguments>
       </action>
@@ -371,202 +440,6 @@ draw_set_halign(fa_center);
 draw_set_font(font_hp);
 draw_text(x,y+26,global.current_val_hero_hp);
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="40">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>sprite_index = spr_hero_down;
-image_speed = 0;
-image_index = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="39">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>sprite_index = spr_hero_right;
-image_speed = 0;
-image_index = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="38">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>sprite_index = spr_hero_up;
-image_speed = 0;
-image_index = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="37">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>sprite_index = spr_hero_left;
-image_speed = 0;
-image_index = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
