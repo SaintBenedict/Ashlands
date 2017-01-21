@@ -28,6 +28,7 @@
             <string>//window_set_sizeable(true); // Разрешаем менять размер окна
 window_set_size(1024,768); // Указываем начальный размер окна
 //window_center(); //Выравниваем окно по центру экрана
+
 </string>
           </argument>
         </arguments>
@@ -84,6 +85,22 @@ if display_get_height() &lt; view_hport[0] // Высота порта вида �
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>332</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

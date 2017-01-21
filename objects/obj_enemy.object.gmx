@@ -138,7 +138,7 @@ instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_fireball">
+    <event eventtype="4" ename="obj_bullet">
       <action>
         <libid>1</libid>
         <id>603</id>

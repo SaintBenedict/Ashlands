@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.player = obj_hero;
+            <string>global.player = obj_player;
 global.npc_click = 0;
 global.npc_near = 0;
-
+attack = 0;
 global.max_pix_hp = 38;
 </string>
           </argument>
@@ -50,7 +50,8 @@ global.max_pix_hp = 38;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.npc_text[0] = obj_npc_1;
+            <string>npc_n = 2;
+global.npc_text[0] = obj_npc_1;
 global.npc_text_text[0] = "YA NE POMOGU";
 global.npc_text_name[0] = "Алиса";
 global.npc_text[1] = obj_npc_2;
@@ -100,7 +101,9 @@ global.npc_text_name[1] = "Дженни";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for (i=0;i&lt;2;i+=1)
+            <string>if instance_number(global.player)&gt;0
+{
+for (i=0;i&lt;npc_n;i+=1)
 {
     if abs(global.npc_text[i].x - global.player.x) &lt; 70 
     {
@@ -109,6 +112,10 @@ global.npc_text_name[1] = "Дженни";
         global.npc_near = 1;
         global.npc_i = i;
         break;
+        }
+        else
+        {
+        global.npc_near = 0;
         }
     }
     else
@@ -119,6 +126,7 @@ global.npc_text_name[1] = "Дженни";
 if global.npc_near = 0
 {
 global.npc_click = 0;
+}
 }
 </string>
           </argument>
@@ -142,7 +150,9 @@ global.npc_click = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(obj_mouseclick) &gt; 0
+            <string>if instance_number(global.player)&gt;0
+{
+if instance_number(obj_mouseclick) &gt; 0
     {
     with (obj_mouseclick)
         {
@@ -152,16 +162,17 @@ global.npc_click = 0;
     }
 else
 {
-xxx = abs(mouse_x - obj_hero.x);
-yyy = abs(mouse_y - obj_hero.y);
+xxx = abs(mouse_x - global.player.x);
+yyy = abs(mouse_y - global.player.y);
 if (xxx &gt; 40 || yyy &gt; 50)
     {
     instance_create(mouse_x,mouse_y,obj_mouseclick);
-    with(obj_hero)
+    with(global.player)
         {
         image_index = 1;
         }
     }
+}
 }
 </string>
           </argument>
@@ -185,11 +196,16 @@ if (xxx &gt; 40 || yyy &gt; 50)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.npc_click = 0
+            <string>if instance_number(global.player)&gt;0
 {
-instance_create(obj_hero.x,obj_hero.y,obj_fireball);
+if (attack = 1 &amp;&amp; global.npc_near = 1)
+{
 }
-
+else
+{
+instance_create(global.player.x,global.player.y,obj_bullet);
+}
+}
 </string>
           </argument>
         </arguments>
@@ -225,7 +241,10 @@ instance_create(obj_hero.x,obj_hero.y,obj_fireball);
         }
     if global.npc_i = 1
         {
-        global.current_val_hero_hp = global.max_val_hero_hp;
+        with(global.player)
+            {
+            hp = max_val_hero_hp;
+            }
         global.npc_click = 0;
         }
 }
@@ -252,7 +271,7 @@ instance_create(obj_hero.x,obj_hero.y,obj_fireball);
           <argument>
             <kind>1</kind>
             <string>
-for (k=0;k&lt;2;k+=1)
+for (k=0;k&lt;npc_n;k+=1)
     {
     if abs(global.npc_text[k].x - mouse_x) &lt; 20 
         {
@@ -260,14 +279,20 @@ for (k=0;k&lt;2;k+=1)
             {
             if mouse_check_button_pressed(mb_left)
                 {
-                global.npc_click = 1
+                global.npc_click = 1;
                 }
             draw_set_font(font_base);
             draw_text(global.npc_text[k].x,global.npc_text[k].y+40,global.npc_text_name[k]);
+            attack += npc_n;
             }
         }
+        else
+        attack -=1;
     }
-
+if attack &gt; 0
+attack = 1;
+else
+attack = 0;
 </string>
           </argument>
         </arguments>

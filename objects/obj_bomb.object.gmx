@@ -64,7 +64,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_fireball">
+    <event eventtype="4" ename="obj_bullet">
       <action>
         <libid>1</libid>
         <id>532</id>
@@ -176,7 +176,7 @@
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_hero">
+    <event eventtype="4" ename="obj_player">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -193,7 +193,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.current_val_hero_hp -= 50;
+            <string>with(global.player)
+{
+hp -= 50;
+}
 </string>
           </argument>
         </arguments>

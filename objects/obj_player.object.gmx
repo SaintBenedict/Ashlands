@@ -25,12 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.max_val_hero_hp = 100;
-global.current_val_hero_hp = 100;
-global.current_pix_hero_hp = 38;
+            <string>max_val_hero_hp = 100;
+hp = 100;
+current_pix_hero_hp = 38;
 sprite_index = spr_hero_down;
 image_speed = 0;
 image_index = 1;
+image_angle=direction;
 </string>
           </argument>
         </arguments>
@@ -53,11 +54,11 @@ image_index = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.current_pix_hero_hp = round(global.current_val_hero_hp * global.max_pix_hp / global.max_val_hero_hp);
-if global.current_val_hero_hp &lt; 1
+            <string>current_pix_hero_hp = round(hp * global.max_pix_hp / max_val_hero_hp);
+if hp &lt; 1
 {
 show_message("Поздравляю, вам пиздец.");
-game_end();
+game_restart();
 }
 </string>
           </argument>
@@ -83,8 +84,8 @@ game_end();
 {
 mox = obj_mouseclick.x;
 moy = obj_mouseclick.y;
-hex = obj_hero.x;
-hey = obj_hero.y;
+hex = global.player.x;
+hey = global.player.y;
 if mox &gt; hex
     {
     if moy &gt; hey
@@ -150,6 +151,24 @@ move_towards_point(obj_mouseclick.x,obj_mouseclick.y,4);
 else
 {
 image_speed = 0;
+}
+if instance_number(obj_controller)&gt;0
+{
+if(idd!=global.myid){exit;}
+direction=point_direction(x,y,mouse_x,mouse_y);
+buffer_seek( obj_controller.Buffer , buffer_seek_start , 0 );
+buffer_write( obj_controller.Buffer , buffer_u8 , 2 );
+buffer_write( obj_controller.Buffer , buffer_s32 , idd );
+buffer_write( obj_controller.Buffer , buffer_u16 , direction );
+buffer_write( obj_controller.Buffer , buffer_f32 , x );
+buffer_write( obj_controller.Buffer , buffer_f32 , y );
+network_send_packet( obj_controller.Socket , obj_controller.Buffer , buffer_tell( obj_controller.Buffer ) );
+if(mouse_check_button_pressed(mb_left)){
+    buffer_seek( obj_controller.Buffer , buffer_seek_start , 0 );
+    buffer_write( obj_controller.Buffer , buffer_u8 , 3 );
+    buffer_write( obj_controller.Buffer , buffer_s32 , idd );
+    network_send_packet( obj_controller.Socket , obj_controller.Buffer , buffer_tell( obj_controller.Buffer ) );/*айди  3 будет отвечать за то, что это стрельба*/
+}
 }
 </string>
           </argument>
@@ -414,10 +433,10 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_hp,global.current_pix_hero_hp,x,y+32);
+            <string>draw_sprite(spr_hp,current_pix_hero_hp,x,y+32);
 draw_set_halign(fa_center);
 draw_set_font(font_hp);
-draw_text(x,y+26,global.current_val_hero_hp);
+draw_text(x,y+26,hp);
 </string>
           </argument>
         </arguments>

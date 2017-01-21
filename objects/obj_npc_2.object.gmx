@@ -49,7 +49,9 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if y &gt; global.player.y
+            <string>if instance_number(global.player)&gt;0
+{
+if y &gt; global.player.y
 {
 depth = -10;
 }
@@ -71,6 +73,7 @@ sprite_index = spr_npc_2
 if abs(y - global.player.y) &gt; 70 
 {
 sprite_index = spr_npc_2
+}
 }
 </string>
           </argument>
