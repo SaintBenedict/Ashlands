@@ -123,7 +123,43 @@ global.pressedx = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="54">
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.xcheck = 1
+{
+    if global.npc_i = 0
+        {
+        instance_create(irandom_range(120,680), irandom_range(80,536), obj_enemy);
+        instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
+        instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
+        instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
+        }
+    if global.npc_i = 1
+        {
+        global.current_val_hero_hp = global.max_val_hero_hp;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="51">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -141,17 +177,53 @@ global.pressedx = 0;
           <argument>
             <kind>1</kind>
             <string>if instance_number(obj_mouseclick) &gt; 0
-{
-with (obj_mouseclick)
-{
-instance_destroy();
-}
-instance_create(mouse_x,mouse_y,obj_mouseclick);
-}
+    {
+    with (obj_mouseclick)
+        {
+        instance_destroy();
+        }
+    instance_create(mouse_x,mouse_y,obj_mouseclick);
+    }
 else
 {
-instance_create(mouse_x,mouse_y,obj_mouseclick);
+xxx = abs(mouse_x - obj_hero.x);
+yyy = abs(mouse_y - obj_hero.y);
+if (xxx &gt; 40 || yyy &gt; 50)
+    {
+    instance_create(mouse_x,mouse_y,obj_mouseclick);
+    with(obj_hero)
+        {
+        image_index = 1;
+        }
+    }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.xcheck = 0
+{
+instance_create(obj_hero.x,obj_hero.y,obj_fireball);
+}
+
 </string>
           </argument>
         </arguments>
@@ -191,45 +263,6 @@ if global.xcheck = 1
         draw_text(global.npc_text[global.npc_i].x,global.npc_text[global.npc_i].y-55,global.npc_text_text[global.npc_i]);
         }
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="88">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if global.xcheck = 1
-{
-    if global.npc_i = 0
-        {
-        instance_create(irandom_range(120,680), irandom_range(80,536), obj_enemy);
-    instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
-    instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
-    instance_create(irandom_range(120,680), irandom_range(80,536), obj_bomb);
-    }
-    }
-if global.xcheck = 1
-{
-    if global.npc_i = 1
-        {
-    global.current_val_hero_hp = global.max_val_hero_hp;
-    }
-    }
 </string>
           </argument>
         </arguments>
