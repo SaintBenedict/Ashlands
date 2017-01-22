@@ -29,6 +29,7 @@
 global.player = obj_player;
 global.npc_click = 0;
 global.npc_near = 0;
+
 </string>
           </argument>
         </arguments>

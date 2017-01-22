@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 7;
+
 </string>
           </argument>
         </arguments>
@@ -50,6 +51,9 @@ image_index = 7;
           <argument>
             <kind>1</kind>
             <string>global.check = 8;
+global.max_val_hero_hp += 100;
+global.dmg_fireball += 10;
+global.movespeed += 5;
 room_goto_next();
 </string>
           </argument>

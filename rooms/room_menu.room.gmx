@@ -11,7 +11,8 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>global.max_val_hero_hp = 100;
-global.dmg_fireball = 3;</code>
+global.dmg_fireball = 3;
+global.movespeed = 4;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

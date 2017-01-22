@@ -224,7 +224,7 @@ else
     }
 
 
-move_towards_point(obj_mouseclick.x,obj_mouseclick.y,4);
+move_towards_point(obj_mouseclick.x,obj_mouseclick.y, global.movespeed);
 }
 else
 {
