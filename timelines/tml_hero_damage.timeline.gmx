@@ -19,7 +19,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_hero.image_blend = c_red;
+            <string>obj_player.image_blend = c_red;
 </string>
           </argument>
         </arguments>
@@ -45,7 +45,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_hero.image_blend = c_white;
+            <string>obj_player.image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_hero.image_blend = c_red;
+            <string>obj_player.image_blend = c_red;
 </string>
           </argument>
         </arguments>
@@ -97,7 +97,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_hero.image_blend = c_white;
+            <string>obj_player.image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -123,7 +123,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_hero.image_blend = c_red;
+            <string>obj_player.image_blend = c_red;
 </string>
           </argument>
         </arguments>
@@ -149,7 +149,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_hero.image_blend = c_white;
+            <string>obj_player.image_blend = c_white;
 </string>
           </argument>
         </arguments>

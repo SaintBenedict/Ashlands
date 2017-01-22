@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.player = obj_player;
+            <string>attack = 0;
+global.player = obj_player;
 global.npc_click = 0;
 global.npc_near = 0;
-attack = 0;
 global.multi_allow = 0;
 </string>
           </argument>
@@ -206,9 +206,6 @@ instance_create(global.player.x,global.player.y,obj_bullet);
             <kind>1</kind>
             <string>if (global.npc_click = 1 &amp;&amp; global.npc_near = 1)
 {   
-    //draw_set_font(font_base);
-    //draw_text(global.npc_text[global.npc_i].x,global.npc_text[global.npc_i].y-55,global.npc_text_text[global.npc_i]);
-        
     if global.npc_i = 0
         {
         instance_create(irandom_range(120,680), irandom_range(80,536), obj_enemy);
