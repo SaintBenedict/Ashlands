@@ -26,10 +26,7 @@
     </sprites>
     <sprites name="menu">
       <sprite>sprites\spr_hp</sprite>
-      <sprite>sprites\spr_menu</sprite>
       <sprite>sprites\spr_mouseclick</sprite>
-      <sprite>sprites\spr_tcp</sprite>
-      <sprite>sprites\spr_single</sprite>
     </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_floor_stone</sprite>
@@ -81,9 +78,7 @@
     <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts">
-    <script>scripts\ReceivedPacket.gml</script>
-  </scripts>
+  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\font_base</font>
     <font>fonts\font_hp</font>
@@ -98,14 +93,10 @@
     <object>objects\obj_mouseclick</object>
     <object>objects\obj_bullet</object>
     <objects name="system">
-      <object>objects\obj_single</object>
       <object>objects\obj_floor_stone</object>
       <object>objects\obj_floor_grass</object>
-      <object>objects\obj_tcp</object>
       <object>objects\obj_init</object>
       <object>objects\obj_options</object>
-      <object>objects\obj_controller</object>
-      <object>objects\obj_menu</object>
     </objects>
     <objects name="check_player">
       <object>objects\check1</object>

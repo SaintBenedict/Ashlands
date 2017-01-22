@@ -28,7 +28,7 @@
             <string>//window_set_sizeable(true); // Разрешаем менять размер окна
 window_set_size(1024,768); // Указываем начальный размер окна
 //window_center(); //Выравниваем окно по центру экрана
-
+instance_create(300,400,obj_player);
 </string>
           </argument>
         </arguments>
