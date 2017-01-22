@@ -6,9 +6,9 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_projectile</sprite>
     <sprite>sprites\spr_bomb</sprite>
+    <sprite>sprites\sprite61</sprite>
     <sprite>sprites\spr_fireball</sprite>
     <sprites name="followers">
       <sprite>sprites\spr_1_up_1</sprite>
@@ -77,12 +77,19 @@
       <sprite>sprites\spr_portrait_1</sprite>
       <sprite>sprites\spr_portrait_2</sprite>
     </sprites>
+    <sprites name="Enemy">
+      <sprite>sprites\spr_enemy</sprite>
+      <sprite>sprites\spr_enemy_zombie_temp</sprite>
+      <sprite>sprites\spr_enemy_zombie_right</sprite>
+      <sprite>sprites\spr_enemy_zombie_left</sprite>
+      <sprite>sprites\spr_enemy_zombie_down</sprite>
+      <sprite>sprites\spr_enemy_zombie_up</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\font_base</font>
     <font>fonts\font_hp</font>
@@ -91,11 +98,14 @@
     <object>objects\obj_player</object>
     <object>objects\obj_npc_1</object>
     <object>objects\obj_npc_2</object>
-    <object>objects\obj_enemy</object>
     <object>objects\obj_projectile</object>
     <object>objects\obj_bomb</object>
     <object>objects\obj_mouseclick</object>
     <object>objects\obj_bullet</object>
+    <objects name="Enemy">
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_zombie</object>
+    </objects>
     <objects name="system">
       <object>objects\obj_floor_stone</object>
       <object>objects\obj_floor_grass</object>
