@@ -27,6 +27,8 @@
     <sprites name="menu">
       <sprite>sprites\spr_hp</sprite>
       <sprite>sprites\spr_mouseclick</sprite>
+      <sprite>sprites\spr_cur_q</sprite>
+      <sprite>sprites\spr_dlg1</sprite>
     </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_floor_stone</sprite>
@@ -108,9 +110,11 @@
       <object>objects\check7</object>
       <object>objects\check8</object>
     </objects>
+    <object>objects\obj_dlg1</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>
+    <timeline>timelines\tml_fire_destroy</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_menu</room>
