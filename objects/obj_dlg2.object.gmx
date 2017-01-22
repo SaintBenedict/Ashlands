@@ -58,12 +58,25 @@ message[1] = "Привет, Дженни."
 message[2] = "Боже, какая же ты тупая..."
 message[3] = "Давай поговорим в другой раз."
 
-message[100] = "А ты нормальный такой парняга &lt;3"
-message[200] = "Уёбывай, пидр! Скатертью дорожка, блять."
-message[201] = "Пиздуй пиздуй!"
-message[300] = "Да без базара"}
+message[10] = "А ты нормальный такой парняга &lt;3"
+message[11] = "Лови симпу &lt;3"
+message[12] = "Дык ёпта блять"
+
+message[20] = "Уёбывай, пидр! Скатертью дорожка, блять."
+message[21] = "Пиздуй пиздуй!"
+
+message[30] = "Да без базара"
+
+message[40] = "Мур-мур-мур"
+message[50] = "А ты чего такой дерзкий?"
+message[51] = "Это ты дерзкая, ёпт!"
+message[52] = "Ладно ладно! Не бей, лучше обоссы!"
+
+message[60] = "Пидор ебаный"}
 if (global.npc_i = 1 &amp;&amp; global.npc_1q = 1) {
 message[0] = "Я не буду разговаривать с таким пидором, как ты.";}
+if (global.npc_i = 1 &amp;&amp; global.npc_1q = 2) {
+message[0] = "Мур-мур-мур :3";}
 </string>
           </argument>
         </arguments>
@@ -125,9 +138,29 @@ start_hp = global.hp;
         if global.npc_0q = 0 {
         global.npc_0q = 1;}
 }
-if global.npc_i = 1 {
-        if (global.npc_1q = 0 &amp;&amp; q_check=1) {
-        global.npc_1q += 1;}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.npc_i = 1 {
+        if global.npc_1q = 0 {
+        global.npc_1q =q_check;}
 }
 </string>
           </argument>
@@ -179,8 +212,29 @@ if global.hp &lt; start_hp {
     if global.npc_1q = 0 {
         if message_current = 1 {
         answers = 1;
-        checks = 3;
-        next_q = 2;
+        checks = 3; // Количество выборов
+        step_q[1] = 0;
+        next_a[1] = 10;
+        step_q[2] = 1; // На какой Q переходим при каком выборе
+        next_a[2] = 20;
+        step_q[3] = 0;
+        next_a[3] = 30;
+        }
+        if message_current = 11 {
+        answers = 1;
+        checks = 2;
+        step_q[1] = 2;
+        next_a[1] = 40;
+        step_q[2] = 0;
+        next_a[2] = 50;
+        }
+        if message_current = 51 {
+        answers = 1;
+        checks = 2;
+        step_q[1] = 0;
+        next_a[1] = 60;
+        step_q[2] = 1;
+        next_a[2] = 60;
         }
     }
 }
@@ -246,11 +300,8 @@ if answers = 0 {
                 draw_text_colour(tX,tY+i*20,message[message_current+i],c_red,c_red,c_red,c_red,1);
                     if mouse_check_button_pressed(mb_left)
                     {
-                    if next_q = i+1
-                        {
-                        q_check = 1;
-                        }
-                    message_current = (i+1)*100;
+                    q_check = step_q[i+1];
+                    message_current = next_a[i+1];
                     }
                 }
                 else
