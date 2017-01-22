@@ -71,6 +71,112 @@ instance_destroy();
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Костыли для спрайтов
+
+
+mox = obj_player.x;
+moy = obj_player.y;
+hex = x;
+hey = y;
+sprdown=spr_enemy_zombie_down;
+sprup=spr_enemy_zombie_up;
+sprright=spr_enemy_zombie_right;
+sprleft=spr_enemy_zombie_left;
+
+if distance_to_object(obj_player)&lt;=300
+{
+if (collision_line(x,y,obj_player.x,obj_player.y,obj_floor_stone,true,true) = noone)
+{
+if mox &gt; hex
+    {
+    if moy &gt; hey
+        {
+        if (moy-hey) &gt; (mox-hex)
+            {
+            sprite_index = sprdown;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprright;
+            image_speed = 0.5;
+            }
+        }
+    else
+        {
+        if (hey-moy) &gt; (mox-hex)
+            {
+            sprite_index = sprup;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprright;
+            image_speed = 0.5;
+            }
+        }
+    }
+else
+    {
+    if moy &gt; hey
+        {
+        if (moy-hey) &gt; (hex-mox)
+            {
+            sprite_index = sprdown;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprleft;
+            image_speed = 0.5;
+            }
+        }
+    else
+        {
+        if (hey-moy) &gt; (hex-mox)
+            {
+            sprite_index = sprup;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprleft;
+            image_speed = 0.5;
+            }
+        }
+    }
+    }
+        else 
+    {
+    sprite_index = sprdown;
+    image_speed = 0.2;
+    }
+    }
+    else 
+    {
+    sprite_index = sprdown;
+    image_speed = 0.2;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_bullet">
       <action>

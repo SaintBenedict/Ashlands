@@ -156,7 +156,9 @@ game_restart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(obj_mouseclick)&gt;0
+            <string>///Костыли для спрайтов и движение
+
+if instance_number(obj_mouseclick)&gt;0
 {
 mox = obj_mouseclick.x;
 moy = obj_mouseclick.y;
