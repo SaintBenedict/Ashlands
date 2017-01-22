@@ -190,6 +190,10 @@ with(global.player)
     timeline_running = true;
     }
 instance_destroy();}
+
+if image_index = talk_index {
+instance_create(0,0,obj_dlg2);
+instance_destroy();}
 </string>
           </argument>
         </arguments>

@@ -74,6 +74,8 @@
       <sprite>sprites\spr_up_7</sprite>
       <sprite>sprites\spr_up_8</sprite>
       <sprite>sprites\spr_player_face</sprite>
+      <sprite>sprites\spr_portrait_1</sprite>
+      <sprite>sprites\spr_portrait_2</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -97,8 +99,10 @@
     <objects name="system">
       <object>objects\obj_floor_stone</object>
       <object>objects\obj_floor_grass</object>
+      <object>objects\obj_dlg1</object>
       <object>objects\obj_init</object>
       <object>objects\obj_options</object>
+      <object>objects\obj_dlg2</object>
     </objects>
     <objects name="check_player">
       <object>objects\check1</object>
@@ -110,7 +114,6 @@
       <object>objects\check7</object>
       <object>objects\check8</object>
     </objects>
-    <object>objects\obj_dlg1</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>

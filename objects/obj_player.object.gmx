@@ -101,7 +101,7 @@ sprright = spr_right_8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = global.max_val_hero_hp;
+            <string>global.hp = global.max_val_hero_hp;
 current_pix_hero_hp = 38;
 sprite_index = sprdown;
 image_speed = 0;
@@ -129,8 +129,8 @@ image_index = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>current_pix_hero_hp = round(hp * 38 / global.max_val_hero_hp);
-if hp &lt; 1
+            <string>current_pix_hero_hp = round(global.hp * 38 / global.max_val_hero_hp);
+if global.hp &lt; 1
 {
 show_message("Поздравляю, вам пиздец.");
 //hp = global.max_val_hero_hp;
@@ -485,7 +485,7 @@ image_speed = 0;
             <string>draw_sprite(spr_hp,current_pix_hero_hp,x,y+32);
 draw_set_halign(fa_center);
 draw_set_font(font_hp);
-draw_text(x,y+26,hp);
+draw_text_color(x,y+26,global.hp,c_black,c_black,c_black,c_black,1);
 </string>
           </argument>
         </arguments>
