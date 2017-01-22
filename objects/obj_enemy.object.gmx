@@ -128,7 +128,7 @@ current_pix_enemy_hp = 38;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>current_pix_enemy_hp = round(current_val_enemy_hp * global.max_pix_hp / max_val_enemy_hp);
+            <string>current_pix_enemy_hp = round(current_val_enemy_hp * 38 / max_val_enemy_hp);
 if current_val_enemy_hp &lt; 1
 {
 instance_destroy();

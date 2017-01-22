@@ -50,6 +50,7 @@ image_index = 1;
           <argument>
             <kind>1</kind>
             <string>global.check = 2;
+global.dmg_fireball += 2;
 room_goto_next();
 </string>
           </argument>

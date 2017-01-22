@@ -27,6 +27,33 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 0;
+window_set_size(672,360);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_wview[0] = window_get_width();
+view_hview[0] = window_get_height();
+view_wport[0] = window_get_width();
+view_hport[0] = window_get_height();
 </string>
           </argument>
         </arguments>
@@ -50,7 +77,35 @@ image_index = 0;
           <argument>
             <kind>1</kind>
             <string>global.check = 1;
+global.max_val_hero_hp += 20
 room_goto_next();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>proportion = view_hport[0]/view_wport[0]; // Пропорции экрана (высоту делить на ширину порта)
+
+if display_get_height() &lt; view_hport[0] // Высота порта вида по умолчанию. Если монитор меньше, происходит уменьшение
+{view_hport[0] = display_get_height();
+ view_wport[0] = view_hport[0]/proportion;}
 </string>
           </argument>
         </arguments>

@@ -101,10 +101,8 @@ sprright = spr_right_8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>max_val_hero_hp = 100;
-hp = max_val_hero_hp;
+            <string>hp = global.max_val_hero_hp;
 current_pix_hero_hp = 38;
-
 sprite_index = sprdown;
 image_speed = 0;
 image_index = 1;
@@ -132,11 +130,11 @@ image_angle=direction;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>current_pix_hero_hp = round(hp * global.max_pix_hp / max_val_hero_hp);
+            <string>current_pix_hero_hp = round(hp * 38 / global.max_val_hero_hp);
 if hp &lt; 1
 {
 show_message("Поздравляю, вам пиздец.");
-hp = max_val_hero_hp;
+hp = global.max_val_hero_hp;
 game_restart();
 }
 </string>

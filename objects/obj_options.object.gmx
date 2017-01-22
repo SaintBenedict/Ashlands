@@ -51,10 +51,10 @@ window_set_size(1024,768); // Указываем начальный размер
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_wview[0] = window_get_width(); // Изменяем ширину вида под ширину окна
-view_hview[0] = window_get_height(); // Изменяем высоту вида под высоту окна
-//view_xview[0] = window_get_x(); // Изменяем положение вида под положение окна
-//view_yview[0] = window_get_y(); // Изменяем положение вида под положение окна
+            <string>view_wview[0] = window_get_width();
+view_hview[0] = window_get_height();
+view_wport[0] = window_get_width();
+view_hport[0] = window_get_height();
 </string>
           </argument>
         </arguments>
