@@ -26,6 +26,113 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize the enemy
+image_speed = 0.2;
+max_val_enemy_hp = 100;
+current_val_enemy_hp = max_val_enemy_hp;
+current_pix_enemy_hp = 38;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Actions of enemy
+if distance_to_object(obj_player)&lt;=300
+{
+      if (collision_line(x,y,obj_player.x,obj_player.y,obj_floor_stone,true,true) = noone)
+    {
+           move_towards_point(obj_player.x,obj_player.y, 2);
+    }
+    else move_towards_point(x,y,0);
+}
+else move_towards_point(x,y,0);
+current_pix_enemy_hp = round(current_val_enemy_hp * 38 / max_val_enemy_hp);
+if current_val_enemy_hp &lt; 1
+{
+instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>current_val_enemy_hp -= global.dmg_fireball;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>500</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring>draw_self();</codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if current_val_enemy_hp &lt; max_val_enemy_hp
+{
+draw_sprite(spr_hp,current_pix_enemy_hp,x,y+32);
+draw_set_halign(fa_center);
+draw_set_font(font_hp);
+draw_text_color(x,y+26,current_val_enemy_hp,c_black,c_black,c_black,c_black,1);
+}
 </string>
           </argument>
         </arguments>
