@@ -58,21 +58,6 @@ else
 {
 depth = 10;
 }
-if abs(x - global.player.x) &lt; 70 
-{
-    if abs(y - global.player.y) &lt; 70
-    {
-    sprite_index = spr_npc_1_q
-    }
-}
-if abs(x - global.player.x) &gt; 70 
-{
-sprite_index = spr_npc_1
-}
-if abs(y - global.player.y) &gt; 70 
-{
-sprite_index = spr_npc_1
-}
 }
 </string>
           </argument>

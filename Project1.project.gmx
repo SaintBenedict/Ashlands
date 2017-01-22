@@ -6,21 +6,26 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_npc_1</sprite>
-    <sprite>sprites\spr_npc_2</sprite>
-    <sprite>sprites\spr_npc_1_q</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_projectile</sprite>
-    <sprite>sprites\spr_hp</sprite>
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_fireball</sprite>
-    <sprites name="hero">
-      <sprite>sprites\spr_hero_up</sprite>
-      <sprite>sprites\spr_hero_right</sprite>
-      <sprite>sprites\spr_hero_left</sprite>
-      <sprite>sprites\spr_hero_down</sprite>
+    <sprites name="followers">
+      <sprite>sprites\spr_1_up_1</sprite>
+      <sprite>sprites\spr_1_right_1</sprite>
+      <sprite>sprites\spr_1_left_1</sprite>
+      <sprite>sprites\spr_1_down_1</sprite>
+      <sprite>sprites\spr_1_down_2</sprite>
+      <sprite>sprites\spr_1_left_2</sprite>
+      <sprite>sprites\spr_1_right_2</sprite>
+      <sprite>sprites\spr_1_up_2</sprite>
+      <sprite>sprites\spr_1_down_3</sprite>
+      <sprite>sprites\spr_1_left_3</sprite>
+      <sprite>sprites\spr_1_right_3</sprite>
+      <sprite>sprites\spr_1_up_3</sprite>
     </sprites>
     <sprites name="menu">
+      <sprite>sprites\spr_hp</sprite>
       <sprite>sprites\spr_menu</sprite>
       <sprite>sprites\spr_mouseclick</sprite>
       <sprite>sprites\spr_tcp</sprite>
@@ -31,6 +36,45 @@
       <sprite>sprites\spr_blank</sprite>
       <sprite>sprites\spr_floor_grass_big</sprite>
       <sprite>sprites\spr_floor_grass</sprite>
+    </sprites>
+    <sprites name="NPC">
+      <sprite>sprites\spr_npc_2</sprite>
+      <sprite>sprites\spr_npc_1</sprite>
+    </sprites>
+    <sprites name="player">
+      <sprite>sprites\spr_down_1</sprite>
+      <sprite>sprites\spr_down_2</sprite>
+      <sprite>sprites\spr_down_3</sprite>
+      <sprite>sprites\spr_down_4</sprite>
+      <sprite>sprites\spr_down_5</sprite>
+      <sprite>sprites\spr_down_6</sprite>
+      <sprite>sprites\spr_down_7</sprite>
+      <sprite>sprites\spr_down_8</sprite>
+      <sprite>sprites\spr_left_1</sprite>
+      <sprite>sprites\spr_left_2</sprite>
+      <sprite>sprites\spr_left_3</sprite>
+      <sprite>sprites\spr_left_4</sprite>
+      <sprite>sprites\spr_left_5</sprite>
+      <sprite>sprites\spr_left_6</sprite>
+      <sprite>sprites\spr_left_7</sprite>
+      <sprite>sprites\spr_left_8</sprite>
+      <sprite>sprites\spr_right_1</sprite>
+      <sprite>sprites\spr_right_2</sprite>
+      <sprite>sprites\spr_right_3</sprite>
+      <sprite>sprites\spr_right_4</sprite>
+      <sprite>sprites\spr_right_5</sprite>
+      <sprite>sprites\spr_right_6</sprite>
+      <sprite>sprites\spr_right_7</sprite>
+      <sprite>sprites\spr_right_8</sprite>
+      <sprite>sprites\spr_up_1</sprite>
+      <sprite>sprites\spr_up_2</sprite>
+      <sprite>sprites\spr_up_3</sprite>
+      <sprite>sprites\spr_up_4</sprite>
+      <sprite>sprites\spr_up_5</sprite>
+      <sprite>sprites\spr_up_6</sprite>
+      <sprite>sprites\spr_up_7</sprite>
+      <sprite>sprites\spr_up_8</sprite>
+      <sprite>sprites\spr_player_face</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -63,11 +107,22 @@
       <object>objects\obj_controller</object>
       <object>objects\obj_menu</object>
     </objects>
+    <objects name="check_player">
+      <object>objects\check1</object>
+      <object>objects\check2</object>
+      <object>objects\check3</object>
+      <object>objects\check4</object>
+      <object>objects\check5</object>
+      <object>objects\check6</object>
+      <object>objects\check7</object>
+      <object>objects\check8</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room_menu</room>
     <room>rooms\room_start</room>
   </rooms>
   <help>

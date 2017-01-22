@@ -30,6 +30,7 @@ global.npc_click = 0;
 global.npc_near = 0;
 attack = 0;
 global.max_pix_hp = 38;
+global.multi_allow = 0;
 </string>
           </argument>
         </arguments>
