@@ -4,7 +4,12 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_explode</sound>
+    <sound>sound\snd_slash</sound>
+    <sound>sound\snd_walk_grass</sound>
+    <sound>sound\snd_fire</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="particles">
       <sprite>sprites\spr_fireball</sprite>

@@ -223,11 +223,17 @@ else
         }
     }
 
+    if !audio_is_playing(snd_walk_grass)
+   {
+   audio_play_sound(snd_walk_grass, 10, true);
+   }
+    
 
 move_towards_point(obj_mouseclick.x,obj_mouseclick.y, global.movespeed);
 }
 else
 {
+audio_stop_sound(snd_walk_grass);
 image_speed = 0;
 }
 </string>
