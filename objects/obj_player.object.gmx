@@ -109,6 +109,7 @@ sprite_index = sprdown;
 image_speed = 0;
 image_index = 1;
 activate = 0;
+charlist_activated = 0;
 </string>
           </argument>
         </arguments>
@@ -542,13 +543,15 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Ебаный ГУЙ
-Xx = view_wview[0]-40;
-Y1y = view_hview[0]-40;
-Y2y = view_hview[0]-188;
-moy = mouse_y-view_yview[0];
-xoy = mouse_x-view_xview[0];
+            <string>///Гуй выбора авто-атаки
+/// Координаты вида и координаты мышки
+Xx = view_wview[0]-40; // Икс нижнего правого угла
+Y1y = view_hview[0]-40; // Игрик нижнего правого угла
+Y2y = view_hview[0]-188; // Игрик чуть выше для всплывающего меню
+moy = mouse_y-view_yview[0]; // Координаты мышки внутри вида
+xoy = mouse_x-view_xview[0]; // Координаты мышки внутри вида
 
+// Если нету диалога - рисуем первоначальный гуй. Отсутствие диалога обязательно для всего гуя.
 if instance_number(obj_dlg2) = 0{
 draw_sprite(spr_left_action,0,Xx,Y1y);
     if global.left_use = 1 {
@@ -556,46 +559,90 @@ draw_sprite(spr_left_action,0,Xx,Y1y);
     if global.left_use = 0 {
     draw_sprite(spr_use_sword,0,Xx,Y1y);}
 
+// Отрисовка всплывающего выбора, когда всплывающий выбор активирован чтобы выбрать спел
 if (moy &gt; Y2y-27 &amp;&amp; moy &lt; Y1y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27 &amp;&amp; activate = 1)
 {
-    global.attack = 1;
-    global.left_change = 1;
+    global.attack = 1; // Запрет атаки
+    global.left_change = 1; // Мы меняем скил
     draw_sprite(spr_left_check,0,Xx,Y1y-27);      
     draw_sprite(spr_use_fire,0,Xx,Y2y+84);
     draw_sprite(spr_use_sword,0,Xx,Y2y);
+    // Подсветка и выбор варианта под мышкой
     if (moy &gt; Y2y+84-27 &amp;&amp; moy &lt; Y2y+84+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27) {
     draw_sprite(spr_use_fire,1,Xx,Y2y+84);
         if mouse_check_button_pressed(mb_left){
         global.left_use = 1;
-        activate = 0;}
-    }
+        activate = 0;}}
     if (moy &gt; Y2y-27 &amp;&amp; moy &lt; Y2y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27) {
     draw_sprite(spr_use_sword,1,Xx,Y2y);
         if mouse_check_button_pressed(mb_left){
         global.left_use = 0;
-        activate = 0;}
-    }
+        activate = 0;}}
 }
 else
 {
+    //Активация выбора и отрисовка всплывающего выбора.
     if (moy &gt; Y1y-27 &amp;&amp; moy &lt; Y1y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27)
         {
         global.attack = 1;
-        global.left_change = 1;
+        global.left_change = 1; // Мы можем менять скил, когда мышка в зоне
             if mouse_check_button(mb_left)
             {
             draw_sprite(spr_left_check,0,Xx,Y1y-27);
             draw_sprite(spr_use_fire,0,Xx,Y2y+84);
             draw_sprite(spr_use_sword,0,Xx,Y2y);
-            activate = 1;
+            activate = 1; // Теперь совсем прям можем
             }
         }
     else
         {
-        global.left_change = 0;
+        global.left_change = 0; // А если мышка ушла, то уже нихуя не можем.
         }
 }
 }
+
+// Гуй чарлиста можно вызвать и в диалоге, поэтому к обджект диалогу мы не привязаны и будем ебашить его в новом коде.
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Гуй чарлиста
+
+// Активация или деактивация чарлиста
+if (keyboard_check_pressed(global.hotkey_charlist)) {
+    switch(charlist_activated)
+    {
+    case 0:
+    charlist_activated = 1;
+    global.block = 1;
+    break;
+    case 1:
+    charlist_activated = 0;
+    global.block = 0;
+    break;
+    }
+}
+// Отрисовка чарлиста
+if (charlist_activated = 1){
+draw_sprite(spr_charlist,0,100,50);
+window_set_cursor(cr_default);}
 
 </string>
           </argument>

@@ -301,7 +301,7 @@ if (message_end &gt; 0)
     var sX = 80;
 
 if answers = 0 {    
-    if (keyboard_check_pressed(ord('S')) || mouse_check_button_pressed(mb_left))
+    if (keyboard_check_pressed(ord('S')) || (mouse_check_button_pressed(mb_left) &amp;&amp; global.block = 0))
     {
         if ((message_current &lt; message_end-1) &amp;&amp; string_length(message[message_current+1])&gt;1)
         {

@@ -25,9 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>window_set_size(1024,768); // Указываем начальный размер окна
+            <string>///Код для размеров экрана
+window_set_size(1024,768); // Указываем начальный размер окна
 window_set_position(300,100); //Выравниваем окно по центру экрана
 instance_create(300,400,obj_player);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Хоткеи
+global.hotkey_charlist = ord('C');
 </string>
           </argument>
         </arguments>
@@ -50,7 +73,8 @@ instance_create(300,400,obj_player);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_wview[0] = window_get_width();
+            <string>///Код для размеров экрана
+view_wview[0] = window_get_width();
 view_hview[0] = window_get_height();
 view_wport[0] = window_get_width();
 view_hport[0] = window_get_height();
@@ -76,7 +100,8 @@ view_hport[0] = window_get_height();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>proportion = view_hport[0]/view_wport[0]; // Пропорции экрана (высоту делить на ширину порта)
+            <string>///Код для размеров экрана
+proportion = view_hport[0]/view_wport[0]; // Пропорции экрана (высоту делить на ширину порта)
 
 if display_get_height() &lt; view_hport[0] // Высота порта вида по умолчанию. Если монитор меньше, происходит уменьшение
 {view_hport[0] = display_get_height();

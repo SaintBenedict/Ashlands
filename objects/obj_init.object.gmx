@@ -28,11 +28,11 @@
             <string>///Initial
 global.attack = 0;
 global.player = obj_player;
-global.npc_click = 0;
-global.npc_near = 0;
+global.npc_click = 0; //Разрешение открыть диалог 1 (при нпц рядом)
+global.npc_near = 0; //Рядом есть нпц
 global.player_invincible = 0;
 global.left_change = 0;
-
+global.block = 0;
 </string>
           </argument>
         </arguments>
@@ -138,7 +138,7 @@ global.npc_click = 0;
             <string>///Атака, диалог, подход к неписи
 //Проверка атаки
 if instance_number(obj_dlg2) = 0{
-if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0)
+if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
 {
     if (global.left_use = 0){
         instance_create(global.player.x, global.player.y, obj_hero_slash);}
@@ -147,7 +147,7 @@ if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0)
 }
 
 //Создание диалога
-if (global.attack = 1 &amp;&amp; global.npc_near = 1 &amp;&amp; global.npc_i = global.npc_k &amp;&amp; global.left_change = 0)
+if (global.attack = 1 &amp;&amp; global.npc_near = 1 &amp;&amp; global.npc_i = global.npc_k &amp;&amp; global.left_change = 0 &amp;&amp; global.block = 0)
 {   
 if global.player.x &gt; global.npc[global.npc_i].x
     {
@@ -160,7 +160,7 @@ else
 
 }
 //Подойти к неписи
-if (global.attack = 1 &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0)
+if (global.attack = 1 &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0 &amp;&amp; global.block = 0)
 {
 instance_create(mouse_x,mouse_y,obj_mouseclick);
 if instance_number(obj_dlg1) &gt; 0
@@ -203,7 +203,7 @@ if instance_number(obj_dlg1) &gt; 0
         instance_destroy();
         }
     }
-if instance_number(obj_dlg2) = 0{
+if (instance_number(obj_dlg2) = 0 &amp;&amp; global.block = 0){
 if instance_number(obj_mouseclick) &gt; 0
     {
     with (obj_mouseclick)
@@ -249,6 +249,7 @@ if (xxx &gt; 40 || yyy &gt; 50)
           <argument>
             <kind>1</kind>
             <string>///Имя непися, курсор и запрет атакаи при наведении
+if global.block = 0 {
 for (k=0;k&lt;npc_n;k+=1)
     {
     if ((abs(global.npc[k].x - mouse_x) &lt; 20) &amp;&amp; (abs(global.npc[k].y - mouse_y) &lt; 20)){
@@ -269,6 +270,7 @@ else
 {
 global.attack = 0;
 window_set_cursor(cr_default);
+}
 }
 </string>
           </argument>

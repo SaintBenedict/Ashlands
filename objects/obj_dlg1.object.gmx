@@ -88,10 +88,7 @@ image_index = default_index;
           <argument>
             <kind>1</kind>
             <string>/// Разрешение атаки герою
-with(obj_init)
-{
 global.attack = 0;
-}
 </string>
           </argument>
         </arguments>
