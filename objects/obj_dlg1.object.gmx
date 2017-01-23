@@ -25,12 +25,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enter = 0;
+            <string>///Переменные
+enter = 0;
 with (obj_init)
     {
     attack = 1;
     }
 image_speed = 0;
+image_index = default_index;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Возможные ветки у разных NPC
 if global.npc_trade[global.npc_i] = 0
 {
 default_index = 5;
@@ -45,7 +68,6 @@ talk_index = 2;
 quit_index = 3;
 trade_index = 4;
 }
-image_index = default_index;
 </string>
           </argument>
         </arguments>
@@ -68,7 +90,8 @@ image_index = default_index;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_init)
+            <string>/// Разрешение атаки герою
+with(obj_init)
 {
 attack = 0;
 }
@@ -94,7 +117,8 @@ attack = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if enter = 1
+            <string>///Подсветка выделенного
+if enter = 1
 {
     if mouse_y &lt; y-25 &amp;&amp; mouse_y &gt; y-50
     {
@@ -135,7 +159,8 @@ attack = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = default_index;
+            <string>///Энтер = 0
+image_index = default_index;
 enter = 0;
 </string>
           </argument>
@@ -159,7 +184,8 @@ enter = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enter = 1;
+            <string>///Энтер = 1
+enter = 1;
 </string>
           </argument>
         </arguments>
@@ -182,7 +208,8 @@ enter = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index = quit_index {
+            <string>///Выбор экшона
+if image_index = quit_index {
 with(global.player)
     {
     timeline_index = tml_fire_destroy;
@@ -216,7 +243,8 @@ instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.npc_click = 1 &amp;&amp; global.npc_near = 1)
+            <string>/// Временная хуйня
+if (global.npc_click = 1 &amp;&amp; global.npc_near = 1)
 {   
 instance_create(global.npc_text[global.npc_i].x+20,global.npc_text[global.npc_i].y-30,obj_dlg1);
     if global.npc_i = 0

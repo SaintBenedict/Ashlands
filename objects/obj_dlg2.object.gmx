@@ -25,9 +25,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Диалоги
+            <string>///Переменные
+message_current = 0;
+timer = 0;
+cutoff = 0;
+portrait = "diest";
+answers = 0;
+q_check = 0;
 
-///NPC 0///
+t = 0;
+increment = 1;
+
+done = false;
+
+start_hp = global.hp;
+vetka = 0;
+check_var = 0;
+huynya = 0;
+change_hp = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Диалоги NPC 0
 if (global.npc_i = 0 &amp;&amp; global.npc_0q = 0) {
     message[0] = "Эй, проснись! Ну ты и соня. Тебя даже вчерашний шторм не разбудил."+chr(10)+"Говорят, мы уже приплыли в Морровинд. Нас выпустят, это точно!";
     message[1] = "Тихо! Стража идёт!";
@@ -35,7 +71,28 @@ if (global.npc_i = 0 &amp;&amp; global.npc_0q = 0) {
 if (global.npc_i = 0 &amp;&amp; global.npc_0q = 1) {
     message[0] = "Мы следим за тобой, ничтожество!";}
 
-///NPC 1///
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Диалоги NPC 1
 if (global.npc_i = 1 &amp;&amp; global.npc_1q = 0) {
     message[0] = "Привет, странник.";
     message[1] = "Привет, Дженни."
@@ -61,44 +118,6 @@ if (global.npc_i = 1 &amp;&amp; global.npc_1q = 2) {
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Переменные
-message_current = 0;
-timer = 0;
-cutoff = 0;
-portrait = "diest";
-answers = 0;
-q_check = 0;
-
-t = 0;
-increment = 1;
-
-done = false;
-
-start_hp = global.hp;
-vetka = 0;
-check_var = 0;
-huynya = 0;
-change_hp = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="1" enumb="0">
       <action>
@@ -117,13 +136,33 @@ change_hp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Установка следующих диалогов
-///NPC 0///
+            <string>///Установка следующих диалогов NPC 0
 if ((global.npc_i = 0) &amp;&amp; (global.npc_0q = 0)) 
     {
     global.npc_0q = 1;
     }
-///NPC 1///
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Установка следующих диалогов NPC 1
 if ((global.npc_i = 1) &amp;&amp; (global.npc_1q = 0)) 
     {
     global.npc_1q = q_check;
@@ -166,13 +205,7 @@ if ((global.npc_i = 1) &amp;&amp; (global.npc_1q = 0))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Установка поведения внутри диалога
-if done = true {
-instance_destroy();}
-if global.hp &lt; start_hp {
-instance_destroy();}
-
-///NPC 1///
+            <string>///Поведение внутри диалога NPC 1
 if global.npc_i = 1 {
     if global.npc_1q = 0 {
         if message_current = 1 {
@@ -206,6 +239,31 @@ if global.npc_i = 1 {
         }
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Дестрой при финале и при снятии хп
+if done = true {
+instance_destroy();}
+if global.hp &lt; start_hp {
+instance_destroy();}
 </string>
           </argument>
         </arguments>
