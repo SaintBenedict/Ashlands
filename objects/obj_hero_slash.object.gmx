@@ -28,6 +28,8 @@
             <string>///Initialization
 
 image_speed = 2;
+
+audio_play_sound(snd_slash, 12, false);
 </string>
           </argument>
         </arguments>
