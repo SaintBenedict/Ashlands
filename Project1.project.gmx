@@ -6,10 +6,12 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_projectile</sprite>
-    <sprite>sprites\spr_bomb</sprite>
-    <sprite>sprites\sprite61</sprite>
-    <sprite>sprites\spr_fireball</sprite>
+    <sprites name="particles">
+      <sprite>sprites\spr_fireball</sprite>
+      <sprite>sprites\spr_projectile</sprite>
+      <sprite>sprites\spr_bomb</sprite>
+      <sprite>sprites\spr_hero_slash</sprite>
+    </sprites>
     <sprites name="followers">
       <sprite>sprites\spr_1_up_1</sprite>
       <sprite>sprites\spr_1_right_1</sprite>
@@ -101,6 +103,7 @@
     <object>objects\obj_projectile</object>
     <object>objects\obj_bomb</object>
     <object>objects\obj_mouseclick</object>
+    <object>objects\obj_hero_slash</object>
     <object>objects\obj_bullet</object>
     <objects name="Enemy">
       <object>objects\obj_enemy</object>

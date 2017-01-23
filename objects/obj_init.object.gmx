@@ -25,10 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>attack = 0;
+            <string>///Initial
+attack = 0;
 global.player = obj_player;
 global.npc_click = 0;
 global.npc_near = 0;
+global.player_invincible = 0;
 
 </string>
           </argument>
@@ -50,7 +52,8 @@ global.npc_near = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>npc_n = 2;
+            <string>///Глобал нпц
+npc_n = 2;
 global.npc_0q = 0;
 global.npc[0] = obj_npc_1;
 global.npc_trade[0] = 0;
@@ -133,7 +136,15 @@ global.npc_click = 0;
             <string>if instance_number(obj_dlg2) = 0{
 if (attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0)
 {
-instance_create(global.player.x,global.player.y,obj_bullet);
+if (global.check = 1)
+{
+if (instance_number(obj_hero_slash) = 0)
+{
+instance_create(global.player.x, global.player.y, obj_hero_slash);
+}
+} 
+
+else instance_create(global.player.x,global.player.y,obj_bullet);
 }
 
 
