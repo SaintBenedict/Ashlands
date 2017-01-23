@@ -136,6 +136,7 @@ show_message("Поздравляю, вам пиздец.");
 //hp = global.max_val_hero_hp;
 game_restart();
 }
+
 </string>
           </argument>
         </arguments>
@@ -538,6 +539,9 @@ image_speed = 0;
             <string>Xx = view_wview[0]-40;
 Y1y = view_hview[0]-40;
 Y2y = view_hview[0]-188;
+moy = mouse_y-view_yview[0];
+xoy = mouse_x-view_xview[0];
+
 if instance_number(obj_dlg2) = 0{
 draw_sprite(spr_left_action,0,Xx,Y1y);
     if global.left_use = 1 {
@@ -546,20 +550,21 @@ draw_sprite(spr_left_action,0,Xx,Y1y);
     draw_sprite(spr_use_sword,0,Xx,Y1y);}
 //    if mouse_check_button_released(mb_left){
 //    activate = 0;}
-if (mouse_y &gt; Y2y-27 &amp;&amp; mouse_y &lt; Y1y+27 &amp;&amp; mouse_x &gt; Xx-27 &amp;&amp; mouse_x &lt; Xx+27 &amp;&amp; activate = 1)
+
+if (moy &gt; Y2y-27 &amp;&amp; moy &lt; Y1y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27 &amp;&amp; activate = 1)
 {
     global.attack = 1;
     global.left_change = 1;
     draw_sprite(spr_left_check,0,Xx,Y1y-27);      
     draw_sprite(spr_use_fire,0,Xx,Y2y+84);
     draw_sprite(spr_use_sword,0,Xx,Y2y);
-    if (mouse_y &gt; Y2y+84-27 &amp;&amp; mouse_y &lt; Y2y+84+27 &amp;&amp; mouse_x &gt; Xx-27 &amp;&amp; mouse_x &lt; Xx+27) {
+    if (moy &gt; Y2y+84-27 &amp;&amp; moy &lt; Y2y+84+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27) {
     draw_sprite(spr_use_fire,1,Xx,Y2y+84);
         if mouse_check_button_pressed(mb_left){
         global.left_use = 1;
         activate = 0;}
     }
-    if (mouse_y &gt; Y2y-27 &amp;&amp; mouse_y &lt; Y2y+27 &amp;&amp; mouse_x &gt; Xx-27 &amp;&amp; mouse_x &lt; Xx+27) {
+    if (moy &gt; Y2y-27 &amp;&amp; moy &lt; Y2y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27) {
     draw_sprite(spr_use_sword,1,Xx,Y2y);
         if mouse_check_button_pressed(mb_left){
         global.left_use = 0;
@@ -568,7 +573,7 @@ if (mouse_y &gt; Y2y-27 &amp;&amp; mouse_y &lt; Y1y+27 &amp;&amp; mouse_x &gt; X
 }
 else
 {
-    if (mouse_y &gt; Y1y-27 &amp;&amp; mouse_y &lt; Y1y+27 &amp;&amp; mouse_x &gt; Xx-27 &amp;&amp; mouse_x &lt; Xx+27)
+    if (moy &gt; Y1y-27 &amp;&amp; moy &lt; Y1y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27)
         {
         global.attack = 1;
         global.left_change = 1;
