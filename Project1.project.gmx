@@ -99,6 +99,9 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
+    <background>background\bg_dirt</background>
+    <background>background\bg_tileset_mud</background>
+    <background>background\bg_ltileset_arge_town</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -112,6 +115,10 @@
     <object>objects\obj_projectile</object>
     <object>objects\obj_bomb</object>
     <object>objects\obj_mouseclick</object>
+    <objects name="map">
+      <object>objects\obj_floor_stone</object>
+      <object>objects\obj_floor_grass</object>
+    </objects>
     <object>objects\obj_hero_slash</object>
     <object>objects\obj_bullet</object>
     <objects name="Enemy">
@@ -119,8 +126,6 @@
       <object>objects\obj_enemy_zombie</object>
     </objects>
     <objects name="system">
-      <object>objects\obj_floor_stone</object>
-      <object>objects\obj_floor_grass</object>
       <object>objects\obj_dlg1</object>
       <object>objects\obj_init</object>
       <object>objects\obj_options</object>
@@ -136,6 +141,7 @@
       <object>objects\check7</object>
       <object>objects\check8</object>
     </objects>
+    <object>objects\obj_solidspace</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>

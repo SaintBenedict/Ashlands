@@ -242,7 +242,7 @@ image_speed = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_floor_stone">
+    <event eventtype="4" ename="obj_solidspace">
       <action>
         <libid>1</libid>
         <id>603</id>

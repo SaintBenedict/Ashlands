@@ -61,7 +61,7 @@ audio_play_sound(snd_fire, 11, false);
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_floor_stone">
+    <event eventtype="4" ename="obj_solidspace">
       <action>
         <libid>1</libid>
         <id>532</id>

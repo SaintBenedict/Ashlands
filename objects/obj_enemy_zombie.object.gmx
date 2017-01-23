@@ -55,7 +55,7 @@ current_pix_enemy_hp = 38;
             <string>///Actions of enemy
 if distance_to_object(obj_player)&lt;=300
 {
-      if (collision_line(x,y,obj_player.x,obj_player.y,obj_floor_stone,true,true) = noone)
+      if (collision_line(x,y,obj_player.x,obj_player.y,obj_solidspace,true,true) = noone)
     {
            move_towards_point(obj_player.x,obj_player.y, 2);
     }
@@ -101,7 +101,7 @@ sprleft=spr_enemy_zombie_left;
 
 if distance_to_object(obj_player)&lt;=300
 {
-if (collision_line(x,y,obj_player.x,obj_player.y,obj_floor_stone,true,true) = noone)
+if (collision_line(x,y,obj_player.x,obj_player.y,obj_solidspace,true,true) = noone)
 {
 if mox &gt; hex
     {
