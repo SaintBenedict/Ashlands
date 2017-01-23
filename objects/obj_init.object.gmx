@@ -134,38 +134,30 @@ global.npc_click = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(obj_dlg2) = 0{
+            <string>//Проверка атаки
+if instance_number(obj_dlg2) = 0{
 if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0)
 {
-if (global.left_use = 0 &amp;&amp; instance_number(obj_hero_slash) = 0)
-{
-instance_create(global.player.x, global.player.y, obj_hero_slash);
-}
-else 
-    {
-    if global.left_use = 1 {
-    instance_create(global.player.x,global.player.y,obj_bullet);}
-    }
+    if (global.left_use = 0){
+        instance_create(global.player.x, global.player.y, obj_hero_slash);}
+    if (global.left_use = 1){
+        instance_create(global.player.x,global.player.y,obj_bullet);}
 }
 
-
+//Создание диалога
 if (global.attack = 1 &amp;&amp; global.npc_near = 1 &amp;&amp; global.npc_i = global.npc_k &amp;&amp; global.left_change = 0)
-{
-var dlg_x;   
+{   
 if global.player.x &gt; global.npc[global.npc_i].x
     {
-    dlg_x = global.npc[global.npc_i].x-100;
+    instance_create(global.npc[global.npc_i].x-100,global.npc[global.npc_i].y-30,obj_dlg1);
     }
 else
     {
-    dlg_x = global.npc[global.npc_i].x+20;
+    instance_create(global.npc[global.npc_i].x+20,global.npc[global.npc_i].y-30,obj_dlg1);
     }
-instance_create(dlg_x,global.npc[global.npc_i].y-30,obj_dlg1);
+
 }
-
-
-
-
+//Подойти к неписи
 if (global.attack = 1 &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0)
 {
 instance_create(mouse_x,mouse_y,obj_mouseclick);
