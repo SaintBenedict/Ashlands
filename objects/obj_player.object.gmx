@@ -235,6 +235,90 @@ image_speed = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_hero_slash">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>mox = mouse_x;
+moy = mouse_y;
+hex = global.player.x;
+hey = global.player.y;
+if mox &gt; hex
+    {
+    if moy &gt; hey
+        {
+        if (moy-hey) &gt; (mox-hex)
+            {
+            sprite_index = sprdown;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprright;
+            image_speed = 0.5;
+            }
+        }
+    else
+        {
+        if (hey-moy) &gt; (mox-hex)
+            {
+            sprite_index = sprup;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprright;
+            image_speed = 0.5;
+            }
+        }
+    }
+else
+    {
+    if moy &gt; hey
+        {
+        if (moy-hey) &gt; (hex-mox)
+            {
+            sprite_index = sprdown;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprleft;
+            image_speed = 0.5;
+            }
+        }
+    else
+        {
+        if (hey-moy) &gt; (hex-mox)
+            {
+            sprite_index = sprup;
+            image_speed = 0.5;
+            }
+        else
+            {
+            sprite_index = sprleft;
+            image_speed = 0.5;
+            }
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_floor_stone">
       <action>
         <libid>1</libid>
