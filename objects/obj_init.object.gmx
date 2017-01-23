@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initial
-attack = 0;
+global.attack = 0;
 global.player = obj_player;
 global.npc_click = 0;
 global.npc_near = 0;
@@ -134,17 +134,21 @@ global.npc_click = 0;
           <argument>
             <kind>1</kind>
             <string>if instance_number(obj_dlg2) = 0{
-if (attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0)
+if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0)
 {
-if (global.check = 1 &amp;&amp; instance_number(obj_hero_slash) = 0)
+if (global.left_use = 0 &amp;&amp; instance_number(obj_hero_slash) = 0)
 {
 instance_create(global.player.x, global.player.y, obj_hero_slash);
 }
-else instance_create(global.player.x,global.player.y,obj_bullet);
+else 
+    {
+    if global.left_use = 1 {
+    instance_create(global.player.x,global.player.y,obj_bullet);}
+    }
 }
 
 
-if (attack = 1 &amp;&amp; global.npc_near = 1 &amp;&amp; global.npc_i = global.npc_k)
+if (global.attack = 1 &amp;&amp; global.npc_near = 1 &amp;&amp; global.npc_i = global.npc_k &amp;&amp; global.left_change = 0)
 {
 var dlg_x;   
 if global.player.x &gt; global.npc[global.npc_i].x
@@ -161,7 +165,7 @@ instance_create(dlg_x,global.npc[global.npc_i].y-30,obj_dlg1);
 
 
 
-if (attack = 1 &amp;&amp; global.npc_near = 0)
+if (global.attack = 1 &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0)
 {
 instance_create(mouse_x,mouse_y,obj_mouseclick);
 if instance_number(obj_dlg1) &gt; 0
@@ -261,18 +265,18 @@ if (xxx &gt; 40 || yyy &gt; 50)
                 }
             draw_set_font(font_base);
             draw_text_color(global.npc[k].x,global.npc[k].y+40,global.npc_name[k],c_black,c_black,c_black,c_black,1);
-            attack += npc_n;
+            global.attack += npc_n;
             window_set_cursor(cr_handpoint);
             }
         }
         else
-        attack -=1;
+        global.attack -=1;
     }
-if attack &gt; 0
-attack = 1;
+if global.attack &gt; 0
+global.attack = 1;
 else
 {
-attack = 0;
+global.attack = 0;
 window_set_cursor(cr_default);
 }
 </string>

@@ -31,6 +31,10 @@
       <sprite>sprites\spr_mouseclick</sprite>
       <sprite>sprites\spr_cur_q</sprite>
       <sprite>sprites\spr_dlg1</sprite>
+      <sprite>sprites\spr_left_action</sprite>
+      <sprite>sprites\spr_use_sword</sprite>
+      <sprite>sprites\spr_use_fire</sprite>
+      <sprite>sprites\spr_left_check</sprite>
     </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_floor_stone</sprite>

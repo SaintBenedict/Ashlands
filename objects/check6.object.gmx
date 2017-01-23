@@ -50,6 +50,7 @@ image_index = 5;
           <argument>
             <kind>1</kind>
             <string>global.check = 6;
+global.left_use = 1;
 room_goto_next();
 </string>
           </argument>

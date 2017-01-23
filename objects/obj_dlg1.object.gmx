@@ -62,10 +62,7 @@ trade_index = 4;
             <kind>1</kind>
             <string>///Переменные
 enter = 0;
-with (obj_init)
-    {
-    attack = 1;
-    }
+global.attack = 1;
 image_speed = 0;
 image_index = default_index;
 </string>
@@ -93,7 +90,7 @@ image_index = default_index;
             <string>/// Разрешение атаки герою
 with(obj_init)
 {
-attack = 0;
+global.attack = 0;
 }
 </string>
           </argument>
