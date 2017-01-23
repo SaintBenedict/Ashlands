@@ -28,6 +28,7 @@
             <string>image_speed = 0;
 image_index = 0;
 window_set_size(672,360);
+window_set_position(300,100);
 </string>
           </argument>
         </arguments>
