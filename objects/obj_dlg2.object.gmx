@@ -25,58 +25,38 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.npc_i = 0 &amp;&amp; global.npc_0q = 0) {
-message[0] = "Эй, проснись! Ну ты и соня. Тебя даже вчерашний шторм не разбудил."+chr(10)+"Говорят, мы уже приплыли в Морровинд. Нас выпустят, это точно!";
-message[1] = "Тихо! Стража идёт!";
-message[2] = "Грязекрабы забирают всё. Они уже добрались до Пелагиада!";}
+            <string>///Диалоги
+
+///NPC 0///
+if (global.npc_i = 0 &amp;&amp; global.npc_0q = 0) {
+    message[0] = "Эй, проснись! Ну ты и соня. Тебя даже вчерашний шторм не разбудил."+chr(10)+"Говорят, мы уже приплыли в Морровинд. Нас выпустят, это точно!";
+    message[1] = "Тихо! Стража идёт!";
+    message[2] = "Грязекрабы забирают всё. Они уже добрались до Пелагиада!";}
 if (global.npc_i = 0 &amp;&amp; global.npc_0q = 1) {
-message[0] = "Мы следим за тобой, ничтожество!";}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (global.npc_i = 1 &amp;&amp; global.npc_1q = 0) {
-message[0] = "Привет, странник.";
+    message[0] = "Мы следим за тобой, ничтожество!";}
 
-message[1] = "Привет, Дженни."
-message[2] = "Боже, какая же ты тупая..."
-message[3] = "Давай поговорим в другой раз."
-
-message[10] = "А ты нормальный такой парняга &lt;3"
-message[11] = "Лови симпу &lt;3"
-message[12] = "Дык ёпта блять"
-
-message[20] = "Уёбывай, пидр! Скатертью дорожка, блять."
-message[21] = "Пиздуй пиздуй!"
-
-message[30] = "Да без базара"
-
-message[40] = "Мур-мур-мур"
-message[50] = "А ты чего такой дерзкий?"
-message[51] = "Это ты дерзкая, ёпт!"
-message[52] = "Ладно ладно! Не бей, лучше обоссы!"
-
-message[60] = "Пидор ебаный"}
+///NPC 1///
+if (global.npc_i = 1 &amp;&amp; global.npc_1q = 0) {
+    message[0] = "Привет, странник.";
+    message[1] = "Привет, Дженни."
+    message[2] = "Боже, какая же ты тупая..."
+    message[3] = "Давай поговорим в другой раз."
+    message[10] = "А ты нормальный такой парняга &lt;3"
+    message[11] = "Лови симпу &lt;3"
+    message[12] = "Дык ёпта блять"
+    message[20] = "Уёбывай, пидр! Скатертью дорожка, блять."
+    message[21] = "Пиздуй пиздуй!"
+    message[30] = "Да без базара"
+    message[40] = "Мур-мур-мур"
+    message[50] = "А ты чего такой дерзкий?"
+    message[51] = "Это ты дерзкая, ёпт!"
+    message[52] = "Ладно ладно! Не бей, лучше обоссы!"
+    message[60] = "Пидор ебаный"
+    message[100] = "Пидор ебаный"}
 if (global.npc_i = 1 &amp;&amp; global.npc_1q = 1) {
-message[0] = "Я не буду разговаривать с таким пидором, как ты.";}
+    message[0] = "Я не буду разговаривать с таким пидором, как ты.";}
 if (global.npc_i = 1 &amp;&amp; global.npc_1q = 2) {
-message[0] = "Мур-мур-мур :3";}
+    message[0] = "Мур-мур-мур :3";}
 </string>
           </argument>
         </arguments>
@@ -97,13 +77,12 @@ message[0] = "Мур-мур-мур :3";}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>message_current = 0;
+            <string>///Переменные
+message_current = 0;
 timer = 0;
 cutoff = 0;
 portrait = "diest";
 answers = 0;
-answerss = 0;
-answer = 0;
 q_check = 0;
 
 t = 0;
@@ -112,6 +91,10 @@ increment = 1;
 done = false;
 
 start_hp = global.hp;
+vetka = 0;
+check_var = 0;
+huynya = 0;
+change_hp = 0;
 </string>
           </argument>
         </arguments>
@@ -134,34 +117,26 @@ start_hp = global.hp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.npc_i = 0 {
-        if global.npc_0q = 0 {
-        global.npc_0q = 1;}
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if global.npc_i = 1 {
-        if global.npc_1q = 0 {
-        global.npc_1q =q_check;}
-}
+            <string>///Установка следующих диалогов
+///NPC 0///
+if ((global.npc_i = 0) &amp;&amp; (global.npc_0q = 0)) 
+    {
+    global.npc_0q = 1;
+    }
+///NPC 1///
+if ((global.npc_i = 1) &amp;&amp; (global.npc_1q = 0)) 
+    {
+    global.npc_1q = q_check;
+    if q_check = 100
+        {
+        global.npc_0q = 1;
+        with(obj_npc_2)
+            {
+            alarm[0] = 30;
+            }
+        check_var = 0;
+        }
+    }
 </string>
           </argument>
         </arguments>
@@ -184,35 +159,19 @@ start_hp = global.hp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if done = true {
-    instance_destroy();}
+            <string>///Установка поведения внутри диалога
+if done = true {
+instance_destroy();}
 if global.hp &lt; start_hp {
-    instance_destroy();}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if global.npc_i = 1 {
+instance_destroy();}
+
+///NPC 1///
+if global.npc_i = 1 {
     if global.npc_1q = 0 {
         if message_current = 1 {
         answers = 1;
         checks = 3; // Количество выборов
+        vetka = 0; // Для изменения статов во втором степе
         step_q[1] = 0;
         next_a[1] = 10;
         step_q[2] = 1; // На какой Q переходим при каком выборе
@@ -223,6 +182,7 @@ if global.hp &lt; start_hp {
         if message_current = 11 {
         answers = 1;
         checks = 2;
+        vetka = 1;
         step_q[1] = 2;
         next_a[1] = 40;
         step_q[2] = 0;
@@ -231,9 +191,10 @@ if global.hp &lt; start_hp {
         if message_current = 51 {
         answers = 1;
         checks = 2;
+        vetka = 2;
         step_q[1] = 0;
         next_a[1] = 60;
-        step_q[2] = 1;
+        step_q[2] = 100;
         next_a[2] = 60;
         }
     }
@@ -260,7 +221,8 @@ if global.hp &lt; start_hp {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(font_base);
+            <string>///Отрисовка диалога
+draw_set_font(font_base);
 
 message_end = array_length_1d(message);
 
@@ -302,6 +264,7 @@ if answers = 0 {
                     {
                     q_check = step_q[i+1];
                     message_current = next_a[i+1];
+                    check_var = i+1; // Выбранный вариант в ветке, указанной в третьем степе, который будет что-то делать в первом степе.
                     }
                 }
                 else
