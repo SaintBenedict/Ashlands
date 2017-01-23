@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = spr_npc_2;
+            <string>///Назначение спрайта
+sprite_index = spr_npc_2;
 image_speed = 0;
 </string>
           </argument>
@@ -131,8 +132,7 @@ global.hp -= 50;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(global.player)&gt;0
-{
+            <string>///Глубина спрайта для обхода героем
 if y &gt; global.player.y
 {
 depth = -10;
@@ -141,22 +141,7 @@ else
 {
 depth = 10;
 }
-if abs(x - global.player.x) &lt; 70 
-{
-    if abs(y - global.player.y) &lt; 70
-    {
-    sprite_index = spr_npc_2
-    }
-}
-if abs(x - global.player.x) &gt; 70 
-{
-sprite_index = spr_npc_2
-}
-if abs(y - global.player.y) &gt; 70 
-{
-sprite_index = spr_npc_2
-}
-}
+
 </string>
           </argument>
         </arguments>

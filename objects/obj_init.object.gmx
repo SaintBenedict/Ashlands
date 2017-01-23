@@ -87,7 +87,8 @@ global.npc_portrait[1] = spr_portrait_2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for (i=0;i&lt;npc_n;i+=1)
+            <string>///Обозначение рядом стоящего NPC, как i
+for (i=0;i&lt;npc_n;i+=1)
 {
     if abs(global.npc[i].x - global.player.x) &lt; 70 
     {
@@ -134,7 +135,8 @@ global.npc_click = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Проверка атаки
+            <string>///Атака, диалог, подход к неписи
+//Проверка атаки
 if instance_number(obj_dlg2) = 0{
 if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0)
 {
@@ -193,7 +195,8 @@ if instance_number(obj_dlg1) &gt; 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(obj_dlg1) &gt; 0
+            <string>///Спавн маускликов с проверкой на диалоги
+if instance_number(obj_dlg1) &gt; 0
     {
     with(obj_dlg1)
         {
@@ -245,26 +248,21 @@ if (xxx &gt; 40 || yyy &gt; 50)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for (k=0;k&lt;npc_n;k+=1)
+            <string>///Имя непися, курсор и запрет атакаи при наведении
+for (k=0;k&lt;npc_n;k+=1)
     {
-    if abs(global.npc[k].x - mouse_x) &lt; 20 
-        {
-        if abs(global.npc[k].y - mouse_y) &lt; 20
-            {
-            global.npc_k = k;
-            if mouse_check_button_pressed(mb_left)
-                {
-                global.npc_click = 1;
-                }
-            draw_set_font(font_base);
-            draw_text_color(global.npc[k].x,global.npc[k].y+40,global.npc_name[k],c_black,c_black,c_black,c_black,1);
-            global.attack += npc_n;
-            window_set_cursor(cr_handpoint);
-            }
-        }
-        else
+    if ((abs(global.npc[k].x - mouse_x) &lt; 20) &amp;&amp; (abs(global.npc[k].y - mouse_y) &lt; 20)){
+        global.npc_k = k;
+        if mouse_check_button_pressed(mb_left){
+            global.npc_click = 1;}
+        draw_set_font(font_base);
+        draw_text_color(global.npc[k].x,global.npc[k].y+40,global.npc_name[k],c_black,c_black,c_black,c_black,1);
+        global.attack += npc_n;
+        window_set_cursor(cr_handpoint);}
+    else
         global.attack -=1;
     }
+    
 if global.attack &gt; 0
 global.attack = 1;
 else
@@ -294,7 +292,8 @@ window_set_cursor(cr_default);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(irandom_range(120,680), irandom_range(80,536), obj_enemy);
+            <string>///Тестовый спавн моба на Е
+instance_create(irandom_range(120,680), irandom_range(80,536), obj_enemy);
 </string>
           </argument>
         </arguments>

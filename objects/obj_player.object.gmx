@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.check = 1
+            <string>///Назначение спрайтов
+if global.check = 1
 {
 sprdown = spr_down_1;
 sprup = spr_up_1;
@@ -101,7 +102,8 @@ sprright = spr_right_8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.hp = global.max_val_hero_hp;
+            <string>///Присваивание глобалок
+global.hp = global.max_val_hero_hp;
 current_pix_hero_hp = 38;
 sprite_index = sprdown;
 image_speed = 0;
@@ -129,11 +131,11 @@ activate = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>current_pix_hero_hp = round(global.hp * 38 / global.max_val_hero_hp);
+            <string>///Расчёт полоски хп и геймовер
+current_pix_hero_hp = round(global.hp * 38 / global.max_val_hero_hp);
 if global.hp &lt; 1
 {
 show_message("Поздравляю, вам пиздец.");
-//hp = global.max_val_hero_hp;
 game_restart();
 }
 
@@ -259,7 +261,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1;
+            <string>///Остановка спрайта при коллизии
+image_index = 1;
 image_speed = 0;
 </string>
           </argument>
@@ -307,7 +310,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mox = mouse_x;
+            <string>///Направление ебальника при атаке мечиком
+mox = mouse_x;
 moy = mouse_y;
 hex = global.player.x;
 hey = global.player.y;
@@ -391,7 +395,7 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///Остановка спрайта при коллизии
 image_index = 1;
 image_speed = 0;
 </string>
@@ -440,7 +444,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1;
+            <string>///Остановка спрайта при коллизии
+image_index = 1;
 image_speed = 0;
 </string>
           </argument>
@@ -488,7 +493,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1;
+            <string>///Остановка спрайта при коллизии
+image_index = 1;
 image_speed = 0;
 </string>
           </argument>
@@ -536,7 +542,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Xx = view_wview[0]-40;
+            <string>///Ебаный ГУЙ
+Xx = view_wview[0]-40;
 Y1y = view_hview[0]-40;
 Y2y = view_hview[0]-188;
 moy = mouse_y-view_yview[0];
@@ -548,8 +555,6 @@ draw_sprite(spr_left_action,0,Xx,Y1y);
     draw_sprite(spr_use_fire,0,Xx,Y1y);}
     if global.left_use = 0 {
     draw_sprite(spr_use_sword,0,Xx,Y1y);}
-//    if mouse_check_button_released(mb_left){
-//    activate = 0;}
 
 if (moy &gt; Y2y-27 &amp;&amp; moy &lt; Y1y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27 &amp;&amp; activate = 1)
 {
@@ -628,7 +633,8 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_hp,current_pix_hero_hp,x,y+32);
+            <string>///Отрисовка хэлсбара
+draw_sprite(spr_hp,current_pix_hero_hp,x,y+32);
 draw_set_halign(fa_center);
 draw_set_font(font_hp);
 draw_text_color(x,y+26,global.hp,c_black,c_black,c_black,c_black,1);

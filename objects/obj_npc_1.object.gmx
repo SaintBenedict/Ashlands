@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = spr_npc_1;
+            <string>///Назначение спрайта
+sprite_index = spr_npc_1;
 image_speed = 0;
 </string>
           </argument>
@@ -49,8 +50,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(global.player)&gt;0
-{if y &gt; global.player.y
+            <string>///Глубина спрайта для обхода героем
+if y &gt; global.player.y
 {
 depth = -10;
 }
@@ -58,7 +59,7 @@ else
 {
 depth = 10;
 }
-}
+
 </string>
           </argument>
         </arguments>

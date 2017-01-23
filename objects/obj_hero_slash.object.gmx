@@ -98,7 +98,8 @@ image_angle=point_direction(mouse_x, mouse_y,global.player.x,global.player.y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.attack = 0;
+            <string>///Разрешение атаки
+global.attack = 0;
 </string>
           </argument>
         </arguments>
@@ -137,7 +138,8 @@ image_angle=point_direction(mouse_x, mouse_y,global.player.x,global.player.y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.attack = 1;
+            <string>///Запрет атаки
+global.attack = 1;
 </string>
           </argument>
         </arguments>
