@@ -101,7 +101,8 @@
     <background>background\background1</background>
     <background>background\bg_dirt</background>
     <background>background\bg_tileset_mud</background>
-    <background>background\bg_ltileset_arge_town</background>
+    <background>background\background4</background>
+    <background>background\bg_1</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
