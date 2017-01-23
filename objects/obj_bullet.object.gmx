@@ -38,7 +38,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemy_zombie">
+    <event eventtype="4" ename="obj_floor_stone">
       <action>
         <libid>1</libid>
         <id>532</id>
@@ -94,7 +94,7 @@
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_floor_stone">
+    <event eventtype="4" ename="obj_enemy_zombie">
       <action>
         <libid>1</libid>
         <id>532</id>
