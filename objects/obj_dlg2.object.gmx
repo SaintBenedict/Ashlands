@@ -129,12 +129,19 @@ if ((global.npc_i = 1) &amp;&amp; (global.npc_1q = 0))
     global.npc_1q = q_check;
     if q_check = 100
         {
-        global.npc_0q = 1;
+        global.npc_1q = 1;
         with(obj_npc_2)
             {
             alarm[0] = 30;
             }
-        check_var = 0;
+        }
+    if q_check = 200
+        {
+        global.npc_1q = 2;
+        with(obj_npc_2)
+            {
+            alarm[1] = 1;
+            }
         }
     }
 </string>
@@ -183,7 +190,7 @@ if global.npc_i = 1 {
         answers = 1;
         checks = 2;
         vetka = 1;
-        step_q[1] = 2;
+        step_q[1] = 200;
         next_a[1] = 40;
         step_q[2] = 0;
         next_a[2] = 50;
