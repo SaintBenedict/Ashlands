@@ -25,14 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Переменные
-enter = 0;
-with (obj_init)
-    {
-    attack = 1;
-    }
-image_speed = 0;
-image_index = default_index;
+            <string>///Возможные ветки у разных NPC
+if global.npc_trade[global.npc_i] = 0
+{
+default_index = 5;
+talk_index = 6;
+quit_index = 7;
+trade_index = 5;
+}
+if global.npc_trade[global.npc_i] = 1
+{
+default_index = 1;
+talk_index = 2;
+quit_index = 3;
+trade_index = 4;
+}
 </string>
           </argument>
         </arguments>
@@ -53,21 +60,14 @@ image_index = default_index;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Возможные ветки у разных NPC
-if global.npc_trade[global.npc_i] = 0
-{
-default_index = 5;
-talk_index = 6;
-quit_index = 7;
-trade_index = 5;
-}
-if global.npc_trade[global.npc_i] = 1
-{
-default_index = 1;
-talk_index = 2;
-quit_index = 3;
-trade_index = 4;
-}
+            <string>///Переменные
+enter = 0;
+with (obj_init)
+    {
+    attack = 1;
+    }
+image_speed = 0;
+image_index = default_index;
 </string>
           </argument>
         </arguments>
