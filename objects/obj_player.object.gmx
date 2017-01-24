@@ -110,6 +110,8 @@ image_speed = 0;
 image_index = 1;
 activate = 0;
 charlist_activated = 0;
+
+
 </string>
           </argument>
         </arguments>
@@ -239,6 +241,45 @@ else
 {
 audio_stop_sound(snd_walk_grass);
 image_speed = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// LVL
+
+switch(global.lvl){
+case 1: global.xp_next = 100; break;
+case 2: global.xp_next = 120; break;
+case 3: global.xp_next = 200; break;
+case 4: global.xp_next = 300; break;
+case 5: global.xp_next = 450; break;
+case 6: global.xp_next = 600; break;
+case 7: global.xp_next = 800; break;
+case 8: global.xp_next = 1100; break;
+case 9: global.xp_next = 1500; break;
+case 10: global.xp_next = 2000; break;
+}
+
+if global.xp &gt; global.xp_next-1 {
+global.lvl += 1
+global.xp = abs(global.xp_next-global.xp);
 }
 </string>
           </argument>
@@ -544,7 +585,8 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>///Гуй выбора авто-атаки
-/// Координаты вида и координаты мышки
+
+// Координаты вида и координаты мышки для автоатаки
 Xx = view_wview[0]-40; // Икс нижнего правого угла
 Y1y = view_hview[0]-40; // Игрик нижнего правого угла
 Y2y = view_hview[0]-188; // Игрик чуть выше для всплывающего меню
@@ -640,9 +682,27 @@ if (keyboard_check_pressed(global.hotkey_charlist)) {
     }
 }
 // Отрисовка чарлиста
+Xc = 100;
+Yc = 50
+var Xm = mouse_x-view_xview[0];
+var Ym = mouse_y-view_yview[0];
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_set_colour(c_white);
+draw_set_font(f_char);
+// Координаты всякой хуйни
+var Xp = Xc+202; // Портрет
+var Yp = Yc+202;
+var Xl = Xc+475; // Уровень
+var Yl = Yc+20;
+
 if (charlist_activated = 1){
-draw_sprite(spr_charlist,0,100,50);
-window_set_cursor(cr_default);}
+draw_sprite(spr_charlist,0,Xc,Yc);
+window_set_cursor(cr_default)
+draw_sprite(spr_player_face,global.check-1,Xp,Yp);
+draw_text(Xl,Yl,string(global.lvl) + " (" + string(global.xp) + "/" + string(global.xp_next) + ")");
+
+}
 
 </string>
           </argument>

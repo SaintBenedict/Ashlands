@@ -110,6 +110,7 @@
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\font_base</font>
+    <font>fonts\f_char</font>
     <font>fonts\font_hp</font>
   </fonts>
   <objects name="objects">

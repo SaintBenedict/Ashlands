@@ -66,6 +66,7 @@ current_pix_enemy_hp = round(current_val_enemy_hp * 38 / max_val_enemy_hp);
 if current_val_enemy_hp &lt; 1
 {
 instance_destroy();
+global.xp += 100;
 }
 </string>
           </argument>
