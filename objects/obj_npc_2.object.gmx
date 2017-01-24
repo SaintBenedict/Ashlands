@@ -51,7 +51,8 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>///Возврат скорости
-global.movespeed -= 10;
+global.baf_movespeed -= 10;
+global.baf_physic_attack -= 10;
 </string>
           </argument>
         </arguments>
@@ -75,9 +76,9 @@ global.movespeed -= 10;
           <argument>
             <kind>1</kind>
             <string>///Бафы
-global.dmg_fireball += 10;
-global.dmg_slash += 10;
-global.movespeed += 10;
+global.magic_attack += 10;
+global.baf_physic_attack += 10;
+global.baf_movespeed += 10;
 alarm[11] = 300;
 </string>
           </argument>

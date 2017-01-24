@@ -294,10 +294,10 @@ message_end = array_length_1d(message);
 if (message_end &gt; 0)
 {
 
-    var tY = view_hview[0]-80;
+    var tY = view_hview[0]-70;
     if (portrait == "none") var tX = 5;
-    else var tX = 60;
-    var sY = view_hview[0]-115;
+    else var tX = 80;
+    var sY = view_hview[0]-110;
     var sX = 80;
 
 if answers = 0 {    
@@ -322,7 +322,7 @@ if answers = 0 {
             {
             for (i=0;i&lt;checks;i+=1)
             {   
-                if mouse_y-view_yview[0] &gt; tY+(i*20) &amp;&amp; mouse_y-view_yview[0] &lt; tY+((i+1)*20)
+                if mouse_y-view_yview[0]+12 &gt; tY+(i*20) &amp;&amp; mouse_y-view_yview[0]+12 &lt; tY+((i+1)*20)
                 {
                 draw_text_colour(tX,tY+i*20,message[message_current+i],c_red,c_red,c_red,c_red,1);
                     if mouse_check_button_pressed(mb_left)

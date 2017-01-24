@@ -52,7 +52,8 @@ image_index = 7;
             <kind>1</kind>
             <string>global.check = 8;
 global.max_val_hero_hp += 100;
-global.dmg_fireball += 10;
+global.magic_attack += 10;
+global.physic_attack =+ 10;
 global.movespeed += 5;
 global.left_use = 1;
 room_goto_next();

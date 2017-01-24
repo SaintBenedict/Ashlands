@@ -51,6 +51,8 @@ image_index = 4;
             <kind>1</kind>
             <string>global.check = 5;
 global.left_use = 1;
+global.baf_physic_attack += 20;
+global.baf_movespeed -= 1;
 room_goto_next();
 </string>
           </argument>
