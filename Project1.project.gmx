@@ -104,8 +104,16 @@
     <background>background\background1</background>
     <background>background\bg_dirt</background>
     <background>background\bg_tileset_mud</background>
-    <background>background\background4</background>
-    <background>background\bg_1</background>
+    <backgrounds name="Tileset_Inq">
+      <background>background\Tileset_1</background>
+      <background>background\Tileset_2</background>
+      <background>background\Tileset_3</background>
+      <background>background\Tileset_4</background>
+      <background>background\Tileset_5</background>
+      <background>background\Tileset_6</background>
+      <background>background\Tileset_7</background>
+      <background>background\Tileset_8</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
