@@ -116,6 +116,7 @@
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\font_base</font>
     <font>fonts\f_char</font>
