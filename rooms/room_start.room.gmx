@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>instance_create(global.player_x,global.player_y,obj_player);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -54,7 +54,6 @@
     <instance objName="obj_init" x="0" y="0" name="inst_4537FC1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_npc_1" x="192" y="128" name="inst_309DDB14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_npc_2" x="640" y="128" name="inst_5896AA7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_options" x="0" y="32" name="inst_756EACCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_zombie" x="864" y="192" name="inst_67221926" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_zombie" x="800" y="288" name="inst_26A69C21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_zombie" x="800" y="384" name="inst_7673B9DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -173,6 +172,7 @@
     <instance objName="obj_solidspace" x="576" y="256" name="inst_EA1FFBA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solidspace" x="576" y="224" name="inst_8750104B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solidspace" x="544" y="224" name="inst_8AA957D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_options" x="0" y="32" name="inst_88829634" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_tileset_mud" x="192" y="96" w="32" h="32" xo="32" yo="64" id="10000617" name="inst_922D3777" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
