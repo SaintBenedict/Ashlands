@@ -153,6 +153,7 @@
     <timeline>timelines\tml_fire_destroy</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room_first_global</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_start</room>
   </rooms>

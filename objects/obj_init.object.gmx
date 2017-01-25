@@ -25,42 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initial
-global.attack = 0;
-global.player = obj_player;
-global.npc_click = 0; //Разрешение открыть диалог 1 (при нпц рядом)
-global.npc_near = 0; //Рядом есть нпц
-global.player_invincible = 0;
-global.left_change = 0;
-global.block = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Глобал нпц
 npc_n = 2;
-global.npc_0q = 0;
 global.npc[0] = obj_npc_1;
 global.npc_trade[0] = 0;
 global.npc_name[0] = "Алиса";
 global.npc_portrait[0] = spr_portrait_1;
-global.npc_1q = 0;
 global.npc[1] = obj_npc_2;
 global.npc_trade[1] = 1;
 global.npc_name[1] = "Дженни";

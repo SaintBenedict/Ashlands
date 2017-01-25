@@ -103,7 +103,6 @@ sprright = spr_right_8;
           <argument>
             <kind>1</kind>
             <string>///Присваивание глобалок
-global.hp = global.max_val_hero_hp;
 current_pix_hero_hp = 38;
 sprite_index = sprdown;
 image_speed = 0;
@@ -111,7 +110,13 @@ image_index = 1;
 activate = 0;
 charlist_activated = 0;
 
-
+global.attack = 0;
+global.player = obj_player;
+global.npc_click = 0; //Разрешение открыть диалог 1 (при нпц рядом)
+global.npc_near = 0; //Рядом есть нпц
+global.player_invincible = 0;
+global.left_change = 0;
+global.block = 0;
 </string>
           </argument>
         </arguments>

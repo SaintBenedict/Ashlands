@@ -10,13 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.xp = 0;
-global.lvl = 1;
-global.max_val_hero_hp = 100;
-global.dmg_fireball = 3;
-global.dmg_slash = 5;
-global.movespeed = 4;
-global.left_use = 0;</code>
+  <code></code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
