@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 0;
-window_set_size(672,360);
-window_set_position(300,100);
+window_set_size(1024,768);
+window_set_position(250,50);
 </string>
           </argument>
         </arguments>
