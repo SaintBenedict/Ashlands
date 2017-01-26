@@ -114,6 +114,7 @@
       <background>background\Tileset_7</background>
       <background>background\Tileset_8</background>
     </backgrounds>
+    <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
