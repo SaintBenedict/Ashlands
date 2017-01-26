@@ -38,6 +38,7 @@
       <sprites name="GUI">
         <sprite>sprites\spr_cur_q</sprite>
         <sprite>sprites\spr_charlist</sprite>
+        <sprite>sprites\spr_plus</sprite>
         <sprite>sprites\spr_use_sword</sprite>
         <sprite>sprites\spr_left_action</sprite>
         <sprite>sprites\spr_use_fire</sprite>

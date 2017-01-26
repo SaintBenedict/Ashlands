@@ -18,10 +18,14 @@ global.magic_attack = 3;
 global.physic_attack = 5;
 global.movespeed = 4;
 global.baf_magic_attack = 0;
+global.lvl_magic_attack = 0;
 global.baf_physic_attack = 0;
+global.lvl_physic_attack = 0;
 global.baf_movespeed = 0;
+global.lvl_movespeed = 0;
 global.player_x = 300;
 global.player_y = 450;
+global.lvl_points = 0;
 
 global.npc_0q = 0;
 global.npc_1q = 0;

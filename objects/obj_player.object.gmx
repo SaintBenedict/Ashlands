@@ -271,20 +271,21 @@ image_speed = 0;
             <string>/// LVL
 
 switch(global.lvl){
-case 1: global.xp_next = 100; break;
-case 2: global.xp_next = 120; break;
-case 3: global.xp_next = 200; break;
-case 4: global.xp_next = 300; break;
-case 5: global.xp_next = 450; break;
-case 6: global.xp_next = 600; break;
-case 7: global.xp_next = 800; break;
-case 8: global.xp_next = 1100; break;
-case 9: global.xp_next = 1500; break;
-case 10: global.xp_next = 2000; break;
+case 1: global.xp_next = 100; global.lvl_points_up = 2; break;
+case 2: global.xp_next = 120; global.lvl_points_up = 3; break;
+case 3: global.xp_next = 200; global.lvl_points_up = 5; break;
+case 4: global.xp_next = 300; global.lvl_points_up = 10; break;
+case 5: global.xp_next = 450; global.lvl_points_up = 15; break;
+case 6: global.xp_next = 600; global.lvl_points_up = 15; break;
+case 7: global.xp_next = 800; global.lvl_points_up = 20; break;
+case 8: global.xp_next = 1100; global.lvl_points_up = 20; break;
+case 9: global.xp_next = 1500; global.lvl_points_up = 25; break;
+case 10: global.xp_next = 2000; global.lvl_points_up = 30; break;
 }
 
 if global.xp &gt; global.xp_next-1 {
 global.lvl += 1
+global.lvl_points += global.lvl_points_up;
 global.xp = abs(global.xp_next-global.xp);
 }
 </string>
@@ -739,6 +740,8 @@ Xc = 100;
 Yc = 50
 My = mouse_y;
 Mx = mouse_x;
+moy = mouse_y-view_yview[0]; // Координаты мышки внутри вида
+mox = mouse_x-view_xview[0]; // Координаты мышки внутри вида
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_colour(c_white);
@@ -787,7 +790,23 @@ if global.current_movespeed &lt; global.movespeed {
 draw_set_colour(c_red);} else {
 draw_set_colour(c_white);}}
 draw_text(Xc+716,Yc+128,string(global.current_movespeed));
-
+// Повышения уровней
+draw_set_colour(c_white)
+if global.lvl_points &gt; 0 {
+draw_text(Xc+595,Yc+370,string(global.lvl_points));
+draw_sprite(spr_plus,0,Xc+618,Yc+86);
+draw_sprite(spr_plus,0,Xc+618,Yc+107);
+draw_sprite(spr_plus,0,Xc+618,Yc+128);
+    if (mouse_check_button_pressed(mb_left) &amp;&amp; mox&gt;Xc+608 &amp;&amp; mox&lt;Xc+628 &amp;&amp; moy&gt;Yc+76 &amp;&amp; moy&lt;Yc+96){
+    global.physic_attack += 1;
+    global.lvl_points -= 1;}
+    if (mouse_check_button_pressed(mb_left) &amp;&amp; mox&gt;Xc+608 &amp;&amp; mox&lt;Xc+628 &amp;&amp; moy&gt;Yc+97 &amp;&amp; moy&lt;Yc+117){
+    global.magic_attack += 1;
+    global.lvl_points -= 1;}
+    if (mouse_check_button_pressed(mb_left) &amp;&amp; mox&gt;Xc+608 &amp;&amp; mox&lt;Xc+628 &amp;&amp; moy&gt;Yc+118 &amp;&amp; moy&lt;Yc+138){
+    global.movespeed += 1;
+    global.lvl_points -= 1;}
+}
 } // Конец отрисовки листа
 draw_set_colour(c_black); // Возвращение дефолтного цвета, а то всё идёт по пизде
 </string>
