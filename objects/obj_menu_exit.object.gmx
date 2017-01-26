@@ -27,8 +27,9 @@
             <kind>1</kind>
             <string>image_index = 13;
 image_speed = 0;
+if instance_number(obj_menu) = 0 {
 window_set_size(1024,768);
-window_set_position(250,50);
+window_set_position(250,50);}
 </string>
           </argument>
         </arguments>
@@ -51,12 +52,13 @@ window_set_position(250,50);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_wview[0] = window_get_width();
+            <string>if instance_number(obj_menu) = 0 {
+view_wview[0] = window_get_width();
 view_hview[0] = window_get_height();
 view_wport[0] = window_get_width();
 view_hport[0] = window_get_height();
 
-surface_resize(application_surface,view_wport[0],view_hport[0])
+surface_resize(application_surface,view_wport[0],view_hport[0])}
 </string>
           </argument>
         </arguments>
@@ -141,11 +143,12 @@ surface_resize(application_surface,view_wport[0],view_hport[0])
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>proportion = view_hport[0]/view_wport[0]; // Пропорции экрана (высоту делить на ширину порта)
+            <string>if instance_number(obj_menu) = 0 {
+proportion = view_hport[0]/view_wport[0]; // Пропорции экрана (высоту делить на ширину порта)
 
 if display_get_height() &lt; view_hport[0] // Высота порта вида по умолчанию. Если монитор меньше, происходит уменьшение
 {view_hport[0] = display_get_height();
- view_wport[0] = view_hport[0]/proportion;}
+ view_wport[0] = view_hport[0]/proportion;}}
 </string>
           </argument>
         </arguments>

@@ -99,8 +99,8 @@ image_index +=1;}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("/autosave.ini");
-score = ini_read_real("save1", "score", 0);
+            <string>ini_open("autosave.sav");
+score = ini_write_real("save1", "score", 0);
 ini_close();
 </string>
           </argument>

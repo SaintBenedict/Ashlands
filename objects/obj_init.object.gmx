@@ -311,7 +311,7 @@ window_set_cursor(cr_default);
           <argument>
             <kind>1</kind>
             <string>if instance_number(obj_menu) = 0 {
-instance_create(window_get_width()/2,window_get_height()/2-199,obj_menu);}
+instance_create(window_get_width()/2+view_xview[0],window_get_height()/2-199+view_yview[0],obj_menu);}
 </string>
           </argument>
         </arguments>
