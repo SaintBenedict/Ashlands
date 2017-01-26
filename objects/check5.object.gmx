@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 4;
+global.baf_physic_attack += 20;
+global.baf_movespeed -= 1;
 </string>
           </argument>
         </arguments>

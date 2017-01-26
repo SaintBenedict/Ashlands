@@ -14,9 +14,12 @@
 global.hp = global.max_val_hero_hp;
 global.xp = 0;
 global.lvl = 1;
-global.dmg_fireball = 3;
-global.dmg_slash = 5;
+global.magic_attack = 3;
+global.physic_attack = 5;
 global.movespeed = 4;
+global.baf_magic_attack = 0;
+global.baf_physic_attack = 0;
+global.baf_movespeed = 0;
 global.player_x = 300;
 global.player_y = 450;
 

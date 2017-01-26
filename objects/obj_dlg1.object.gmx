@@ -144,6 +144,10 @@ if Mx &gt; x+0 &amp;&amp; Mx &lt; x+80
         instance_destroy();}
     }
 }
+else
+{
+image_index = default_index;
+}
 </string>
           </argument>
         </arguments>
