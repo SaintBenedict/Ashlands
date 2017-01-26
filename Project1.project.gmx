@@ -102,6 +102,7 @@
       <sprite>sprites\spr_enemy_zombie_down</sprite>
       <sprite>sprites\spr_enemy_zombie_up</sprite>
     </sprites>
+    <sprite>sprites\spr_hero_collision</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -119,7 +120,9 @@
     </backgrounds>
     <background>background\bg_menu</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pth_circle</path>
+  </paths>
   <fonts name="fonts">
     <font>fonts\font_base</font>
     <font>fonts\f_char</font>

@@ -31,6 +31,7 @@ max_val_enemy_hp = 100;
 current_val_enemy_hp = max_val_enemy_hp;
 current_pix_enemy_hp = 38;
 invincible = 0;
+patroling = false;
 </string>
           </argument>
         </arguments>
@@ -60,13 +61,23 @@ if (current_val_enemy_hp == 100)
     //NOT ENRAGED
     if distance_to_object(obj_player)&lt;=300
     {
-      grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
+    patroling = false;
+    grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
     path = path_add();
-    mp_grid_add_instances(path,obj_solidspace,1);
+    mp_grid_add_instances(grid,obj_solidspace,1);
     mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
     path_start(path,2,"",1);
     }
-    else move_towards_point(x,y,0);
+    else 
+    {
+    if (patroling == false)
+    {
+    path_start(pth_circle,2,path_action_continue,0);
+    patroling = true;
+    }
+    }
+    
+    
 }
 else
 {
@@ -75,7 +86,7 @@ else
     {
     grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
     path = path_add();
-    mp_grid_add_instances(path,obj_solidspace,1);
+    mp_grid_add_instances(grid,obj_solidspace,1);
     mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
     path_start(path,4,"",1);
     }
