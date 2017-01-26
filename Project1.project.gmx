@@ -139,6 +139,7 @@
     <objects name="Enemy">
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_zombie</object>
+      <object>objects\obj_zombie</object>
     </objects>
     <objects name="system">
       <object>objects\obj_dlg1</object>

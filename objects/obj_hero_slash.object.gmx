@@ -75,8 +75,8 @@ audio_play_sound(snd_slash, 12, false);
           <argument>
             <kind>1</kind>
             <string>///Поворот
-My = (mouse_y/room_height)*window_get_height()+view_yview[0];
-Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
+My = mouse_y;
+Mx = mouse_x;
 image_angle=point_direction(Mx, My,global.player.x,global.player.y);
 </string>
           </argument>

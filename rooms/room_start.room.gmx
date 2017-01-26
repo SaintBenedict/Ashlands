@@ -55,9 +55,6 @@
     <instance objName="obj_init" x="0" y="0" name="inst_4537FC1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_npc_1" x="192" y="544" name="inst_309DDB14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_npc_2" x="576" y="768" name="inst_5896AA7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_zombie" x="864" y="192" name="inst_67221926" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_zombie" x="800" y="288" name="inst_26A69C21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_zombie" x="800" y="384" name="inst_7673B9DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solidspace" x="128" y="32" name="inst_4ACD8550" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solidspace" x="128" y="64" name="inst_6AFB2DA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solidspace" x="128" y="96" name="inst_66B1E0C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -173,6 +170,9 @@
     <instance objName="obj_solidspace" x="576" y="256" name="inst_EA1FFBA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solidspace" x="576" y="224" name="inst_8750104B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solidspace" x="544" y="224" name="inst_8AA957D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_zombie" x="736" y="192" name="inst_5A96DFBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_zombie" x="864" y="320" name="inst_C2AE65C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_zombie" x="896" y="192" name="inst_860D887D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_tileset_mud" x="192" y="96" w="32" h="32" xo="32" yo="64" id="10000617" name="inst_922D3777" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

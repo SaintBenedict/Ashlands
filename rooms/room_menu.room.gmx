@@ -60,9 +60,7 @@
     <instance objName="check7" x="128" y="448" name="inst_304B46EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="check8" x="288" y="448" name="inst_B684E8C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles>
-    <tile bgName="bg_tileset_mud" x="-288" y="0" w="16" h="16" xo="0" yo="0" id="10001280" name="inst_A0FB832F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-  </tiles>
+  <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>
