@@ -36,5 +36,7 @@
     <frame index="13">images\spr_m_menu_13.png</frame>
     <frame index="14">images\spr_m_menu_14.png</frame>
     <frame index="15">images\spr_m_menu_15.png</frame>
+    <frame index="16">images\spr_m_menu_16.png</frame>
+    <frame index="17">images\spr_m_menu_17.png</frame>
   </frames>
 </sprite>

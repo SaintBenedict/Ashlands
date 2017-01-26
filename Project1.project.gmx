@@ -40,11 +40,12 @@
         <sprite>sprites\spr_charlist</sprite>
         <sprite>sprites\spr_plus</sprite>
         <sprite>sprites\spr_use_sword</sprite>
+        <sprite>sprites\spr_m_menu</sprite>
         <sprite>sprites\spr_left_action</sprite>
         <sprite>sprites\spr_use_fire</sprite>
         <sprite>sprites\spr_left_check</sprite>
+        <sprite>sprites\spr_menu</sprite>
       </sprites>
-      <sprite>sprites\spr_m_menu</sprite>
     </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_floor_stone</sprite>
@@ -154,6 +155,8 @@
       <object>objects\obj_menu_options</object>
       <object>objects\obj_menu_credits</object>
       <object>objects\obj_menu_exit</object>
+      <object>objects\obj_menu_next</object>
+      <object>objects\obj_menu</object>
     </objects>
     <objects name="check_player">
       <object>objects\check1</object>
