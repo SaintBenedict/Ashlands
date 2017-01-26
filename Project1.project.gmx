@@ -104,16 +104,8 @@
     <background>background\background1</background>
     <background>background\bg_dirt</background>
     <background>background\bg_tileset_mud</background>
-    <backgrounds name="Tileset_Inq">
-      <background>background\Tileset_1</background>
-      <background>background\Tileset_2</background>
-      <background>background\Tileset_3</background>
-      <background>background\Tileset_4</background>
-      <background>background\Tileset_5</background>
-      <background>background\Tileset_6</background>
-      <background>background\Tileset_7</background>
-      <background>background\Tileset_8</background>
-    </backgrounds>
+    <background>background\background4</background>
+    <background>background\bg_1</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -162,7 +154,6 @@
     <timeline>timelines\tml_fire_destroy</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room_first_global</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_start</room>
   </rooms>

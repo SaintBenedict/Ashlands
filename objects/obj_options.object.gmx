@@ -26,16 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>///Код для размеров экрана
-global.scale = 1;
-global.lastw = 1024;
-global.lasth = 768;
-neww = 1024;
-newh = 768;
-
 window_set_size(1024,768); // Указываем начальный размер окна
-window_set_position(250,50); //Выравниваем окно по центру экрана
-
-
+window_set_position(300,100); //Выравниваем окно по центру экрана
+instance_create(300,400,obj_player);
 </string>
           </argument>
         </arguments>
@@ -56,68 +49,8 @@ window_set_position(250,50); //Выравниваем окно по центру
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    display_w=view_wview[0]
-    display_h=view_hview[0]
-    display_set_gui_size(display_w, display_h)
-    global.screen_surface = surface_create(display_w, display_h);
-    surface_set_target(global.screen_surface);
-    draw_clear_alpha(c_black, 0);
-    surface_reset_target();
-    view_surface_id[0] = global.screen_surface;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>2</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>    display_w=view_wview[0]*global.scale
-    display_h=view_hview[0]*global.scale
-    display_set_gui_size(display_w, display_h)
-    global.screen_surface = surface_create(display_w, display_h);
-    surface_set_target(global.screen_surface);
-    draw_clear_alpha(c_black, 0);
-    surface_reset_target();
-    view_surface_id[0] = global.screen_surface;
+            <string>///Хоткеи
+global.hotkey_charlist = ord('C');
 </string>
           </argument>
         </arguments>
@@ -143,24 +76,8 @@ window_set_position(250,50); //Выравниваем окно по центру
             <string>///Код для размеров экрана
 view_wview[0] = window_get_width();
 view_hview[0] = window_get_height();
-view_wport[0] = view_wview[0];
-view_hport[0] = view_hview[0];
-
-if (global.lastw != view_wview[0] || global.lasth != view_hview[0])
-    {
-    neww = view_wview[0];
-    newh = view_hview[0];
-    display_w=view_wview[0]*global.scale
-    display_h=view_hview[0]*global.scale
-    display_set_gui_size(display_w, display_h)
-    global.screen_surface = surface_create(display_w, display_h);
-    surface_set_target(global.screen_surface);
-    draw_clear_alpha(c_black, 0);
-    surface_reset_target();
-    view_surface_id[0] = global.screen_surface;
-    global.lastw = neww;
-    global.lasth = newh;
-    }
+view_wport[0] = window_get_width();
+view_hport[0] = window_get_height();
 </string>
           </argument>
         </arguments>
@@ -183,7 +100,7 @@ if (global.lastw != view_wview[0] || global.lasth != view_hview[0])
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Уменьшает изначальный порт, если ДИСПЛЕЙ меньше чем 768 в высоту. Ебать умная прога.
+            <string>///Код для размеров экрана
 proportion = view_hport[0]/view_wport[0]; // Пропорции экрана (высоту делить на ширину порта)
 
 if display_get_height() &lt; view_hport[0] // Высота порта вида по умолчанию. Если монитор меньше, происходит уменьшение
@@ -194,61 +111,20 @@ if display_get_height() &lt; view_hport[0] // Высота порта вида �
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="9" enumb="27">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>332</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_game</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>    if(surface_exists(global.screen_surface))
-
-    {
-    draw_surface_ext(global.screen_surface,0,0,global.scale,global.scale,0,c_white,1);
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="110">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>    display_w=view_wview[0]*global.scale
-    display_h=view_hview[0]*global.scale
-    display_set_gui_size(display_w, display_h)
-    global.screen_surface = surface_create(display_w, display_h);
-    surface_set_target(global.screen_surface);
-    draw_clear_alpha(c_black, 0);
-    surface_reset_target();
-    view_surface_id[0] = global.screen_surface;
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
   </events>

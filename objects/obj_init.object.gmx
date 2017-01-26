@@ -25,12 +25,42 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Initial
+global.attack = 0;
+global.player = obj_player;
+global.npc_click = 0; //Разрешение открыть диалог 1 (при нпц рядом)
+global.npc_near = 0; //Рядом есть нпц
+global.player_invincible = 0;
+global.left_change = 0;
+global.block = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Глобал нпц
 npc_n = 2;
+global.npc_0q = 0;
 global.npc[0] = obj_npc_1;
 global.npc_trade[0] = 0;
 global.npc_name[0] = "Алиса";
 global.npc_portrait[0] = spr_portrait_1;
+global.npc_1q = 0;
 global.npc[1] = obj_npc_2;
 global.npc_trade[1] = 1;
 global.npc_name[1] = "Дженни";
@@ -107,8 +137,6 @@ global.npc_click = 0;
             <kind>1</kind>
             <string>///Атака, диалог, подход к неписи
 //Проверка атаки
-My = (mouse_y/room_height)*window_get_height()+view_yview[0];
-Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
 if instance_number(obj_dlg2) = 0{
 if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
 {
@@ -134,7 +162,7 @@ else
 //Подойти к неписи
 if (global.attack = 1 &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0 &amp;&amp; global.block = 0)
 {
-instance_create(Mx,My,obj_mouseclick);
+instance_create(mouse_x,mouse_y,obj_mouseclick);
 if instance_number(obj_dlg1) &gt; 0
     {
     with(obj_dlg1)
@@ -168,8 +196,6 @@ if instance_number(obj_dlg1) &gt; 0
           <argument>
             <kind>1</kind>
             <string>///Спавн маускликов с проверкой на диалоги
-My = (mouse_y/room_height)*window_get_height()+view_yview[0];
-Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
 if instance_number(obj_dlg1) &gt; 0
     {
     with(obj_dlg1)
@@ -184,15 +210,15 @@ if instance_number(obj_mouseclick) &gt; 0
         {
         instance_destroy();
         }
-    instance_create(Mx,My,obj_mouseclick);
+    instance_create(mouse_x,mouse_y,obj_mouseclick);
     }
 else
 {
-xxx = abs(Mx - global.player.x);
-yyy = abs(My - global.player.y);
+xxx = abs(mouse_x - global.player.x);
+yyy = abs(mouse_y - global.player.y);
 if (xxx &gt; 40 || yyy &gt; 50)
     {
-    instance_create(Mx,My,obj_mouseclick);
+    instance_create(mouse_x,mouse_y,obj_mouseclick);
     with(global.player)
         {
         image_index = 1;
@@ -223,12 +249,10 @@ if (xxx &gt; 40 || yyy &gt; 50)
           <argument>
             <kind>1</kind>
             <string>///Имя непися, курсор и запрет атакаи при наведении
-My = (mouse_y/room_height)*window_get_height()+view_yview[0];
-Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
 if global.block = 0 {
 for (k=0;k&lt;npc_n;k+=1)
     {
-    if ((abs(global.npc[k].x - Mx) &lt; 20) &amp;&amp; (abs(global.npc[k].y - My) &lt; 20)){
+    if ((abs(global.npc[k].x - mouse_x) &lt; 20) &amp;&amp; (abs(global.npc[k].y - mouse_y) &lt; 20)){
         global.npc_k = k;
         if mouse_check_button_pressed(mb_left){
             global.npc_click = 1;}
@@ -275,22 +299,6 @@ instance_create(irandom_range(120,680), irandom_range(80,536), obj_enemy);
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="27">
-      <action>
-        <libid>1</libid>
-        <id>332</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_end_game</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

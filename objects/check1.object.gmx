@@ -79,7 +79,6 @@ view_hport[0] = window_get_height();
             <kind>1</kind>
             <string>global.check = 1;
 global.max_val_hero_hp += 20
-global.hp += 20;
 room_goto_next();
 </string>
           </argument>
