@@ -103,7 +103,6 @@ sprright = spr_right_8;
           <argument>
             <kind>1</kind>
             <string>///Присваивание глобалок
-global.hp = global.max_val_hero_hp;
 current_pix_hero_hp = 38;
 sprite_index = sprdown;
 image_speed = 0;
@@ -111,7 +110,14 @@ image_index = 1;
 activate = 0;
 charlist_activated = 0;
 
-
+global.attack = 0;
+global.player = obj_player;
+global.npc_click = 0; //Разрешение открыть диалог 1 (при нпц рядом)
+global.npc_near = 0; //Рядом есть нпц
+global.player_invincible = 0;
+global.left_change = 0;
+global.block = 0;
+global.left_use = 0;
 </string>
           </argument>
         </arguments>
@@ -281,56 +287,6 @@ if global.xp &gt; global.xp_next-1 {
 global.lvl += 1
 global.xp = abs(global.xp_next-global.xp);
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Статы
-global.current_magic_attack = global.magic_attack + global.baf_magic_attack;
-global.current_physic_attack = global.physic_attack + global.baf_physic_attack;
-global.current_movespeed = global.movespeed + global.baf_movespeed;
-
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Дамаг скилов
-global.dmg_fireball = global.current_magic_attack;
-global.dmg_slash = global.current_physic_attack;
 </string>
           </argument>
         </arguments>
@@ -635,13 +591,15 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>///Гуй выбора авто-атаки
-
+surface_set_target(global.screen_surface);
 // Координаты вида и координаты мышки для автоатаки
 Xx = view_wview[0]-40; // Икс нижнего правого угла
 Y1y = view_hview[0]-40; // Игрик нижнего правого угла
 Y2y = view_hview[0]-188; // Игрик чуть выше для всплывающего меню
-moy = mouse_y-view_yview[0]; // Координаты мышки внутри вида
-xoy = mouse_x-view_xview[0]; // Координаты мышки внутри вида
+//moy = mouse_y-view_yview[0]; // Координаты мышки внутри вида
+//xoy = mouse_x-view_xview[0]; // Координаты мышки внутри вида
+moy = (mouse_y/room_height)*window_get_height();
+xoy = (mouse_x/room_width)*window_get_width();
 
 // Если нету диалога - рисуем первоначальный гуй. Отсутствие диалога обязательно для всего гуя.
 if instance_number(obj_dlg2) = 0{
@@ -694,7 +652,7 @@ else
 }
 
 // Гуй чарлиста можно вызвать и в диалоге, поэтому к обджект диалогу мы не привязаны и будем ебашить его в новом коде.
-
+surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -716,7 +674,7 @@ else
           <argument>
             <kind>1</kind>
             <string>///Гуй чарлиста
-
+surface_set_target(global.screen_surface);
 // Активация или деактивация чарлиста
 if (keyboard_check_pressed(global.hotkey_charlist)) {
     switch(charlist_activated)
@@ -734,57 +692,26 @@ if (keyboard_check_pressed(global.hotkey_charlist)) {
 // Отрисовка чарлиста
 Xc = 100;
 Yc = 50
-var Xm = mouse_x-view_xview[0];
-var Ym = mouse_y-view_yview[0];
+My = (mouse_y/room_height)*window_get_height();
+Mx = (mouse_x/room_width)*window_get_width();
+draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_colour(c_white);
+draw_set_font(f_char);
 // Координаты всякой хуйни
 var Xp = Xc+202; // Портрет
 var Yp = Yc+202;
+var Xl = Xc+475; // Уровень
+var Yl = Yc+20;
 
 if (charlist_activated = 1){
-draw_set_halign(fa_left);
 draw_sprite(spr_charlist,0,Xc,Yc);
 window_set_cursor(cr_default)
-draw_sprite(spr_player_face,global.check-1,Xp,Yp); // Портрет
-// Уровень
-draw_set_font(f_char);
-draw_text(Xc+475,Yc+20,string(global.lvl) + " (" + string(global.xp) + "/" + string(global.xp_next) + ")");
-// Названия характеристик
-draw_set_font(f_char_text);
-draw_text(Xc+408,Yc+86,"Физическая атака");
-draw_text(Xc+408,Yc+107,"Магическая атака");
-draw_text(Xc+408,Yc+128,"Скорость");
-// Значения характеристик
-draw_set_halign(fa_center);
-draw_set_font(f_char);
-draw_text(Xc+551,Yc+86,string(global.physic_attack));
-draw_text(Xc+551,Yc+107,string(global.magic_attack));
-draw_text(Xc+551,Yc+128,string(global.movespeed));
-// Значения характеристик
-draw_set_halign(fa_center);
-draw_set_font(f_char);
-if global.current_physic_attack &gt; global.physic_attack {
-draw_set_colour(c_green);} else {
-if global.current_physic_attack &lt; global.physic_attack {
-draw_set_colour(c_red);} else {
-draw_set_colour(c_white);}}
-draw_text(Xc+716,Yc+86,string(global.current_physic_attack));
-if global.current_magic_attack &gt; global.magic_attack {
-draw_set_colour(c_green);} else {
-if global.current_magic_attack &lt; global.magic_attack {
-draw_set_colour(c_red);} else {
-draw_set_colour(c_white);}}
-draw_text(Xc+716,Yc+107,string(global.current_magic_attack));
-if global.current_movespeed &gt; global.movespeed {
-draw_set_colour(c_green);} else {
-if global.current_movespeed &lt; global.movespeed {
-draw_set_colour(c_red);} else {
-draw_set_colour(c_white);}}
-draw_text(Xc+716,Yc+128,string(global.current_movespeed));
+draw_sprite(spr_player_face,global.check-1,Xp,Yp);
+draw_text(Xl,Yl,string(global.lvl) + " (" + string(global.xp) + "/" + string(global.xp_next) + ")");
 
-} // Конец отрисовки листа
-draw_set_colour(c_black); // Возвращение дефолтного цвета, а то всё идёт по пизде
+}
+surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -822,10 +749,12 @@ draw_set_colour(c_black); // Возвращение дефолтного цве�
           <argument>
             <kind>1</kind>
             <string>///Отрисовка хэлсбара
+
 draw_sprite(spr_hp,current_pix_hero_hp,x,y+32);
 draw_set_halign(fa_center);
 draw_set_font(font_hp);
 draw_text_color(x,y+32,global.hp,c_black,c_black,c_black,c_black,1);
+
 </string>
           </argument>
         </arguments>
