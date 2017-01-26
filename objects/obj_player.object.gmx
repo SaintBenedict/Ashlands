@@ -638,15 +638,14 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>///Гуй выбора авто-атаки
-surface_set_target(global.screen_surface);
+
 // Координаты вида и координаты мышки для автоатаки
 Xx = view_wview[0]-40; // Икс нижнего правого угла
 Y1y = view_hview[0]-40; // Игрик нижнего правого угла
 Y2y = view_hview[0]-188; // Игрик чуть выше для всплывающего меню
-//moy = mouse_y-view_yview[0]; // Координаты мышки внутри вида
-//xoy = mouse_x-view_xview[0]; // Координаты мышки внутри вида
-moy = (mouse_y/room_height)*window_get_height();
-xoy = (mouse_x/room_width)*window_get_width();
+moy = mouse_y-view_yview[0]; // Координаты мышки внутри вида
+xoy = mouse_x-view_xview[0]; // Координаты мышки внутри вида
+
 
 // Если нету диалога - рисуем первоначальный гуй. Отсутствие диалога обязательно для всего гуя.
 if instance_number(obj_dlg2) = 0{
@@ -699,7 +698,6 @@ else
 }
 
 // Гуй чарлиста можно вызвать и в диалоге, поэтому к обджект диалогу мы не привязаны и будем ебашить его в новом коде.
-surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -721,7 +719,7 @@ surface_reset_target();
           <argument>
             <kind>1</kind>
             <string>///Гуй чарлиста
-surface_set_target(global.screen_surface);
+
 // Активация или деактивация чарлиста
 if (keyboard_check_pressed(global.hotkey_charlist)) {
     switch(charlist_activated)
@@ -739,8 +737,8 @@ if (keyboard_check_pressed(global.hotkey_charlist)) {
 // Отрисовка чарлиста
 Xc = 100;
 Yc = 50
-My = (mouse_y/room_height)*window_get_height();
-Mx = (mouse_x/room_width)*window_get_width();
+My = mouse_y;
+Mx = mouse_x;
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_colour(c_white);
@@ -792,8 +790,6 @@ draw_text(Xc+716,Yc+128,string(global.current_movespeed));
 
 } // Конец отрисовки листа
 draw_set_colour(c_black); // Возвращение дефолтного цвета, а то всё идёт по пизде
-
-surface_reset_target();
 </string>
           </argument>
         </arguments>

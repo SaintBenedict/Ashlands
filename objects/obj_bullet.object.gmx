@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>///Initialization
-My = (mouse_y/room_height)*window_get_height()+view_yview[0];
-Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
 audio_play_sound(snd_fire, 11, false);
 </string>
           </argument>
@@ -49,11 +47,11 @@ audio_play_sound(snd_fire, 11, false);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>Mx</string>
+            <string>mouse_x</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>My</string>
+            <string>mouse_y</string>
           </argument>
           <argument>
             <kind>0</kind>

@@ -287,11 +287,10 @@ instance_destroy();}
           <argument>
             <kind>1</kind>
             <string>///Отрисовка диалога
-surface_set_target(global.screen_surface);
 draw_set_font(font_base);
 draw_set_colour(c_black);
-My = (mouse_y/room_height)*window_get_height();
-Mx = (mouse_x/room_width)*window_get_width();
+My = mouse_y-view_yview[0];
+Mx = mouse_x-view_xview[0];
 message_end = array_length_1d(message);
 
 if (message_end &gt; 0)
@@ -301,7 +300,7 @@ if (message_end &gt; 0)
     if (portrait == "none") var tX = 5;
     else var tX = 60;
     var sY = view_hview[0]-110;
-    var sX = 80;
+    var sX = 50;
 
 if answers = 0 {    
     if (keyboard_check_pressed(ord('S')) || (mouse_check_button_pressed(mb_left) &amp;&amp; global.block = 0))
@@ -363,7 +362,6 @@ if answers = 0 {
         }
     }
 }
-surface_reset_target();
 </string>
           </argument>
         </arguments>

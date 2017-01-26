@@ -55,6 +55,8 @@ window_set_position(250,50);
 view_hview[0] = window_get_height();
 view_wport[0] = window_get_width();
 view_hport[0] = window_get_height();
+
+surface_resize(application_surface,view_wport[0],view_hport[0])
 </string>
           </argument>
         </arguments>
