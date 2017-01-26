@@ -130,8 +130,6 @@
     <object>objects\obj_player</object>
     <object>objects\obj_npc_1</object>
     <object>objects\obj_npc_2</object>
-    <object>objects\obj_projectile</object>
-    <object>objects\obj_bomb</object>
     <object>objects\obj_mouseclick</object>
     <objects name="map">
       <object>objects\obj_floor_stone</object>
@@ -140,7 +138,6 @@
     <object>objects\obj_hero_slash</object>
     <object>objects\obj_bullet</object>
     <objects name="Enemy">
-      <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_zombie</object>
       <object>objects\obj_enemy_zombie_green</object>
       <object>objects\obj_enemy_zombie_red</object>

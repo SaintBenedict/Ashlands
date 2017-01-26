@@ -26,14 +26,39 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize the enemy
+charge_ready=true;
 image_xscale = 3;
 image_yscale = image_xscale;
 image_speed = 1;
 max_val_enemy_hp = 300;
 current_val_enemy_hp = max_val_enemy_hp;
 current_pix_enemy_hp = 38;
-invincible = 0;
+invincible = 1;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>150</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>11</string>
           </argument>
         </arguments>
       </action>
@@ -130,7 +155,7 @@ if (current_val_enemy_hp == 300)
     //NOT ENRAGED
     if distance_to_object(obj_player)&lt;=300
     {
-      grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
+    grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
     path = path_add();
     mp_grid_add_instances(path,obj_solidspace,1);
     mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
@@ -139,7 +164,7 @@ if (current_val_enemy_hp == 300)
     else move_towards_point(x,y,0);
 }
 else
-{
+{   
     //ENRAGED
     if distance_to_object(obj_player)&lt;=900
     {
@@ -147,7 +172,7 @@ else
     path = path_add();
     mp_grid_add_instances(path,obj_solidspace,1);
     mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
-    path_start(path,6,"",1);
+    path_start(path,4,"",1);
     }
     else move_towards_point(x,y,0);
 }
