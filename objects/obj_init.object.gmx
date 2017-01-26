@@ -107,6 +107,8 @@ global.npc_click = 0;
             <kind>1</kind>
             <string>///Атака, диалог, подход к неписи
 //Проверка атаки
+My = (mouse_y/room_height)*window_get_height()+view_yview[0];
+Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
 if instance_number(obj_dlg2) = 0{
 if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
 {
@@ -132,7 +134,7 @@ else
 //Подойти к неписи
 if (global.attack = 1 &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0 &amp;&amp; global.block = 0)
 {
-instance_create(mouse_x,mouse_y,obj_mouseclick);
+instance_create(Mx,My,obj_mouseclick);
 if instance_number(obj_dlg1) &gt; 0
     {
     with(obj_dlg1)
@@ -166,6 +168,8 @@ if instance_number(obj_dlg1) &gt; 0
           <argument>
             <kind>1</kind>
             <string>///Спавн маускликов с проверкой на диалоги
+My = (mouse_y/room_height)*window_get_height()+view_yview[0];
+Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
 if instance_number(obj_dlg1) &gt; 0
     {
     with(obj_dlg1)
@@ -180,15 +184,15 @@ if instance_number(obj_mouseclick) &gt; 0
         {
         instance_destroy();
         }
-    instance_create(mouse_x,mouse_y,obj_mouseclick);
+    instance_create(Mx,My,obj_mouseclick);
     }
 else
 {
-xxx = abs(mouse_x - global.player.x);
-yyy = abs(mouse_y - global.player.y);
+xxx = abs(Mx - global.player.x);
+yyy = abs(My - global.player.y);
 if (xxx &gt; 40 || yyy &gt; 50)
     {
-    instance_create(mouse_x,mouse_y,obj_mouseclick);
+    instance_create(Mx,My,obj_mouseclick);
     with(global.player)
         {
         image_index = 1;
@@ -219,10 +223,12 @@ if (xxx &gt; 40 || yyy &gt; 50)
           <argument>
             <kind>1</kind>
             <string>///Имя непися, курсор и запрет атакаи при наведении
+My = (mouse_y/room_height)*window_get_height()+view_yview[0];
+Mx = (mouse_x/room_width)*window_get_width()+view_xview[0];
 if global.block = 0 {
 for (k=0;k&lt;npc_n;k+=1)
     {
-    if ((abs(global.npc[k].x - mouse_x) &lt; 20) &amp;&amp; (abs(global.npc[k].y - mouse_y) &lt; 20)){
+    if ((abs(global.npc[k].x - Mx) &lt; 20) &amp;&amp; (abs(global.npc[k].y - My) &lt; 20)){
         global.npc_k = k;
         if mouse_check_button_pressed(mb_left){
             global.npc_click = 1;}

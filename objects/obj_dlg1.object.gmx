@@ -112,74 +112,27 @@ global.attack = 0;
           <argument>
             <kind>1</kind>
             <string>///Подсветка выделенного
-if enter = 1
+My = (mouse_y/room_height)*window_get_height()+view_yview[0];
+Mx = (mouse_x/room_width)*window_get_width()+view_xview[0]+global.npc[global.npc_i].x;
+if Mx &gt; 0 &amp;&amp; Mx &lt; 80
 {
-    if mouse_y &lt; y-25 &amp;&amp; mouse_y &gt; y-50
+    if My &lt; y-25 &amp;&amp; My &gt; y-50
     {
     image_index = talk_index;
     }
-    if mouse_y &lt; y &amp;&amp; mouse_y &gt; y-25
+    if My &lt; y &amp;&amp; My &gt; y-25
     {
     image_index = trade_index;
     }
-    if mouse_y &gt; y &amp;&amp; mouse_y &lt; y+25
+    if My &gt; y &amp;&amp; My &lt; y+25
     {
     image_index = default_index;
     }
-    if mouse_y &gt; y+25 &amp;&amp; mouse_y &lt; y+50
+    if My &gt; y+25 &amp;&amp; My &lt; y+50
     {
     image_index = quit_index;
     }
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="11">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Энтер = 0
-image_index = default_index;
-enter = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Энтер = 1
-enter = 1;
 </string>
           </argument>
         </arguments>
