@@ -43,6 +43,7 @@
         <sprite>sprites\spr_use_fire</sprite>
         <sprite>sprites\spr_left_check</sprite>
       </sprites>
+      <sprite>sprites\spr_m_menu</sprite>
     </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_floor_stone</sprite>
@@ -146,6 +147,12 @@
       <object>objects\obj_init</object>
       <object>objects\obj_options</object>
       <object>objects\obj_dlg2</object>
+      <object>objects\obj_menu_new</object>
+      <object>objects\obj_menu_save</object>
+      <object>objects\obj_menu_load</object>
+      <object>objects\obj_menu_options</object>
+      <object>objects\obj_menu_credits</object>
+      <object>objects\obj_menu_exit</object>
     </objects>
     <objects name="check_player">
       <object>objects\check1</object>
