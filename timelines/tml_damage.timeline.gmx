@@ -21,8 +21,8 @@
             <kind>1</kind>
             <string>///Неуязвимый и красный.
 
-obj_player.image_blend = c_red;
-global.player_invincible = 1;
+image_blend = c_red;
+invincible = 1;
 </string>
           </argument>
         </arguments>
@@ -48,9 +48,9 @@ global.player_invincible = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Обычный цвет.
+            <string>///Нормальный цвет.
 
-obj_player.image_blend = c_white;
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -78,7 +78,7 @@ obj_player.image_blend = c_white;
             <kind>1</kind>
             <string>///Красный цвет.
 
-obj_player.image_blend = c_red;
+image_blend = c_red;
 </string>
           </argument>
         </arguments>
@@ -104,9 +104,9 @@ obj_player.image_blend = c_red;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Обычный цвет.
+            <string>///Нормальный цвет.
 
-obj_player.image_blend = c_white;
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -134,7 +134,7 @@ obj_player.image_blend = c_white;
             <kind>1</kind>
             <string>///Красный цвет.
 
-obj_player.image_blend = c_red;
+image_blend = c_red;
 </string>
           </argument>
         </arguments>
@@ -160,9 +160,9 @@ obj_player.image_blend = c_red;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Обычный цвет.
+            <string>///Нормальный цвет.
 
-obj_player.image_blend = c_white;
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -170,7 +170,7 @@ obj_player.image_blend = c_white;
     </event>
   </entry>
   <entry>
-    <step>30</step>
+    <step>12</step>
     <event>
       <action>
         <libid>1</libid>
@@ -188,9 +188,9 @@ obj_player.image_blend = c_white;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Уязвимый.
+            <string>///Уязвимый
 
-global.player_invincible = 0;
+invincible = 0;
 </string>
           </argument>
         </arguments>

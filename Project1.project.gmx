@@ -142,7 +142,7 @@
     <objects name="Enemy">
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_zombie</object>
-      <object>objects\obj_zombie</object>
+      <object>objects\obj_enemy_zombie_green</object>
     </objects>
     <objects name="system">
       <object>objects\obj_dlg1</object>
@@ -172,6 +172,7 @@
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>
+    <timeline>timelines\tml_damage</timeline>
     <timeline>timelines\tml_fire_destroy</timeline>
   </timelines>
   <rooms name="rooms">

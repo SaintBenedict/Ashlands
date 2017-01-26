@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize the enemy
+image_blend = c_green;
 image_speed = 0.2;
 max_val_enemy_hp = 100;
 current_val_enemy_hp = max_val_enemy_hp;
@@ -60,26 +61,28 @@ if (current_val_enemy_hp = 100)
     //NOT ENRAGED
     if distance_to_object(obj_player)&lt;=300
     {
-    if (collision_line(x,y,obj_player.x,obj_player.y,obj_solidspace,true,true) = noone)
-    {
-    move_towards_point(obj_player.x,obj_player.y, 2);
+      grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
+    path = path_add();
+    mp_grid_add_instances(path,obj_solidspace,1);
+    mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
+    path_start(path,2,"",1);
     }
     else move_towards_point(x,y,0);
-
-    }
 }
 else
 {
     //ENRAGED
     if distance_to_object(obj_player)&lt;=900
     {
-      if (collision_line(x,y,obj_player.x,obj_player.y,obj_solidspace,true,true) = noone)
-    {
-           move_towards_point(obj_player.x,obj_player.y, 4);
+    grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
+    path = path_add();
+    mp_grid_add_instances(path,obj_solidspace,1);
+    mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
+    path_start(path,4,"",1);
     }
     else move_towards_point(x,y,0);
-    }
 }
+
 
 
 //Проверка состояния
@@ -89,7 +92,6 @@ if current_val_enemy_hp &lt; 1
 instance_destroy();
 global.xp += 100;
 }
-
 </string>
           </argument>
         </arguments>
@@ -111,7 +113,7 @@ global.xp += 100;
           <argument>
             <kind>1</kind>
             <string>///Костыли для спрайтов
-
+image_blend = c_green;
 
 mox = obj_player.x;
 moy = obj_player.y;
@@ -249,6 +251,7 @@ timeline_index = tml_damage;
 timeline_loop = false;
 timeline_position = 0;
 timeline_running = true;
+
 }
 
 </string>
