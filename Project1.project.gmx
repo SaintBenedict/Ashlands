@@ -143,6 +143,7 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_zombie</object>
       <object>objects\obj_enemy_zombie_green</object>
+      <object>objects\obj_enemy_zombie_red</object>
     </objects>
     <objects name="system">
       <object>objects\obj_dlg1</object>

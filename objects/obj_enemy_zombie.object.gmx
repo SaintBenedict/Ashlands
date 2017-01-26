@@ -55,7 +55,7 @@ invincible = 0;
             <kind>1</kind>
             <string>///Actions of enemy
 
-if (current_val_enemy_hp = 100)
+if (current_val_enemy_hp == 100)
 {
     //NOT ENRAGED
     if distance_to_object(obj_player)&lt;=300
