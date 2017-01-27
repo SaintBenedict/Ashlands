@@ -67,6 +67,7 @@ if (current_val_enemy_hp == 100)
     else move_towards_point(x,y,0);
 
     }
+    else move_towards_point(x,y,0);
 }
 else
 {
