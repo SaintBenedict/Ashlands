@@ -10,7 +10,7 @@ switch(mob_id){
 шанс падения 60%*/
 case 0: {
 if irandom(100) < 60 {
-instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),obj_i_u_apple);}
+instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),global.item[1]);}
 break;}
 
 ///////////////////////////////////// Зомби грин
@@ -20,9 +20,9 @@ break;}
 ид 1 шанс 50%*/
 case 1: {
 if irandom(100) < 80 {
-instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),obj_i_u_apple);}
+instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),global.item[1]);}
 if irandom(100) < 50 {
-instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),obj_i_u_carrot);}
+instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),global.item[2]);}
 break;}
 
 ///////////////////////////////////// Зомби рэд
@@ -31,11 +31,11 @@ break;}
 ид 1 шанс 80%
 ид 0 может упасть дважды с шансом 40%*/
 case 2: {
-instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),obj_i_u_apple);
+instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),global.item[1]);
 if irandom(100) < 40 {
-instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),obj_i_u_apple);}
+instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),global.item[1]);}
 if irandom(100) < 80 {
-instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),obj_i_u_carrot);}
+instance_create(xx+irandom_range(-20,20),yy+irandom_range(-20,20),global.item[2]);}
 break;}
 
 //

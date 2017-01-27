@@ -56,8 +56,8 @@ global.npc_portrait[1] = spr_portrait_2;
           <argument>
             <kind>1</kind>
             <string>/// Предметы
-item[0] = obj_i_u_apple;
-item[1] = obj_i_u_carrot;
+global.item[1] = obj_i_u_apple;
+global.item[2] = obj_i_u_carrot;
 </string>
           </argument>
         </arguments>

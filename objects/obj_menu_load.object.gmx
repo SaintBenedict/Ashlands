@@ -120,6 +120,7 @@ global.lvl_points = ini_read_real("Stats","lvl_points",global.lvl_points);
 global.player_x = ini_read_real("Player","player_x",global.player_x);
 global.player_y = ini_read_real("Player","player_y",global.player_y);
 global.check = ini_read_real("Player","check",global.check);
+global.inventory_full = ini_read_real("Player","inventory_full",global.inventory_full);
 
 global.npc_0q = ini_read_real("NPC","npc_0q",global.npc_0q);
 global.npc_1q = ini_read_real("NPC","npc_1q",global.npc_1q);

@@ -27,12 +27,15 @@ global.player_x = 300;
 global.player_y = 450;
 global.lvl_points = 0;
 global.check = 0;
+global.inventory_full = 0;
 
 global.npc_0q = 0;
 global.npc_1q = 0;
 
 
-global.hotkey_charlist = ord('C');</code>
+global.hotkey_charlist = ord('C');
+
+for (i=0; i&lt;30; i+=1) {global.inventory[i] = 0;}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

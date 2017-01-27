@@ -117,6 +117,7 @@ ini_write_real("Stats","baf_movespeed",global.baf_movespeed);
 ini_write_real("Stats","lvl_movespeed",global.lvl_movespeed);
 ini_write_real("Stats","lvl_points",global.lvl_points);
 
+ini_write_real("Player","inventory_full",global.inventory_full);
 ini_write_real("Player","player_x",global.player.x);
 ini_write_real("Player","player_y",global.player.y);
 ini_write_real("Player","check",global.check);
