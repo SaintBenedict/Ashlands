@@ -58,7 +58,8 @@ view_hview[0] = window_get_height();
 view_wport[0] = view_wview[0];
 view_hport[0] = view_hview[0];
 
-surface_resize(application_surface,view_wport[0],view_hport[0])
+if window_get_height() &gt; 10{
+surface_resize(application_surface,view_wport[0],view_hport[0])}
 </string>
           </argument>
         </arguments>
