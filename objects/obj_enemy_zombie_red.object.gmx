@@ -185,12 +185,15 @@ if (current_val_enemy_hp == 300)
     mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
     path_start(path,4,"",1);
     }
-    else move_towards_point(x,y,0);
+    else
+    {
+    move_towards_point(x,y,0);
+    }
 }
 else
 {   
     //ENRAGED
-    if distance_to_object(obj_player)&lt;=900
+    if distance_to_object(obj_player)&lt;=600
     {
     grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
     path = path_add();
@@ -198,7 +201,9 @@ else
     mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
     path_start(path,4,"",1);
     }
-    else move_towards_point(x,y,0);
+    {
+    move_towards_point(x,y,0);
+    }
 }
 
 

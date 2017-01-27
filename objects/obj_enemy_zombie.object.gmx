@@ -100,7 +100,7 @@ if (current_val_enemy_hp == 100)
 else
 {
     //ENRAGED
-    if distance_to_object(obj_player)&lt;=900
+    if distance_to_object(obj_player)&lt;=600
     {
       if (collision_line(x,y,obj_player.x,obj_player.y,obj_solidspace,true,true) = noone)
     {
