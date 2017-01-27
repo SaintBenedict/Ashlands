@@ -902,11 +902,7 @@ draw_set_colour(c_black); // Возвращение дефолтного цве�
           <argument>
             <kind>1</kind>
             <string>///Отрисовка хэлсбара
-
-draw_sprite(spr_hp,current_pix_hero_hp,x,y+32);
-draw_set_halign(fa_center);
-draw_set_font(font_hp);
-draw_text_color(x,y+32,global.hp,c_black,c_black,c_black,c_black,1);
+healthbar(current_pix_hero_hp,global.hp);
 
 </string>
           </argument>

@@ -402,13 +402,8 @@ global.hp -= 30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if current_val_enemy_hp &lt; max_val_enemy_hp
-{
-draw_sprite(spr_hp,current_pix_enemy_hp,x,y+32);
-draw_set_halign(fa_center);
-draw_set_font(font_hp);
-draw_text_color(x,y+32,current_val_enemy_hp,c_black,c_black,c_black,c_black,1);
-}
+            <string>if current_val_enemy_hp &lt; max_val_enemy_hp {
+healthbar(current_pix_enemy_hp,current_val_enemy_hp);}
 </string>
           </argument>
         </arguments>

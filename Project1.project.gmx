@@ -132,6 +132,7 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\drop.gml</script>
+    <script>scripts\healthbar.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_base</font>
