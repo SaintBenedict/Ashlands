@@ -60,7 +60,7 @@ audio_play_sound(snd_fire, 11, false);
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemy_zombie_red">
+    <event eventtype="4" ename="obj_solidspace">
       <action>
         <libid>1</libid>
         <id>532</id>
@@ -139,7 +139,7 @@ audio_play_sound(snd_explode, 11, false);
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_solidspace">
+    <event eventtype="4" ename="obj_enemy_zombie_red">
       <action>
         <libid>1</libid>
         <id>532</id>
