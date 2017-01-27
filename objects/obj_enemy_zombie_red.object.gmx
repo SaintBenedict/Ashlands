@@ -33,7 +33,7 @@ image_speed = 1;
 max_val_enemy_hp = 300;
 current_val_enemy_hp = max_val_enemy_hp;
 current_pix_enemy_hp = 38;
-invincible = 1;
+invincible = 0;
 </string>
           </argument>
         </arguments>
