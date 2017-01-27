@@ -131,10 +131,14 @@
     <path>paths\pth_circle</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\drop.gml</script>
     <script>scripts\healthbar.gml</script>
-    <script>scripts\pick_up.gml</script>
-    <script>scripts\lets_draw_inventory.gml</script>
+    <scripts name="items">
+      <script>scripts\drop.gml</script>
+      <script>scripts\pick_up.gml</script>
+      <script>scripts\lets_draw_inventory.gml</script>
+      <script>scripts\item_use.gml</script>
+      <script>scripts\item_names.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_base</font>
@@ -145,10 +149,6 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_init</object>
-    <objects name="map">
-      <object>objects\obj_floor_stone</object>
-      <object>objects\obj_floor_grass</object>
-    </objects>
     <objects name="Enemy">
       <object>objects\obj_enemy_zombie</object>
       <object>objects\obj_enemy_zombie_green</object>
@@ -168,31 +168,35 @@
       <object>objects\obj_menu_exit</object>
       <object>objects\obj_menu_next</object>
       <object>objects\obj_menu</object>
-    </objects>
-    <objects name="check_player">
-      <object>objects\check1</object>
-      <object>objects\check2</object>
-      <object>objects\check3</object>
-      <object>objects\check4</object>
-      <object>objects\check5</object>
-      <object>objects\check6</object>
-      <object>objects\check7</object>
-      <object>objects\check8</object>
-    </objects>
-    <objects name="items">
-      <objects name="usable">
-        <object>objects\obj_i_u_apple</object>
-        <object>objects\obj_i_u_carrot</object>
+      <objects name="check_player">
+        <object>objects\check1</object>
+        <object>objects\check2</object>
+        <object>objects\check3</object>
+        <object>objects\check4</object>
+        <object>objects\check5</object>
+        <object>objects\check6</object>
+        <object>objects\check7</object>
+        <object>objects\check8</object>
+      </objects>
+      <objects name="map">
+        <object>objects\obj_floor_stone</object>
+        <object>objects\obj_floor_grass</object>
+      </objects>
+      <objects name="effects">
+        <object>objects\obj_bullet</object>
+        <object>objects\obj_hero_slash</object>
+        <object>objects\obj_tornado</object>
       </objects>
     </objects>
     <objects name="npc">
       <object>objects\obj_npc_1</object>
       <object>objects\obj_npc_2</object>
     </objects>
-    <objects name="effects">
-      <object>objects\obj_bullet</object>
-      <object>objects\obj_hero_slash</object>
-      <object>objects\obj_tornado</object>
+    <objects name="items">
+      <objects name="usable">
+        <object>objects\obj_i_u_apple</object>
+        <object>objects\obj_i_u_carrot</object>
+      </objects>
     </objects>
   </objects>
   <timelines name="timelines">

@@ -134,6 +134,18 @@ ini_write_real("Hotkey","hotkey_charlist",global.hotkey_charlist);
 
 ini_close();
 }
+
+
+with(obj_menu_next){
+instance_destroy();}
+with(obj_menu_load){
+instance_destroy();}
+with(obj_menu_exit){
+instance_destroy();}
+with(obj_menu){
+instance_destroy();}
+
+instance_destroy();
 </string>
           </argument>
         </arguments>

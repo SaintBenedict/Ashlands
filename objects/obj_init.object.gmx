@@ -58,8 +58,13 @@ global.npc_portrait[1] = spr_portrait_2;
             <string>/// Предметы
 global.item[1] = obj_i_u_apple;
 global.item_sprite[1] = spr_i_u_apple;
+global.item_name[1] = "Яблоко";
+global.item_text[1] = "Вкусное, сочное, сладкое. "+chr(10)+"Восстанавливает некоторое "+chr(10)+"количество здоровья";
+
 global.item[2] = obj_i_u_carrot;
 global.item_sprite[2] = spr_i_u_carrot;
+global.item_name[2] = "Морковка";
+global.item_text[2] = "Улучшает зрение, помогает "+chr(10)+"укрепить организм и восполнить"+chr(10)+"запас сил.";
 </string>
           </argument>
         </arguments>

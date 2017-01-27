@@ -151,7 +151,7 @@ if global.hp &lt; 1
 show_message("Поздравляю, вам пиздец.");
 game_restart();
 }
-
+if global.hp &gt; global.max_val_hero_hp { global.hp = global.max_val_hero_hp; }
 </string>
           </argument>
         </arguments>
@@ -814,8 +814,13 @@ window_set_cursor(cr_default)
 draw_sprite(spr_player_face,global.check-1,Xp,Yp); // Портрет
 // Уровень
 draw_text(Xl,Yl,string(global.lvl) + " (" + string(global.xp) + "/" + string(global.xp_next) + ")");
+draw_sprite(spr_hp,current_pix_hero_hp,Xp,Yc+314);
+draw_set_halign(fa_center);
+draw_set_font(font_hp);
+draw_text_color(Xp,Yc+314,global.hp,c_black,c_black,c_black,c_black,1);
 // Названия характеристик
 draw_set_font(f_char_text);
+draw_set_halign(fa_left);
 draw_text(Xc+408,Yc+86,"Физическая атака");
 draw_text(Xc+408,Yc+107,"Магическая атака");
 draw_text(Xc+408,Yc+128,"Скорость");
