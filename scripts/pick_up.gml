@@ -5,8 +5,9 @@ var hy = global.player.y
 
 razx = abs(hx-x);
 razy = abs(hy-y);
+if hy < y {toto = 70} else {toto = 50}
 
-if (razx < 40 && razy < 50) {
+if (razx < 50 && razy < toto) {
     if (global.inventory_full < 30){
     place_into_inv(item_id);
     instance_destroy();
