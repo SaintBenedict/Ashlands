@@ -155,6 +155,7 @@
       <object>objects\obj_enemy_zombie_red</object>
     </objects>
     <objects name="system">
+      <object>objects\obj_block</object>
       <object>objects\obj_solidspace</object>
       <object>objects\obj_mouseclick</object>
       <object>objects\obj_dlg1</object>

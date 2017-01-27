@@ -13,7 +13,8 @@ if (razx < 40 && razy < 50) {
     window_set_cursor(cr_default);}
     else {
     show_message("Инвентарь переполнен");}
-}
+global.block = 0;
+instance_create(0,0,obj_block);}
 
 
 #define place_into_inv
