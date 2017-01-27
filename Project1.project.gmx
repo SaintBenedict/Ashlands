@@ -12,6 +12,7 @@
     <sound>sound\snd_tornado</sound>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\spr_hero_collision</sprite>
     <sprites name="particles">
       <sprite>sprites\spr_fireball</sprite>
       <sprite>sprites\spr_projectile</sprite>
@@ -97,14 +98,18 @@
       <sprite>sprites\spr_portrait_2</sprite>
     </sprites>
     <sprites name="Enemy">
-      <sprite>sprites\spr_enemy</sprite>
       <sprite>sprites\spr_enemy_zombie_temp</sprite>
       <sprite>sprites\spr_enemy_zombie_right</sprite>
       <sprite>sprites\spr_enemy_zombie_left</sprite>
       <sprite>sprites\spr_enemy_zombie_down</sprite>
       <sprite>sprites\spr_enemy_zombie_up</sprite>
     </sprites>
-    <sprite>sprites\spr_hero_collision</sprite>
+    <sprites name="items">
+      <sprites name="usable">
+        <sprite>sprites\spr_i_u_apple</sprite>
+        <sprite>sprites\spr_i_u_carrot</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -125,6 +130,9 @@
   <paths name="paths">
     <path>paths\pth_circle</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\drop.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font_base</font>
     <font>fonts\f_char</font>
@@ -133,24 +141,20 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_npc_1</object>
-    <object>objects\obj_npc_2</object>
-    <object>objects\obj_mouseclick</object>
+    <object>objects\obj_init</object>
     <objects name="map">
       <object>objects\obj_floor_stone</object>
       <object>objects\obj_floor_grass</object>
     </objects>
-    <object>objects\obj_hero_slash</object>
-    <object>objects\obj_bullet</object>
-    <object>objects\obj_tornado</object>
     <objects name="Enemy">
       <object>objects\obj_enemy_zombie</object>
       <object>objects\obj_enemy_zombie_green</object>
       <object>objects\obj_enemy_zombie_red</object>
     </objects>
     <objects name="system">
+      <object>objects\obj_solidspace</object>
+      <object>objects\obj_mouseclick</object>
       <object>objects\obj_dlg1</object>
-      <object>objects\obj_init</object>
       <object>objects\obj_options</object>
       <object>objects\obj_dlg2</object>
       <object>objects\obj_menu_new</object>
@@ -172,7 +176,21 @@
       <object>objects\check7</object>
       <object>objects\check8</object>
     </objects>
-    <object>objects\obj_solidspace</object>
+    <objects name="items">
+      <objects name="usable">
+        <object>objects\obj_i_u_apple</object>
+        <object>objects\obj_i_u_carrot</object>
+      </objects>
+    </objects>
+    <objects name="npc">
+      <object>objects\obj_npc_1</object>
+      <object>objects\obj_npc_2</object>
+    </objects>
+    <objects name="effects">
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_hero_slash</object>
+      <object>objects\obj_tornado</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>
