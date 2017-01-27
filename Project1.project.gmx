@@ -134,6 +134,7 @@
     <script>scripts\drop.gml</script>
     <script>scripts\healthbar.gml</script>
     <script>scripts\pick_up.gml</script>
+    <script>scripts\lets_draw_inventory.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_base</font>

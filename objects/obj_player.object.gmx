@@ -863,6 +863,7 @@ draw_sprite(spr_plus,0,Xc+618,Yc+128);
     global.movespeed += 1;
     global.lvl_points -= 1;}
 }
+lets_draw_inventory(Xc,Yc);
 } // Конец отрисовки листа
 draw_set_colour(c_black); // Возвращение дефолтного цвета, а то всё идёт по пизде
 </string>

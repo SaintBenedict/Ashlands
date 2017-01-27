@@ -20,6 +20,6 @@ global.block = 0;}
 var item_id = argument0;
 global.inventory_full += 1;
 
-for (i=1;i<30;i+=1;){
+for (i=1;i<31;i+=1;){
 if global.inventory[i] = 0 {global.inventory[i] = item_id; break;}
 }
