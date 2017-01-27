@@ -9,6 +9,7 @@
     <sound>sound\snd_slash</sound>
     <sound>sound\snd_walk_grass</sound>
     <sound>sound\snd_fire</sound>
+    <sound>sound\snd_tornado</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="particles">
@@ -16,6 +17,7 @@
       <sprite>sprites\spr_projectile</sprite>
       <sprite>sprites\spr_bomb</sprite>
       <sprite>sprites\spr_hero_slash</sprite>
+      <sprite>sprites\spr_tornado</sprite>
     </sprites>
     <sprites name="followers">
       <sprite>sprites\spr_1_up_1</sprite>
@@ -140,6 +142,7 @@
     </objects>
     <object>objects\obj_hero_slash</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_tornado</object>
     <objects name="Enemy">
       <object>objects\obj_enemy_zombie</object>
       <object>objects\obj_enemy_zombie_green</object>

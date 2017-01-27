@@ -128,6 +128,42 @@ global.npc_click = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="54">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Атака
+//Проверка атаки
+My = mouse_y;
+Mx = mouse_x;
+if instance_number(obj_dlg2) = 0{
+if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
+{
+   // if (global.left_use = 0){
+       // instance_create(global.player.x, global.player.y, obj_hero_slash);}
+    if (global.left_use = 1){
+        instance_create(global.player.x,global.player.y,obj_tornado);
+        }
+}
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="53">
       <action>
         <libid>1</libid>
@@ -208,38 +244,38 @@ if instance_number(obj_dlg1) &gt; 0
           <argument>
             <kind>1</kind>
             <string>///Спавн маускликов с проверкой на диалоги
-My = mouse_y;
-Mx = mouse_x;
-if instance_number(obj_dlg1) &gt; 0
-    {
-    with(obj_dlg1)
-        {
-        instance_destroy();
-        }
-    }
-if (instance_number(obj_dlg2) = 0 &amp;&amp; global.block = 0){
-if instance_number(obj_mouseclick) &gt; 0
-    {
-    with (obj_mouseclick)
-        {
-        instance_destroy();
-        }
-    instance_create(Mx,My,obj_mouseclick);
-    }
-else
-{
-xxx = abs(Mx - global.player.x);
-yyy = abs(My - global.player.y);
-if (xxx &gt; 40 || yyy &gt; 50)
-    {
-    instance_create(Mx,My,obj_mouseclick);
-    with(global.player)
-        {
-        image_index = 1;
-        }
-    }
-}
-}
+//My = mouse_y;
+//Mx = mouse_x;
+//if instance_number(obj_dlg1) &gt; 0
+//    {
+//    with(obj_dlg1)
+//        {
+//        instance_destroy();
+//       }
+//    }
+//if (instance_number(obj_dlg2) = 0 &amp;&amp; global.block = 0){
+//if instance_number(obj_mouseclick) &gt; 0
+//    {
+//    with (obj_mouseclick)
+//        {
+//        instance_destroy();
+//        }
+//    instance_create(Mx,My,obj_mouseclick);
+//    }
+//else
+//{
+//xxx = abs(Mx - global.player.x);
+//yyy = abs(My - global.player.y);
+//if (xxx &gt; 40 || yyy &gt; 50)
+//    {
+//    instance_create(Mx,My,obj_mouseclick);
+//    with(global.player)
+//        {
+//        image_index = 1;
+//        }
+//    }
+//}
+//}
 </string>
           </argument>
         </arguments>
