@@ -108,7 +108,7 @@ if (current_val_enemy_hp == 100)
 else
 {
     //ENRAGED
-    if distance_to_object(obj_player)&lt;=600
+    if distance_to_object(obj_player)&lt;=400
     {
     patroling = false;
     grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
