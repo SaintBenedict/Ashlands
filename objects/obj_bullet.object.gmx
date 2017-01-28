@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-100</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_light</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///Initialization
 audio_play_sound(snd_fire, 11, false);
+
+//light
+pl_light_init(40, make_color_rgb(252, 150, 55), 1);
 </string>
           </argument>
         </arguments>
