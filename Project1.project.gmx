@@ -21,6 +21,7 @@
       <sprite>sprites\spr_bomb</sprite>
       <sprite>sprites\spr_hero_slash</sprite>
       <sprite>sprites\spr_tornado</sprite>
+      <sprite>sprites\spr_exploision</sprite>
     </sprites>
     <sprites name="followers">
       <sprite>sprites\spr_1_up_1</sprite>
@@ -182,14 +183,22 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_init</object>
+    <objects name="map">
+      <object>objects\obj_solidspace</object>
+    </objects>
+    <objects name="effects">
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_hero_slash</object>
+      <object>objects\obj_tornado</object>
+    </objects>
     <objects name="Enemy">
+      <object>objects\obj_parent_enemy</object>
       <object>objects\obj_enemy_zombie</object>
       <object>objects\obj_enemy_zombie_green</object>
       <object>objects\obj_enemy_zombie_red</object>
     </objects>
     <objects name="system">
       <object>objects\obj_block</object>
-      <object>objects\obj_solidspace</object>
       <object>objects\obj_mouseclick</object>
       <object>objects\obj_dlg1</object>
       <object>objects\obj_options</object>
@@ -212,15 +221,6 @@
         <object>objects\check7</object>
         <object>objects\check8</object>
       </objects>
-      <objects name="map">
-        <object>objects\obj_floor_stone</object>
-        <object>objects\obj_floor_grass</object>
-      </objects>
-      <objects name="effects">
-        <object>objects\obj_bullet</object>
-        <object>objects\obj_hero_slash</object>
-        <object>objects\obj_tornado</object>
-      </objects>
     </objects>
     <objects name="npc">
       <object>objects\obj_npc_1</object>
@@ -234,6 +234,7 @@
     </objects>
     <object>objects\obj_fireplace</object>
     <object>objects\obj_light</object>
+    <object>objects\obj_exploision</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>
