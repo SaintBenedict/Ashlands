@@ -27,8 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 4;
-global.baf_physic_attack += 20;
-global.baf_movespeed -= 1;
+
 </string>
           </argument>
         </arguments>
@@ -53,6 +52,8 @@ global.baf_movespeed -= 1;
             <kind>1</kind>
             <string>global.check = 5;
 global.left_use = 1;
+global.baf_physic_attack += 20;
+global.baf_movespeed -= 1;
 room_goto_next();
 </string>
           </argument>
