@@ -28,7 +28,7 @@
             <string>///Initialize
 
 pl_light_init(90, make_color_rgb(252, 150, 55), 1);
-image_speed = 3;
+image_speed = 5;
 </string>
           </argument>
         </arguments>
@@ -49,7 +49,7 @@ image_speed = 3;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>26</string>
+            <string>12</string>
           </argument>
           <argument>
             <kind>4</kind>

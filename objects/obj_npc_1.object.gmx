@@ -53,7 +53,7 @@ image_speed = 0;
             <string>///Глубина спрайта для обхода героем
 if y &gt; global.player.y
 {
-depth = -10;
+depth = 1;
 }
 else
 {

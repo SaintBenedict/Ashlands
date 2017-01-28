@@ -136,7 +136,7 @@ global.hp -= 50;
             <string>///Глубина спрайта для обхода героем
 if y &gt; global.player.y
 {
-depth = -10;
+depth = 1;
 }
 else
 {
