@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>item_id = 2;
+            <string>///Айдишник
+item_id = 2;
 </string>
           </argument>
         </arguments>
@@ -48,7 +49,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>window_set_cursor(cr_default);
+            <string>///Курсор и глобалблок
+window_set_cursor(cr_default);
 global.block = 0;
 </string>
           </argument>
@@ -72,7 +74,8 @@ global.block = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>window_set_cursor(cr_handpoint);
+            <string>///Курсор и глобалблок
+window_set_cursor(cr_handpoint);
 global.block = 1;
 </string>
           </argument>
@@ -96,7 +99,8 @@ global.block = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pick_up(item_id);
+            <string>///Пикап при айдишнике
+pick_up(item_id);
 </string>
           </argument>
         </arguments>
@@ -133,7 +137,8 @@ global.block = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_position(mouse_x,mouse_y,id) {item_names(item_id,x,y);}
+            <string>///Название всплывающее
+if instance_position(mouse_x,mouse_y,id) {item_names(item_id,x,y);}
 </string>
           </argument>
         </arguments>

@@ -113,6 +113,10 @@
         <sprite>sprites\spr_i_u_carrot</sprite>
       </sprites>
     </sprites>
+    <sprites name="usable">
+      <sprite>sprites\spr_chest</sprite>
+      <sprite>sprites\spr_chest2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -167,6 +171,7 @@
         <script>scripts\pl_light_destroy.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\use.gml</script>
   </scripts>
   <shaders name="shaders">
     <shaders name="prettylight">
@@ -231,6 +236,10 @@
         <object>objects\obj_i_u_apple</object>
         <object>objects\obj_i_u_carrot</object>
       </objects>
+    </objects>
+    <objects name="usable">
+      <object>objects\obj_chest_once</object>
+      <object>objects\obj_chest_perm</object>
     </objects>
     <object>objects\obj_fireplace</object>
     <object>objects\obj_light</object>

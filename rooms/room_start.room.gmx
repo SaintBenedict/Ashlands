@@ -65,6 +65,8 @@
     <instance objName="obj_i_u_apple" x="160" y="704" name="inst_0F4B22B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_i_u_carrot" x="288" y="800" name="inst_8173C45C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fireplace" x="608" y="384" name="inst_5CCFC52A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chest_once" x="576" y="512" name="inst_58ADCEBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chest_perm" x="192" y="640" name="inst_16A94258" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_tileset_mud" x="192" y="96" w="32" h="32" xo="32" yo="64" id="10000617" name="inst_922D3777" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
