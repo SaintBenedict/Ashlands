@@ -11,6 +11,7 @@ var y2u = y2-23;
 var y2d = y2+23;
 
 
+
 for (i=1;i<16;i+=1){
     if global.inventory[i] != 0{
         draw_sprite(global.item_sprite[global.inventory[i]],0,x1+(xm*(i-1)),y1);
@@ -29,6 +30,8 @@ for (i=1;i<16;i+=1){
 if (mouse_x-view_xview[0]>x1l+(xm*(i-1)) && mouse_x-view_xview[0]<x1r+(xm*(i-1)) && mouse_y-view_yview[0]>y1u && mouse_y-view_yview[0]<y1d){
     if global.inventory[i] != 0 {item_caption(i,x1r+(xm*(i-1)),y1u);}
     if mouse_check_button_pressed(mb_right){ item_use(i); }
+    if (mouse_check_button_pressed(mb_left) && touch = 0 && global.inventory[i] != 0) {touch = 1; item_pull(i);}
+    if (mouse_check_button_released(mb_left) && touch = 1) {touch = 0; item_put(i);}
 }
 }
 
@@ -36,6 +39,8 @@ for (i=16;i<31;i+=1){
 if (mouse_x-view_xview[0]>x1l+(xm*(i-16)) && mouse_x-view_xview[0]<x1r+(xm*(i-16)) && mouse_y-view_yview[0]>y2u && mouse_y-view_yview[0]<y2d){
     if global.inventory[i] != 0 {item_caption(i,x1r+(xm*(i-16)),y2u);}
     if mouse_check_button_pressed(mb_right){ item_use(i); }
+    if (mouse_check_button_pressed(mb_left) && touch = 0 && global.inventory[i] != 0) {touch = 1; item_pull(i);}
+    if (mouse_check_button_released(mb_left) && touch = 1) {touch = 0; item_put(i);}
 }
 }
 
@@ -56,3 +61,19 @@ draw_set_font(f_char);
 draw_text(xx-5,yy-75,global.item_name[item_id]);
 draw_set_font(f_char_text);
 draw_text(xx-5,yy-40,global.item_text[item_id]);
+#define item_pull
+var i = argument0;
+pull_inventory = global.inventory[i];
+global.inventory[i] = 0;
+time_inventory = i;
+cursor_sprite = global.item_sprite[pull_inventory];
+
+#define item_put
+var i = argument0;
+if global.inventory[i] = 0 {
+global.inventory[i] = pull_inventory;}
+else {
+global.inventory[time_inventory] = global.inventory[i];
+global.inventory[i] = pull_inventory;}
+
+cursor_sprite = -1;
