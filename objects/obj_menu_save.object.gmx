@@ -143,6 +143,8 @@ with(obj_menu_load){
 instance_destroy();}
 with(obj_menu_exit){
 instance_destroy();}
+with(obj_menu_options){
+instance_destroy();}
 with(obj_menu){
 instance_destroy();}
 instance_create(0,0,obj_block);
