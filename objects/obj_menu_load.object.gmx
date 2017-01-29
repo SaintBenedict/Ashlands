@@ -123,6 +123,7 @@ global.player_x = ini_read_real("Player","player_x",global.player_x);
 global.player_y = ini_read_real("Player","player_y",global.player_y);
 global.check = ini_read_real("Player","check",global.check);
 global.inventory_full = ini_read_real("Player","inventory_full",global.inventory_full);
+global.left_use = ini_read_real("Player","global.left_use",global.left_use);
 for (i=0; i&lt;31; i+=1) {global.inventory[i] = ini_read_real("Player","inventory"+string(i),global.inventory[i]);}
 // NPC
 global.npc_0q = ini_read_real("NPC","npc_0q",global.npc_0q);

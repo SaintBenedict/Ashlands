@@ -118,7 +118,6 @@ global.npc_near = 0; //Рядом есть нпц
 global.player_invincible = 0;
 global.left_change = 0;
 global.block = 0;
-global.left_use = 0;
 
 global.sprint = 1;
 

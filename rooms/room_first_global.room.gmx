@@ -28,6 +28,7 @@ global.player_y = 450;
 global.lvl_points = 0;
 global.check = 0;
 global.inventory_full = 0;
+global.left_use = 0;
 
 global.npc_0q = 0;
 global.npc_1q = 0;
