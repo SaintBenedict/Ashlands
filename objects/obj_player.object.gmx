@@ -832,7 +832,7 @@ var Yl = Yc+20;
 
 if (charlist_activated = 1){
 draw_sprite(spr_charlist,0,Xc,Yc);
-//////////////////////////////////////////////window_set_cursor(cr_default)
+window_set_cursor(cr_default)
 draw_sprite(spr_player_face,global.check-1,Xp,Yp); // Портрет
 // Уровень
 draw_text(Xl,Yl,string(global.lvl) + " (" + string(global.xp) + "/" + string(global.xp_next) + ")");
