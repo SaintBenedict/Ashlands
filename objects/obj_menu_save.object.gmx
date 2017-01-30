@@ -104,6 +104,7 @@ ini_open("autosave.sav");
 
 // Stats
 ini_write_real("Stats","max_val_hero_hp",global.max_val_hero_hp);
+ini_write_real("Stats","current_max_val_hero_hp",global.current_max_val_hero_hp);
 ini_write_real("Stats","hp",global.hp);
 ini_write_real("Stats","xp",global.xp);
 ini_write_real("Stats","lvl",global.lvl);
@@ -111,11 +112,13 @@ ini_write_real("Stats","magic_attack",global.magic_attack);
 ini_write_real("Stats","physic_attack",global.physic_attack);
 ini_write_real("Stats","movespeed",global.movespeed);
 ini_write_real("Stats","baf_magic_attack",global.baf_magic_attack);
-ini_write_real("Stats","lvl_magic_attack",global.lvl_magic_attack);
+//ini_write_real("Stats","lvl_magic_attack",global.lvl_magic_attack);
 ini_write_real("Stats","baf_physic_attack",global.baf_physic_attack);
-ini_write_real("Stats","lvl_physic_attack",global.lvl_physic_attack);
+//ini_write_real("Stats","lvl_physic_attack",global.lvl_physic_attack);
 ini_write_real("Stats","baf_movespeed",global.baf_movespeed);
-ini_write_real("Stats","lvl_movespeed",global.lvl_movespeed);
+//ini_write_real("Stats","lvl_movespeed",global.lvl_movespeed);
+//ini_write_real("Stats","lvl_max_val_hero_hp",global.lvl_max_val_hero_hp);
+ini_write_real("Stats","baf_max_val_hero_hp",global.baf_max_val_hero_hp);
 ini_write_real("Stats","lvl_points",global.lvl_points);
 
 // Player
@@ -124,6 +127,7 @@ ini_write_real("Player","player_x",global.player.x);
 ini_write_real("Player","player_y",global.player.y);
 ini_write_real("Player","check",global.check);
 ini_write_real("Player","global.left_use",global.left_use);
+ini_write_real("Player","equipment_chest",global.equipment_chest);
 for (i=0; i&lt;31; i+=1) {ini_write_real("Player","inventory"+string(i),global.inventory[i]);}
 
 // NPC

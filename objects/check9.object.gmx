@@ -52,6 +52,7 @@ image_index = 8;
             <kind>1</kind>
             <string>global.check = 9;
 global.max_val_hero_hp += 100;
+global.current_max_val_hero_hp += 100;
 global.hp += 100;
 global.magic_attack += 25;
 global.physic_attack =+ 25;

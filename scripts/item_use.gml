@@ -8,3 +8,14 @@ case 2: global.hp += 50; global.physic_attack += 2; break;
 }
 global.inventory[item_slot_id] = 0;
 global.inventory_full -= 1;}
+// 500-1000 Броньки
+if global.inventory[item_slot_id] > 500 && global.inventory[item_slot_id] < 1000{ 
+if (global.equipment_chest = 0){
+global.equipment_chest = global.inventory[item_slot_id];
+global.inventory[item_slot_id] = 0;
+global.inventory_full -= 1;}
+else {
+var temp = global.equipment_chest;
+global.equipment_chest = global.inventory[item_slot_id];
+global.inventory[item_slot_id] = temp}
+}

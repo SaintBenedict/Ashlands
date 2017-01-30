@@ -65,6 +65,13 @@ global.item[2] = obj_i_u_carrot;
 global.item_sprite[2] = spr_i_u_carrot;
 global.item_name[2] = "Морковка";
 global.item_text[2] = "Улучшает зрение, помогает "+chr(10)+"укрепить организм и восполнить"+chr(10)+"запас сил.";
+
+
+
+global.item[501] = obj_i_e_c_valk;
+global.item_sprite[501] = spr_i_e_c_valk;
+global.item_name[501] = "Броня Валькирии";
+global.item_text[501] = "Крайне прочная броня, "+chr(10)+"обладатель которой становится"+chr(10)+"гораздо выносливее";
 </string>
           </argument>
         </arguments>

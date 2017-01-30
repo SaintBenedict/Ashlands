@@ -31,7 +31,7 @@ break;}
 ид 1 шанс 80%
 ид 0 может упасть дважды с шансом 40%*/
 case 2: {
-instance_create(xx+irandom_range(-40,40),yy+irandom_range(-40,40),global.item[1]);
+instance_create(xx+irandom_range(-40,40),yy+irandom_range(-40,40),global.item[501]);
 if irandom(100) < 40 {
 instance_create(xx+irandom_range(-40,40),yy+irandom_range(-40,40),global.item[1]);}
 if irandom(100) < 80 {

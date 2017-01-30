@@ -52,6 +52,10 @@
         <sprite>sprites\spr_left_check</sprite>
         <sprite>sprites\spr_menu</sprite>
         <sprite>sprites\spr_opt_change</sprite>
+        <sprite>sprites\spr_char_chest</sprite>
+        <sprite>sprites\spr_char_legs</sprite>
+        <sprite>sprites\spr_char_helmet</sprite>
+        <sprite>sprites\spr_char_hands</sprite>
       </sprites>
     </sprites>
     <sprites name="tiles">
@@ -116,6 +120,11 @@
       <sprites name="usable">
         <sprite>sprites\spr_i_u_apple</sprite>
         <sprite>sprites\spr_i_u_carrot</sprite>
+      </sprites>
+      <sprites name="equipment">
+        <sprites name="chests">
+          <sprite>sprites\spr_i_e_c_valk</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="usable">
@@ -241,6 +250,11 @@
       <objects name="usable">
         <object>objects\obj_i_u_apple</object>
         <object>objects\obj_i_u_carrot</object>
+      </objects>
+      <objects name="equipment">
+        <objects name="chests">
+          <object>objects\obj_i_e_c_valk</object>
+        </objects>
       </objects>
     </objects>
     <objects name="usable">

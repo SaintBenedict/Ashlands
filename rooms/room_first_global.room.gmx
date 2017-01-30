@@ -18,11 +18,10 @@ global.magic_attack = 3;
 global.physic_attack = 5;
 global.movespeed = 4;
 global.baf_magic_attack = 0;
-global.lvl_magic_attack = 0;
 global.baf_physic_attack = 0;
-global.lvl_physic_attack = 0;
+global.baf_max_val_hero_hp = 0;
+global.current_max_val_hero_hp = global.max_val_hero_hp;
 global.baf_movespeed = 0;
-global.lvl_movespeed = 0;
 global.player_x = 300;
 global.player_y = 450;
 global.lvl_points = 0;
@@ -37,7 +36,10 @@ global.npc_1q = 0;
 global.hotkey_charlist = ord('C');
 global.control = 0;
 
-for (i=0; i&lt;31; i+=1) {global.inventory[i] = 0;}</code>
+for (i=0; i&lt;31; i+=1) {global.inventory[i] = 0;}
+
+global.equipment_chest = 0;
+global.hp_chest_baf = 0;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
