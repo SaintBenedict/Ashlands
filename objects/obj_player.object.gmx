@@ -201,7 +201,7 @@ if global.hp &gt; global.current_max_val_hero_hp { global.hp = global.current_ma
           <argument>
             <kind>1</kind>
             <string>///Костыли для спрайтов и движение
-
+if instance_number(obj_dlg2) = 0 &amp;&amp; instance_number(obj_menu) = 0 &amp;&amp; charlist_activated = 0 {
 
 //Разворот камеры за мышкой.
 var mox = mouse_x; //Зачем вообще эти переменные? - я их вводил, когда у меня координаты мыши поплили, потом оставил чтобы по всему коду не менять
@@ -334,6 +334,7 @@ move_towards_point(obj_mouseclick.x,obj_mouseclick.y, global.movespeed);
 //   {
 //   audio_play_sound(snd_walk_grass, 10, true);
 //   }
+ }
  }
 </string>
           </argument>
