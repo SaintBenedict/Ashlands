@@ -9,7 +9,7 @@
   <bboxmode>0</bboxmode>
   <bbox_left>3</bbox_left>
   <bbox_right>47</bbox_right>
-  <bbox_top>8</bbox_top>
+  <bbox_top>11</bbox_top>
   <bbox_bottom>45</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -22,6 +22,5 @@
   <frames>
     <frame index="0">images\spr_opt_change_0.png</frame>
     <frame index="1">images\spr_opt_change_1.png</frame>
-    <frame index="2">images\spr_opt_change_2.png</frame>
   </frames>
 </sprite>

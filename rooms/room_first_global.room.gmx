@@ -35,6 +35,7 @@ global.npc_1q = 0;
 
 
 global.hotkey_charlist = ord('C');
+global.control = 0;
 
 for (i=0; i&lt;31; i+=1) {global.inventory[i] = 0;}</code>
   <enableViews>0</enableViews>

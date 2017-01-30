@@ -131,6 +131,7 @@ global.npc_1q = ini_read_real("NPC","npc_1q",global.npc_1q);
 
 // HotKeys
 global.hotkey_charlist = ini_read_real("Hotkey","hotkey_charlist",global.hotkey_charlist);
+global.control = ini_read_real("Hotkey","control",global.control);
 
 ini_close();
 

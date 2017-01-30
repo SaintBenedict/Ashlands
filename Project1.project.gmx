@@ -51,6 +51,7 @@
         <sprite>sprites\spr_use_fire</sprite>
         <sprite>sprites\spr_left_check</sprite>
         <sprite>sprites\spr_menu</sprite>
+        <sprite>sprites\spr_opt_change</sprite>
       </sprites>
     </sprites>
     <sprites name="tiles">

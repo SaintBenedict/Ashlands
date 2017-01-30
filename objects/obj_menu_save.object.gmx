@@ -132,6 +132,7 @@ ini_write_real("NPC","npc_1q",global.npc_1q);
 
 // HotKeys
 ini_write_real("Hotkey","hotkey_charlist",global.hotkey_charlist);
+ini_write_real("Hotkey","control",global.control);
 
 ini_close();
 }
