@@ -236,6 +236,8 @@ global.npc_click = 0;
 My = mouse_y;
 Mx = mouse_x;
 if instance_number(obj_dlg2) = 0{
+
+if global.control = 0 {
 if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
 {
    // if (global.left_use = 0){
@@ -244,6 +246,12 @@ if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global
         instance_create(global.player.x,global.player.y,obj_tornado);
         }
 }
+} else {
+instance_create(mouse_x, mouse_y, obj_mouseclick);
+}
+
+
+
 }
 </string>
           </argument>
@@ -330,38 +338,40 @@ if instance_number(obj_dlg1) &gt; 0
           <argument>
             <kind>1</kind>
             <string>///Спавн маускликов с проверкой на диалоги
-//My = mouse_y;
-//Mx = mouse_x;
-//if instance_number(obj_dlg1) &gt; 0
-//    {
-//    with(obj_dlg1)
-//        {
-//        instance_destroy();
-//       }
-//    }
-//if (instance_number(obj_dlg2) = 0 &amp;&amp; global.block = 0){
-//if instance_number(obj_mouseclick) &gt; 0
-//    {
-//    with (obj_mouseclick)
-//        {
-//        instance_destroy();
-//        }
-//    instance_create(Mx,My,obj_mouseclick);
-//    }
-//else
-//{
-//xxx = abs(Mx - global.player.x);
-//yyy = abs(My - global.player.y);
-//if (xxx &gt; 40 || yyy &gt; 50)
-//    {
-//    instance_create(Mx,My,obj_mouseclick);
-//    with(global.player)
-//        {
-//        image_index = 1;
-//        }
-//    }
-//}
-//}
+if global.control = 1 {
+My = mouse_y;
+Mx = mouse_x;
+if instance_number(obj_dlg1) &gt; 0
+    {
+    with(obj_dlg1)
+        {
+        instance_destroy();
+      }
+    }
+if (instance_number(obj_dlg2) = 0 &amp;&amp; global.block = 0){
+if instance_number(obj_mouseclick) &gt; 0
+    {
+    with (obj_mouseclick)
+        {
+        instance_destroy();
+        }
+    instance_create(Mx,My,obj_mouseclick);
+    }
+else
+{
+xxx = abs(Mx - global.player.x);
+yyy = abs(My - global.player.y);
+if (xxx &gt; 40 || yyy &gt; 50)
+    {
+    instance_create(Mx,My,obj_mouseclick);
+    with(global.player)
+        {
+        image_index = 1;
+        }
+    }
+}
+}
+}
 </string>
           </argument>
         </arguments>

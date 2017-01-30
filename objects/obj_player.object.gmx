@@ -202,10 +202,9 @@ if global.hp &gt; global.current_max_val_hero_hp { global.hp = global.current_ma
             <kind>1</kind>
             <string>///Костыли для спрайтов и движение
 
-//if instance_number(obj_mouseclick)&gt;0
-//{
+
 //Разворот камеры за мышкой.
-var mox = mouse_x; //Зачем вообще эти переменные?
+var mox = mouse_x; //Зачем вообще эти переменные? - я их вводил, когда у меня координаты мыши поплили, потом оставил чтобы по всему коду не менять
 var moy = mouse_y;
 var hex = global.player.x;
 var hey = global.player.y;
@@ -218,12 +217,12 @@ if mox &gt; hex
         if (moy-hey) &gt; (mox-hex)
             {
             sprite_index = sprdown;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprright;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         }
     else
@@ -231,12 +230,12 @@ if mox &gt; hex
         if (hey-moy) &gt; (mox-hex)
             {
             sprite_index = sprup;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprright;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         }
     }
@@ -247,12 +246,12 @@ else
         if (moy-hey) &gt; (hex-mox)
             {
             sprite_index = sprdown;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprleft;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         }
     else
@@ -260,12 +259,12 @@ else
         if (hey-moy) &gt; (hex-mox)
             {
             sprite_index = sprup;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprleft;
-            //image_speed = 0.5;
+            if global.control = 1 &amp;&amp; instance_number(obj_mouseclick) &gt; 0 {image_speed = 0.5;}
             }
         }
     }
@@ -280,6 +279,7 @@ MOVEDOWN = keyboard_check(ord('S'));
 SPRINT = keyboard_check(vk_lshift);
  
 //Движение игрока
+if global.control = 0 {
 if (MOVELEFT &amp;&amp; x &gt; sprite_width/2) 
 { 
     x -= global.current_movespeed; 
@@ -317,11 +317,14 @@ if (SPRINT==false)
 { 
     global.sprint = 1;
 }
-
+}
+else {
 //Движение мышкой. Пока закомментировано.
-
-//move_towards_point(obj_mouseclick.x,obj_mouseclick.y, global.movespeed);
-//}
+if instance_number(obj_mouseclick)&gt;0
+{
+move_towards_point(obj_mouseclick.x,obj_mouseclick.y, global.movespeed);
+}
+//
 //else
 //{
 //audio_stop_sound(snd_walk_grass);
@@ -330,7 +333,8 @@ if (SPRINT==false)
 //    if !audio_is_playing(snd_walk_grass)
 //   {
 //   audio_play_sound(snd_walk_grass, 10, true);
- //  }
+//   }
+ }
 </string>
           </argument>
         </arguments>
