@@ -105,6 +105,7 @@ ini_open("autosave.sav");
 // Stats
 ini_write_real("Stats","max_val_hero_hp",global.max_val_hero_hp);
 ini_write_real("Stats","current_max_val_hero_hp",global.current_max_val_hero_hp);
+ini_write_real("Stats","hp_chest_baf",global.hp_chest_baf);
 ini_write_real("Stats","hp",global.hp);
 ini_write_real("Stats","xp",global.xp);
 ini_write_real("Stats","lvl",global.lvl);
