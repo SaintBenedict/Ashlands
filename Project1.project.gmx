@@ -127,10 +127,10 @@
           <sprite>sprites\spr_i_e_c_bobr</sprite>
         </sprites>
         <sprites name="hands">
-          <sprite>sprites\sp_i_e_h_lady</sprite>
+          <sprite>sprites\spr_i_e_h_lady</sprite>
           <sprite>sprites\spr_i_e_h_man</sprite>
         </sprites>
-        <sprites name="helmet">
+        <sprites name="helmets">
           <sprite>sprites\spr_i_e_he_allhat</sprite>
           <sprite>sprites\spr_i_e_he_fox</sprite>
         </sprites>
@@ -267,6 +267,19 @@
       <objects name="equipment">
         <objects name="chests">
           <object>objects\obj_i_e_c_valk</object>
+          <object>objects\obj_i_e_c_bobr</object>
+        </objects>
+        <objects name="hands">
+          <object>objects\obj_i_e_h_lady</object>
+          <object>objects\obj_i_e_h_man</object>
+        </objects>
+        <objects name="helmets">
+          <object>objects\obj_i_e_he_allhat</object>
+          <object>objects\obj_i_e_he_fox</object>
+        </objects>
+        <objects name="legs">
+          <object>objects\obj_i_e_l_bad</object>
+          <object>objects\obj_i_e_l_rabbit</object>
         </objects>
       </objects>
     </objects>

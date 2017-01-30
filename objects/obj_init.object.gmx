@@ -72,6 +72,43 @@ global.item[501] = obj_i_e_c_valk;
 global.item_sprite[501] = spr_i_e_c_valk;
 global.item_name[501] = "Броня Валькирии";
 global.item_text[501] = "Крайне прочная броня, "+chr(10)+"обладатель которой становится"+chr(10)+"гораздо выносливее";
+
+global.item[502] = obj_i_e_c_bobr;
+global.item_sprite[502] = spr_i_e_c_bobr;
+global.item_name[502] = "Мантия Боброчека";
+global.item_text[502] = "Невесомая мантия, "+chr(10)+"созданная будто из одеяла."+chr(10)+"По необъяснимым причинам"+chr(10)+"позволяет испепелять врагов" +chr(10)+"священным огнем.";
+
+global.item[1001] = obj_i_e_l_bad;
+global.item_sprite[1001] = spr_i_e_l_bad;
+global.item_name[1001] = "Ботинок Роланда";
+global.item_text[1001] = "Жесткий, обитый железом ботинок, "+chr(10)+"будто создан для того,"+chr(10)+"что бы наступать на лицо злодеям и псам.";
+
+global.item[1002] = obj_i_e_l_rabbit;
+global.item_sprite[1002] = spr_i_e_l_rabbit;
+global.item_name[1002] = "Тапочки пунктуальности";
+global.item_text[1002] = "Пара пушистых тапков, "+chr(10)+"которые позволят вам"+chr(10)+"успеть куда угодно.";
+
+global.item[1501] = obj_i_e_h_lady;
+global.item_sprite[1501] = spr_i_e_h_lady;
+global.item_name[1501] = "Дамские перчатки";
+global.item_text[1501] = "Говорят, в этих изящных перчатках, "+chr(10)+"сделанных из кожи ведьм,"+chr(10)+"удобно творить заклинания.";
+
+global.item[1502] = obj_i_e_h_man;
+global.item_sprite[1502] = spr_i_e_h_man;
+global.item_name[1502] = "Перчатки Тормистких Монахов";
+global.item_text[1502] = "Один удар бойца в такой перчатке "+chr(10)+" и зло, несправедливость, мерзость"+chr(10)+" падают на колени, моля о прощении.";
+
+global.item[2001] = obj_i_e_he_allhat;
+global.item_sprite[2001] = spr_i_e_he_allhat;
+global.item_name[2001] = "Тюрбан Алладина";
+global.item_text[2001] = "Помимо магических способностей, "+chr(10)+"дает возможность коварно"+chr(10)+" подталкивать гоблинов к суициду.";
+
+global.item[2002] = obj_i_e_he_fox;
+global.item_sprite[2002] = spr_i_e_he_fox;
+global.item_name[2002] = "Маска Лисы Сережи";
+global.item_text[2002] = "Носитель становится куда более выносливым "+chr(10)+"к ударам ножа и укусам собак."+chr(10)+"ОСТОРОЖНО:Увеличивает продолжительность диалогов до получаса";
+
+
 </string>
           </argument>
         </arguments>
