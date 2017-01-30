@@ -82,6 +82,13 @@ sprup = spr_up_8;
 sprleft = spr_left_8;
 sprright = spr_right_8;
 }
+if global.check = 9
+{
+sprdown = spr_down_9;
+sprup = spr_up_9;
+sprleft = spr_left_9;
+sprright = spr_right_9;
+}
 </string>
           </argument>
         </arguments>

@@ -28,5 +28,6 @@
     <frame index="5">images\spr_player_face_5.png</frame>
     <frame index="6">images\spr_player_face_6.png</frame>
     <frame index="7">images\spr_player_face_7.png</frame>
+    <frame index="8">images\spr_player_face_8.png</frame>
   </frames>
 </sprite>

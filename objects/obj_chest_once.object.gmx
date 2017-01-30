@@ -52,10 +52,10 @@ type = "once_container";
           <argument>
             <kind>1</kind>
             <string>///Дроп хуйни при дестрое
-instance_create(x+irandom_range(-20,20),y+irandom_range(-20,20),global.item[1]);
-instance_create(x+irandom_range(-20,20),y+irandom_range(-20,20),global.item[1]);
-instance_create(x+irandom_range(-20,20),y+irandom_range(-20,20),global.item[1]);
-instance_create(x+irandom_range(-20,20),y+irandom_range(-20,20),global.item[2]);
+instance_create(x+irandom_range(-40,40),y+irandom_range(-40,40),global.item[1]);
+instance_create(x+irandom_range(-40,40),y+irandom_range(-40,40),global.item[1]);
+instance_create(x+irandom_range(-40,40),y+irandom_range(-40,40),global.item[1]);
+instance_create(x+irandom_range(-40,40),y+irandom_range(-40,40),global.item[2]);
 </string>
           </argument>
         </arguments>

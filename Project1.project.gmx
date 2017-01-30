@@ -73,6 +73,7 @@
       <sprite>sprites\spr_down_6</sprite>
       <sprite>sprites\spr_down_7</sprite>
       <sprite>sprites\spr_down_8</sprite>
+      <sprite>sprites\spr_down_9</sprite>
       <sprite>sprites\spr_left_1</sprite>
       <sprite>sprites\spr_left_2</sprite>
       <sprite>sprites\spr_left_3</sprite>
@@ -81,6 +82,7 @@
       <sprite>sprites\spr_left_6</sprite>
       <sprite>sprites\spr_left_7</sprite>
       <sprite>sprites\spr_left_8</sprite>
+      <sprite>sprites\spr_left_9</sprite>
       <sprite>sprites\spr_right_1</sprite>
       <sprite>sprites\spr_right_2</sprite>
       <sprite>sprites\spr_right_3</sprite>
@@ -89,6 +91,7 @@
       <sprite>sprites\spr_right_6</sprite>
       <sprite>sprites\spr_right_7</sprite>
       <sprite>sprites\spr_right_8</sprite>
+      <sprite>sprites\spr_right_9</sprite>
       <sprite>sprites\spr_up_1</sprite>
       <sprite>sprites\spr_up_2</sprite>
       <sprite>sprites\spr_up_3</sprite>
@@ -97,6 +100,7 @@
       <sprite>sprites\spr_up_6</sprite>
       <sprite>sprites\spr_up_7</sprite>
       <sprite>sprites\spr_up_8</sprite>
+      <sprite>sprites\spr_up_9</sprite>
       <sprite>sprites\spr_player_face</sprite>
       <sprite>sprites\spr_portrait_1</sprite>
       <sprite>sprites\spr_portrait_2</sprite>
@@ -226,6 +230,7 @@
         <object>objects\check6</object>
         <object>objects\check7</object>
         <object>objects\check8</object>
+        <object>objects\check9</object>
       </objects>
     </objects>
     <objects name="npc">
