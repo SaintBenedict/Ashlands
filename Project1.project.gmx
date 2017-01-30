@@ -124,6 +124,19 @@
       <sprites name="equipment">
         <sprites name="chests">
           <sprite>sprites\spr_i_e_c_valk</sprite>
+          <sprite>sprites\spr_i_e_c_bobr</sprite>
+        </sprites>
+        <sprites name="hands">
+          <sprite>sprites\sp_i_e_h_lady</sprite>
+          <sprite>sprites\spr_i_e_h_man</sprite>
+        </sprites>
+        <sprites name="helmet">
+          <sprite>sprites\spr_i_e_he_allhat</sprite>
+          <sprite>sprites\spr_i_e_he_fox</sprite>
+        </sprites>
+        <sprites name="legs">
+          <sprite>sprites\spr_i_e_l_bad</sprite>
+          <sprite>sprites\spr_i_e_l_rabbit</sprite>
         </sprites>
       </sprites>
     </sprites>
