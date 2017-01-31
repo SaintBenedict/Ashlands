@@ -59,15 +59,80 @@ if (mouse_x-view_xview[0]>x_e+41-23 && mouse_x-view_xview[0]<x_e+41+23 && mouse_
         draw_set_alpha(1);
         draw_set_color(c_white);
         draw_set_font(f_char);
-        draw_text(x_e+41+23-5,y_e+171-23-75,global.item_name[global.equipment_chest]);
+        draw_set_valign(fa_top);
+        draw_text(x_e+41+23-5,y_e+171-23-85,global.item_name[global.equipment_chest]);
         draw_set_font(f_char_text);
-        draw_text(x_e+41+23-5,y_e+171-23-40,global.item_text[global.equipment_chest]);
+        draw_text(x_e+41+23-5,y_e+171-23-60,global.item_text[global.equipment_chest]);
+        draw_set_valign(fa_middle);
         }
     if mouse_check_button_pressed(mb_right){ item_to_inv("chest",global.equipment_chest); }
 }
-draw_sprite(spr_char_legs,0,x_e+363,y_e+171);
-draw_sprite(spr_char_helmet,0,x_e+41,y_e+106);
-draw_sprite(spr_char_hands,0,x_e+363,y_e+107);
+// Ноги
+if global.equipment_legs != 0{
+draw_sprite(global.item_sprite[global.equipment_legs],0,x_e+363,y_e+171);}
+else {draw_sprite(spr_char_legs,0,x_e+363,y_e+171);}
+if (mouse_x-view_xview[0]>x_e+363-23 && mouse_x-view_xview[0]<x_e+363+23 && mouse_y-view_yview[0]>y_e+171-23 && mouse_y-view_yview[0]<y_e+171+23){
+    if global.equipment_legs != 0 
+        {
+        draw_set_halign(fa_left);
+        draw_set_color(c_black);
+        draw_set_alpha(0.75);
+        draw_rectangle(x_e+363+23-10,y_e+171-23+10,x_e+363+23+190,y_e+171-23-90,c_black);
+        draw_set_alpha(1);
+        draw_set_color(c_white);
+        draw_set_font(f_char);
+        draw_set_valign(fa_top);
+        draw_text(x_e+363+23-5,y_e+171-23-85,global.item_name[global.equipment_legs]);
+        draw_set_font(f_char_text);
+        draw_text(x_e+363+23-5,y_e+171-23-60,global.item_text[global.equipment_legs]);
+        draw_set_valign(fa_middle);
+        }
+    if mouse_check_button_pressed(mb_right){ item_to_inv("legs",global.equipment_legs); }
+}
+// Руки
+if global.equipment_hands != 0{
+draw_sprite(global.item_sprite[global.equipment_hands],0,x_e+363,y_e+107);}
+else {draw_sprite(spr_char_hands,0,x_e+363,y_e+107);}
+if (mouse_x-view_xview[0]>x_e+363-23 && mouse_x-view_xview[0]<x_e+363+23 && mouse_y-view_yview[0]>y_e+107-23 && mouse_y-view_yview[0]<y_e+107+23){
+    if global.equipment_hands != 0 
+        {
+        draw_set_halign(fa_left);
+        draw_set_color(c_black);
+        draw_set_alpha(0.75);
+        draw_rectangle(x_e+363+23-10,y_e+107-23+10,x_e+363+23+190,y_e+107-23-90,c_black);
+        draw_set_alpha(1);
+        draw_set_color(c_white);
+        draw_set_font(f_char);
+        draw_set_valign(fa_top);
+        draw_text(x_e+363+23-5,y_e+107-23-85,global.item_name[global.equipment_hands]);
+        draw_set_font(f_char_text);
+        draw_text(x_e+363+23-5,y_e+107-23-60,global.item_text[global.equipment_hands]);
+        draw_set_valign(fa_middle);
+        }
+    if mouse_check_button_pressed(mb_right){ item_to_inv("hands",global.equipment_hands); }
+}
+// Шлем
+if global.equipment_helmet != 0{
+draw_sprite(global.item_sprite[global.equipment_helmet],0,x_e+41,y_e+106);}
+else {draw_sprite(spr_char_helmet,0,x_e+41,y_e+106);}
+if (mouse_x-view_xview[0]>x_e+41-23 && mouse_x-view_xview[0]<x_e+41+23 && mouse_y-view_yview[0]>y_e+106-23 && mouse_y-view_yview[0]<y_e+106+23){
+    if global.equipment_helmet != 0 
+        {
+        draw_set_halign(fa_left);
+        draw_set_color(c_black);
+        draw_set_alpha(0.75);
+        draw_rectangle(x_e+41+23-10,y_e+106-23+10,x_e+41+23+190,y_e+106-23-90,c_black);
+        draw_set_alpha(1);
+        draw_set_color(c_white);
+        draw_set_font(f_char);
+        draw_set_valign(fa_top);
+        draw_text(x_e+41+23-5,y_e+106-23-85,global.item_name[global.equipment_helmet]);
+        draw_set_font(f_char_text);
+        draw_text(x_e+41+23-5,y_e+106-23-60,global.item_text[global.equipment_helmet]);
+        draw_set_valign(fa_middle);
+        }
+    if mouse_check_button_pressed(mb_right){ item_to_inv("helmet",global.equipment_helmet); }
+}
 
 
 #define item_caption
@@ -84,9 +149,11 @@ draw_rectangle(xx-10,yy+10,xx+190,yy-90,c_black);
 draw_set_alpha(1);
 draw_set_color(c_white);
 draw_set_font(f_char);
-draw_text(xx-5,yy-75,global.item_name[item_id]);
+draw_set_valign(fa_top);
+draw_text(xx-5,yy-85,global.item_name[item_id]);
 draw_set_font(f_char_text);
-draw_text(xx-5,yy-40,global.item_text[item_id]);
+draw_text(xx-5,yy-60,global.item_text[item_id]);
+draw_set_valign(fa_middle);
 
 #define item_pull
 var i = argument0;
@@ -114,8 +181,10 @@ global.inventory[k] = i_id;
 global.inventory_full += 1;
 switch(type){
 case "chest": {global.equipment_chest = 0; break;}
+case "legs": {global.equipment_legs = 0; break;}
+case "hands": {global.equipment_hands = 0; break;}
+case "helmet": {global.equipment_helmet = 0; break;}
 }
 break;}
 }
-
 

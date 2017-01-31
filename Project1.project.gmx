@@ -199,6 +199,8 @@
       </scripts>
     </scripts>
     <script>scripts\use.gml</script>
+    <script>scripts\save.gml</script>
+    <script>scripts\load.gml</script>
   </scripts>
   <shaders name="shaders">
     <shaders name="prettylight">

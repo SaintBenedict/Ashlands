@@ -397,10 +397,10 @@ global.xp = abs(global.xp_next-global.xp);
           <argument>
             <kind>1</kind>
             <string>///Статы
-global.current_magic_attack = global.magic_attack + global.baf_magic_attack;
-global.current_physic_attack = global.physic_attack + global.baf_physic_attack;
-global.current_movespeed = (global.movespeed + global.baf_movespeed)*global.sprint;
-global.current_max_val_hero_hp = global.max_val_hero_hp + global.hp_chest_baf;
+global.current_magic_attack = global.magic_attack + global.baf_magic_attack + global.magic_chest_baf + global.magic_hands_baf + global.magic_helmet_baf;
+global.current_physic_attack = global.physic_attack + global.baf_physic_attack + global.physic_legs_baf + global.physic_hands_baf;
+global.current_movespeed = (global.movespeed + global.baf_movespeed + global.movespeed_legs_baf)*global.sprint;
+global.current_max_val_hero_hp = global.max_val_hero_hp + global.hp_chest_baf + global.hp_helmet_baf;
 </string>
           </argument>
         </arguments>
@@ -446,8 +446,24 @@ global.dmg_slash = global.current_physic_attack;
             <kind>1</kind>
             <string>///Бафы от шмота
 switch(global.equipment_chest){
-case 0: global.hp_chest_baf = 0; break;
-case 501: global.hp_chest_baf = 70; break;
+case 0: global.hp_chest_baf = 0; global.magic_chest_baf = 0; break;
+case 501: global.hp_chest_baf = 70; global.magic_chest_baf = 0; break;
+case 502: global.hp_chest_baf = 50; global.magic_chest_baf = 20; break;
+}
+switch(global.equipment_legs){
+case 0: global.movespeed_legs_baf = 0; global.physic_legs_baf = 0; break;
+case 1001: global.movespeed_legs_baf = 1; global.physic_legs_baf = 10; break;
+case 1002: global.movespeed_legs_baf = 3; global.physic_legs_baf = 0; break;
+}
+switch(global.equipment_hands){
+case 0: global.magic_hands_baf = 0; global.physic_hands_baf = 0; break;
+case 1501: global.magic_hands_baf = 15; global.physic_hands_baf = 15; break;
+case 1502: global.physic_hands_baf = 30; global.magic_hands_baf = 0; break;
+}
+switch(global.equipment_helmet){
+case 0: global.hp_helmet_baf = 0; global.magic_helmet_baf = 0; break;
+case 2001: global.hp_helmet_baf = 30; global.magic_helmet_baf = 10; break;
+case 2002: global.magic_helmet_baf = 20; global.hp_helmet_baf = 0; break;
 }
 </string>
           </argument>
