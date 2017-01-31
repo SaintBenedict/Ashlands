@@ -2,6 +2,7 @@
 
 // Prepare the light surface
 if (!surface_exists(_pl_lightSurface)) {
+    surface_free(_pl_lightSurface);
     _pl_lightSurface = surface_create(_pl_baseRadius * 2, _pl_baseRadius * 2);
 }
 surface_set_target(_pl_lightSurface);

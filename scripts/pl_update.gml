@@ -9,6 +9,7 @@ for (var i = 0; i < ds_list_size(_pl_lightObjects); i++) {
 
 // Prepare lightmap
 if (!surface_exists(_pl_lightmap)) {
+    surface_free(_pl_lightmap);
     _pl_lightmap = surface_create(view_wview[0], view_hview[0]);
 }
 
@@ -38,6 +39,7 @@ if (_pl_blurring) {
 
     // Prepare blurmap
     if (!surface_exists(_pl_blurmap)) {
+        surface_free(_pl_blurmap);
         _pl_blurmap = surface_create(view_wview[0], view_hview[0]);
     }
     

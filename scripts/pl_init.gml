@@ -5,10 +5,12 @@ _pl_lightObjects = ds_list_create();
 
 // Setup the global light surface
 _pl_lightmap = surface_create(view_wview[0], view_hview[0]);
+surface_free(_pl_lightmap);
 _pl_vivid = true;
 
 // Setup blurring
 _pl_blurmap = surface_create(view_wview[0], view_hview[0]);
+surface_free(_pl_blurmap);
 _pl_blurring = true;
 
 // Set options
