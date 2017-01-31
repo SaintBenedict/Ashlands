@@ -862,6 +862,7 @@ if (keyboard_check_pressed(global.hotkey_charlist)) {
     case 1:
     charlist_activated = 0;
     global.block = 0;
+    with(obj_mouseclick){instance_destroy()};
     break;
     }
 }

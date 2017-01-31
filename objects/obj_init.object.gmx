@@ -534,6 +534,8 @@ instance_create(window_get_width()/2+view_xview[0],window_get_height()/2-199+vie
 with(global.player){
 if charlist_activated = 1{
 charlist_activated = 0;}}
+
+with(obj_mouseclick){instance_destroy()};
 </string>
           </argument>
         </arguments>
