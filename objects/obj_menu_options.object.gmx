@@ -96,16 +96,11 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>if instance_number(obj_menu) = 1 {
-with(obj_menu_next){
-instance_destroy();}
-with(obj_menu_load){
-instance_destroy();}
-with(obj_menu_exit){
-instance_destroy();}
-with(obj_menu_options){
-instance_destroy();}
-with(obj_menu_save){
-instance_destroy();}
+kill(obj_menu_next);
+kill(obj_menu_load);
+kill(obj_menu_exit);
+kill(obj_menu_options);
+kill(obj_menu_save);
 
 with(obj_menu){
 options = 1;}

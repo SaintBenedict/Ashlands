@@ -535,7 +535,7 @@ with(global.player){
 if charlist_activated = 1{
 charlist_activated = 0;}}
 
-with(obj_mouseclick){instance_destroy()};
+kill(obj_mouseclick);
 </string>
           </argument>
         </arguments>
