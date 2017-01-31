@@ -28,8 +28,6 @@
             <string>///Код для размеров экрана
 window_set_size(1024,768); // Указываем начальный размер окна
 window_set_position(250,50); //Выравниваем окно по центру экрана
-
-
 </string>
           </argument>
         </arguments>
