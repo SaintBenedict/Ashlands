@@ -109,7 +109,7 @@ pl_light_destroy();}
             <kind>1</kind>
             <string>///Boom
 
-//audio_play_sound(snd_explode, 11, false);
+audio_play_sound(snd_explode, 11, false);
 instance_create(x, y, obj_exploision);
 if global.light_check = 1 {
 pl_light_destroy();}
@@ -152,7 +152,7 @@ pl_light_destroy();}
             <kind>1</kind>
             <string>///Boom
 
-//audio_play_sound(snd_explode, 11, false);
+audio_play_sound(snd_explode, 11, false);
 instance_create(x, y, obj_exploision);
 if global.light_check = 1 {
 pl_light_destroy();}
