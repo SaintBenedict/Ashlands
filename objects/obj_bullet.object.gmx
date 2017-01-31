@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initialization
+
 audio_play_sound(snd_fire, 11, false);
 
 //light
@@ -108,7 +109,7 @@ pl_light_destroy();}
             <kind>1</kind>
             <string>///Boom
 
-audio_play_sound(snd_explode, 11, false);
+//audio_play_sound(snd_explode, 11, false);
 instance_create(x, y, obj_exploision);
 if global.light_check = 1 {
 pl_light_destroy();}
@@ -150,8 +151,8 @@ pl_light_destroy();}
           <argument>
             <kind>1</kind>
             <string>///Boom
-//var snd = audio_create_stream("Music/Track1.ogg");
-//audio_play_sound(snd, 11, false);
+
+//audio_play_sound(snd_explode, 11, false);
 instance_create(x, y, obj_exploision);
 if global.light_check = 1 {
 pl_light_destroy();}
