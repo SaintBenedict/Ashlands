@@ -67,6 +67,13 @@
     <instance objName="obj_fireplace" x="608" y="384" name="inst_5CCFC52A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_chest_once" x="576" y="512" name="inst_58ADCEBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_chest_perm" x="192" y="640" name="inst_16A94258" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_i_e_c_bobr" x="128" y="768" name="inst_3098923F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_i_e_he_allhat" x="160" y="800" name="inst_11ABF529" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_i_e_he_fox" x="96" y="864" name="inst_3B54F70A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_i_e_l_bad" x="192" y="736" name="inst_5500F914" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_i_e_l_rabbit" x="64" y="800" name="inst_80358FB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_i_e_h_lady" x="256" y="704" name="inst_29C2FA7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_i_e_h_man" x="192" y="832" name="inst_6F5587FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_tileset_mud" x="192" y="96" w="32" h="32" xo="32" yo="64" id="10000617" name="inst_922D3777" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
