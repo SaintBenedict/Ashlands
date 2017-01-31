@@ -130,7 +130,7 @@ global.item_text[2002] = "Носитель становится куда бол�
           <argument>
             <kind>1</kind>
             <string>///Light
-global.light_check = 1;
+global.light_check = 0;
 
 if global.light_check = 1 {
 pl_init();
@@ -508,7 +508,8 @@ window_set_cursor(cr_default);
             <kind>1</kind>
             <string>///Light
 if global.light_check = 1 {
-pl_draw();}
+pl_draw();
+    }
 </string>
           </argument>
         </arguments>
@@ -536,28 +537,6 @@ if global.light_check = 1 {
 ds_list_clear(_pl_lightObjects);}
 
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="96">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>

@@ -19,7 +19,8 @@ surface_set_target(_pl_lightmap);
     draw_clear(c_black);
     draw_set_alpha(_pl_ambientBrightness);
     draw_set_color(_pl_ambientColor);
-    draw_rectangle(0, 0, surface_get_width(_pl_lightmap), surface_get_height(_pl_lightmap), false);
+    draw_rectangle(0, 0, window_get_width(), window_get_height(), false);
+
     
     // Draw lights
     draw_set_alpha(1);
