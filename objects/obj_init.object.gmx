@@ -535,7 +535,7 @@ pl_draw();
             <string>///Light
 if global.light_check = 1 {
 ds_list_clear(_pl_lightObjects);}
-
+show_message(string(instance_number(obj_solidspace)))
 </string>
           </argument>
         </arguments>
