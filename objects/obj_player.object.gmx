@@ -149,7 +149,8 @@ global.sprint = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pl_light_init(900, make_color_rgb(252, 150, 55), 0.5);
+            <string>if global.light_check = 1 {
+pl_light_init(900, make_color_rgb(252, 150, 55), 0.5);}
 </string>
           </argument>
         </arguments>

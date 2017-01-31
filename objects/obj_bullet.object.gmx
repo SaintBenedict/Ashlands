@@ -29,8 +29,9 @@
 audio_play_sound(snd_fire, 11, false);
 
 //light
+if global.light_check = 1 {
 pl_light_init(40, make_color_rgb(252, 150, 55), 1);
-pl_light_destroy();
+pl_light_destroy();}
 </string>
           </argument>
         </arguments>
@@ -81,7 +82,8 @@ pl_light_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pl_light_destroy();
+            <string>if global.light_check = 1 {
+pl_light_destroy();}
 </string>
           </argument>
         </arguments>
@@ -108,7 +110,8 @@ pl_light_destroy();
 
 audio_play_sound(snd_explode, 11, false);
 instance_create(x, y, obj_exploision);
-pl_light_destroy();
+if global.light_check = 1 {
+pl_light_destroy();}
 
 </string>
           </argument>
@@ -150,7 +153,8 @@ pl_light_destroy();
 
 audio_play_sound(snd_explode, 11, false);
 instance_create(x, y, obj_exploision);
-pl_light_destroy();
+if global.light_check = 1 {
+pl_light_destroy();}
 
 </string>
           </argument>

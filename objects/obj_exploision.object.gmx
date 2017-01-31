@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize
-
+if global.light_check = 1 {
 pl_light_init(90, make_color_rgb(252, 150, 55), 1);
+pl_light_destroy();}
 image_speed = 5;
-pl_light_destroy();
 </string>
           </argument>
         </arguments>
@@ -76,7 +76,8 @@ pl_light_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pl_light_destroy();
+            <string>if global.light_check = 1 {
+pl_light_destroy();}
 </string>
           </argument>
         </arguments>

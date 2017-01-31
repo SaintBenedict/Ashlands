@@ -130,9 +130,12 @@ global.item_text[2002] = "Носитель становится куда бол�
           <argument>
             <kind>1</kind>
             <string>///Light
+global.light_check = 1;
+
+if global.light_check = 1 {
 pl_init();
 pl_add(obj_light);
-
+}
 </string>
           </argument>
         </arguments>
@@ -156,8 +159,8 @@ pl_add(obj_light);
           <argument>
             <kind>1</kind>
             <string>///Light
-
-pl_update();
+if global.light_check = 1 {
+pl_update();}
 </string>
           </argument>
         </arguments>
@@ -433,8 +436,8 @@ if (xxx &gt; 40 || yyy &gt; 50)
           <argument>
             <kind>1</kind>
             <string>///Light
-
-pl_end();
+if global.light_check = 1 {
+pl_end();}
 </string>
           </argument>
         </arguments>
@@ -504,8 +507,8 @@ window_set_cursor(cr_default);
           <argument>
             <kind>1</kind>
             <string>///Light
-
-pl_draw();
+if global.light_check = 1 {
+pl_draw();}
 </string>
           </argument>
         </arguments>
@@ -529,8 +532,8 @@ pl_draw();
           <argument>
             <kind>1</kind>
             <string>///Light
-
-    ds_list_clear(_pl_lightObjects);
+if global.light_check = 1 {
+ds_list_clear(_pl_lightObjects);}
 
 </string>
           </argument>

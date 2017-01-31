@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Create light
-
-pl_light_init(90, make_color_rgb(252, 150, 55), 1);
+if global.light_check = 1 {
+pl_light_init(90, make_color_rgb(252, 150, 55), 1);}
 </string>
           </argument>
         </arguments>
