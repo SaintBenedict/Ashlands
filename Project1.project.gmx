@@ -225,9 +225,12 @@
     <object>objects\obj_player</object>
     <object>objects\obj_init</object>
     <objects name="map">
+      <object>objects\obj_light</object>
       <object>objects\obj_solidspace</object>
     </objects>
     <objects name="effects">
+      <object>objects\obj_fireplace</object>
+      <object>objects\obj_exploision</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_hero_slash</object>
       <object>objects\obj_tornado</object>
@@ -296,9 +299,6 @@
       <object>objects\obj_chest_once</object>
       <object>objects\obj_chest_perm</object>
     </objects>
-    <object>objects\obj_fireplace</object>
-    <object>objects\obj_light</object>
-    <object>objects\obj_exploision</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_hero_damage</timeline>

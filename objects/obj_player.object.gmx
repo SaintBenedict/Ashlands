@@ -894,6 +894,7 @@ draw_sprite(spr_plus,0,Xc+618,Yc+262);
     global.max_val_hero_hp += 10;
     global.lvl_points -= 1;}
 }
+// Инвентарь
 lets_draw_inventory(Xc,Yc);
 
 } // Конец отрисовки листа
