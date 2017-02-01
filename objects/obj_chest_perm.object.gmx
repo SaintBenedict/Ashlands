@@ -56,8 +56,7 @@ cont_id = 1;
             <string>///Одноразовое проигрывание спрайта
 if image_index = 3 {image_speed = 0;}
 
-if open = 1 {show_message("бах"); open = 0;
-container(cont_id);}
+if open = 1 {show_message("бах");}
 </string>
           </argument>
         </arguments>
@@ -174,8 +173,7 @@ container(cont_id);
 charlist_activated = 1;//открытие(переоткрытие) чарлиста
 Xc = 100;
 Yc = 50
-if (charlist_activated = 1){
-draw_sprite(spr_box,0,Xc,Yc)};}
+}
 </string>
           </argument>
         </arguments>
