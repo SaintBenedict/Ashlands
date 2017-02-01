@@ -51,7 +51,7 @@ item_id = 1502;
             <kind>1</kind>
             <string>///Курсор и глобалблок
 window_set_cursor(cr_default);
-global.block = 0;
+global.usable = 0;
 </string>
           </argument>
         </arguments>
@@ -76,7 +76,7 @@ global.block = 0;
             <kind>1</kind>
             <string>///Курсор и глобалблок
 window_set_cursor(cr_handpoint);
-global.block = 1;
+global.usable = 1;
 </string>
           </argument>
         </arguments>

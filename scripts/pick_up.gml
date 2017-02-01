@@ -14,7 +14,7 @@ if (razx < 50 && razy < toto) {
     window_set_cursor(cr_default);}
     else {
     show_message("Инвентарь переполнен");}
-global.block = 0;
+global.usable = 0;
 instance_create(0,0,obj_block);}
 
 

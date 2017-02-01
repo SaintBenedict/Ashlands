@@ -26,68 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>///Назначение спрайтов
-if global.check = 1
-{
-sprdown = spr_down_1;
-sprup = spr_up_1;
-sprleft = spr_left_1;
-sprright = spr_right_1;
-}
-if global.check = 2
-{
-sprdown = spr_down_2;
-sprup = spr_up_2;
-sprleft = spr_left_2;
-sprright = spr_right_2;
-}
-if global.check = 3
-{
-sprdown = spr_down_3;
-sprup = spr_up_3;
-sprleft = spr_left_3;
-sprright = spr_right_3;
-}
-if global.check = 4
-{
-sprdown = spr_down_4;
-sprup = spr_up_4;
-sprleft = spr_left_4;
-sprright = spr_right_4;
-}
-if global.check = 5
-{
-sprdown = spr_down_5;
-sprup = spr_up_5;
-sprleft = spr_left_5;
-sprright = spr_right_5;
-}
-if global.check = 6
-{
-sprdown = spr_down_6;
-sprup = spr_up_6;
-sprleft = spr_left_6;
-sprright = spr_right_6;
-}
-if global.check = 7
-{
-sprdown = spr_down_7;
-sprup = spr_up_7;
-sprleft = spr_left_7;
-sprright = spr_right_7;
-}
-if global.check = 8
-{
-sprdown = spr_down_8;
-sprup = spr_up_8;
-sprleft = spr_left_8;
-sprright = spr_right_8;
-}
-if global.check = 9
-{
-sprdown = spr_down_9;
-sprup = spr_up_9;
-sprleft = spr_left_9;
-sprright = spr_right_9;
+switch(global.check){
+case 1:{sprdown = spr_down_1; sprup = spr_up_1; sprleft = spr_left_1; sprright = spr_right_1; break;}
+case 2:{sprdown = spr_down_2; sprup = spr_up_2; sprleft = spr_left_2; sprright = spr_right_2; break;}
+case 3:{sprdown = spr_down_3; sprup = spr_up_3; sprleft = spr_left_3; sprright = spr_right_3; break;}
+case 4:{sprdown = spr_down_4; sprup = spr_up_4; sprleft = spr_left_4; sprright = spr_right_4; break;}
+case 5:{sprdown = spr_down_5; sprup = spr_up_5; sprleft = spr_left_5; sprright = spr_right_5; break;}
+case 6:{sprdown = spr_down_6; sprup = spr_up_6; sprleft = spr_left_6; sprright = spr_right_6; break;}
+case 7:{sprdown = spr_down_7; sprup = spr_up_7; sprleft = spr_left_7; sprright = spr_right_7; break;}
+case 8:{sprdown = spr_down_8; sprup = spr_up_8; sprleft = spr_left_8; sprright = spr_right_8; break;}
+case 9:{sprdown = spr_down_9; sprup = spr_up_9; sprleft = spr_left_9; sprright = spr_right_9; break;}
 }
 </string>
           </argument>
@@ -125,8 +73,8 @@ global.npc_near = 0; //Рядом есть нпц
 global.player_invincible = 0;
 global.left_change = 0;
 global.block = 0;
-
 global.sprint = 1;
+global.usable = 0;
 
 
 </string>
@@ -149,7 +97,8 @@ global.sprint = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.light_check = 1 {
+            <string>///Свет
+if global.light_check = 1 {
 pl_light_init(900, make_color_rgb(252, 150, 55), 0.5);}
 </string>
           </argument>
@@ -175,12 +124,9 @@ pl_light_init(900, make_color_rgb(252, 150, 55), 0.5);}
             <kind>1</kind>
             <string>///Расчёт полоски хп и геймовер
 current_pix_hero_hp = round(global.hp * 38 / global.current_max_val_hero_hp);
-if global.hp &lt; 1
-{
-show_message("Поздравляю, вам пиздец.");
-game_restart();
-}
-if global.hp &gt; global.current_max_val_hero_hp { global.hp = global.current_max_val_hero_hp; }
+
+if global.hp &lt; 1 {game_restart();}
+if global.hp &gt; global.current_max_val_hero_hp {global.hp = global.current_max_val_hero_hp;}
 </string>
           </argument>
         </arguments>
@@ -647,12 +593,12 @@ if mox &gt; hex
         if (moy-hey) &gt; (mox-hex)
             {
             sprite_index = sprdown;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprright;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         }
     else
@@ -660,12 +606,12 @@ if mox &gt; hex
         if (hey-moy) &gt; (mox-hex)
             {
             sprite_index = sprup;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprright;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         }
     }
@@ -676,12 +622,12 @@ else
         if (moy-hey) &gt; (hex-mox)
             {
             sprite_index = sprdown;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprleft;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         }
     else
@@ -689,12 +635,12 @@ else
         if (hey-moy) &gt; (hex-mox)
             {
             sprite_index = sprup;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         else
             {
             sprite_index = sprleft;
-            image_speed = 0.5;
+            if global.control = 0 {image_speed = 0.5;}
             }
         }
 }
@@ -782,13 +728,13 @@ xoy = mouse_x-view_xview[0]; // Координаты мышки внутри в�
 // Если нету диалога - рисуем первоначальный гуй. Отсутствие диалога обязательно для всего гуя.
 if instance_number(obj_dlg2) = 0{
 draw_sprite(spr_left_action,0,Xx,Y1y);
-    if global.left_use = 1 {
-    draw_sprite(spr_use_fire,0,Xx,Y1y);}
-    if global.left_use = 0 {
-    draw_sprite(spr_use_sword,0,Xx,Y1y);}
-
+    switch(global.left_use){
+    case 1: {draw_sprite(spr_use_fire,0,Xx,Y1y); break;}
+    case 0: {draw_sprite(spr_use_sword,0,Xx,Y1y); break;}
+    }
+    
 // Отрисовка всплывающего выбора, когда всплывающий выбор активирован чтобы выбрать спел
-if (moy &gt; Y2y-27 &amp;&amp; moy &lt; Y1y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27 &amp;&amp; activate = 1)
+if (activate = 1 &amp;&amp; moy &gt; Y2y-27 &amp;&amp; moy &lt; Y1y+27 &amp;&amp; xoy &gt; Xx-27 &amp;&amp; xoy &lt; Xx+27)
 {
     global.attack = 1; // Запрет атаки
     global.left_change = 1; // Мы меняем скил
@@ -854,17 +800,9 @@ else
 
 // Активация или деактивация чарлиста
 if (keyboard_check_pressed(global.hotkey_charlist)) {
-    switch(charlist_activated)
-    {
-    case 0:
-    charlist_activated = 1;
-    global.block = 1;
-    break;
-    case 1:
-    charlist_activated = 0;
-    global.block = 0;
-    with(obj_mouseclick){instance_destroy()};
-    break;
+    switch(charlist_activated){
+    case 0: {charlist_activated = 1; global.block = 1; break;}
+    case 1: {charlist_activated = 0; global.block = 0; kill(obj_mouseclick); break;}
     }
 }
 // Отрисовка чарлиста

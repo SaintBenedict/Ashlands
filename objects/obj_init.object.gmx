@@ -132,10 +132,7 @@ global.item_text[2002] = "Носитель становится куда бол�
             <string>///Light
 global.light_check = 0;
 
-if global.light_check = 1 {
-pl_init();
-pl_add(obj_light);
-}
+if global.light_check = 1 {pl_init(); pl_add(obj_light);}
 </string>
           </argument>
         </arguments>
@@ -159,8 +156,7 @@ pl_add(obj_light);
           <argument>
             <kind>1</kind>
             <string>///Light
-if global.light_check = 1 {
-pl_update();}
+if global.light_check = 1 {pl_update();}
 </string>
           </argument>
         </arguments>
@@ -278,21 +274,14 @@ Mx = mouse_x;
 if instance_number(obj_dlg2) = 0{
 
 if global.control = 0 {
-if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
-{
-   // if (global.left_use = 0){
-       // instance_create(global.player.x, global.player.y, obj_hero_slash);}
-    if (global.left_use = 1){
-        instance_create(global.player.x,global.player.y,obj_tornado);
-        }
-}
+    if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
+    {
+        if (global.left_use = 1) {instance_create(global.player.x,global.player.y,obj_tornado);}
+    }
 } else {
-if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0) {
-instance_create(mouse_x, mouse_y, obj_mouseclick);}
+    if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0) 
+        {instance_create(mouse_x, mouse_y, obj_mouseclick);}
 }
-
-
-
 }
 </string>
           </argument>
@@ -321,38 +310,26 @@ instance_create(mouse_x, mouse_y, obj_mouseclick);}
 My = mouse_y;
 Mx = mouse_x;
 if instance_number(obj_dlg2) = 0{
-if (global.attack = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.block = 0)
+if (global.block = 0 &amp;&amp; instance_number(obj_dlg1) = 0 &amp;&amp; global.attack = 0 &amp;&amp; global.usable = 0)
 {
-    if (global.left_use = 0){
-        instance_create(global.player.x, global.player.y, obj_hero_slash);}
-    if (global.left_use = 1){
-        instance_create(global.player.x,global.player.y,obj_bullet);}
+    switch(global.left_use){
+    case 0: {instance_create(global.player.x, global.player.y,obj_hero_slash); break;}
+    case 1: {instance_create(global.player.x,global.player.y,obj_bullet); break;}
+    }
 }
-
 //Создание диалога
 if (global.attack = 1 &amp;&amp; global.npc_near = 1 &amp;&amp; global.npc_i = global.npc_k &amp;&amp; global.left_change = 0 &amp;&amp; global.block = 0)
 {   
-if global.player.x &gt; global.npc[global.npc_i].x
-    {
-    instance_create(global.npc[global.npc_i].x-100,global.npc[global.npc_i].y-30,obj_dlg1);
-    }
-else
-    {
-    instance_create(global.npc[global.npc_i].x+20,global.npc[global.npc_i].y-30,obj_dlg1);
-    }
-
+    if global.player.x &gt; global.npc[global.npc_i].x
+        {instance_create(global.npc[global.npc_i].x-100,global.npc[global.npc_i].y-30,obj_dlg1);}
+    else
+        {instance_create(global.npc[global.npc_i].x+20,global.npc[global.npc_i].y-30,obj_dlg1);}
 }
 //Подойти к неписи
-if (global.attack = 1 &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0 &amp;&amp; global.block = 0)
+if ((global.attack = 1 || global.usable = 1) &amp;&amp; global.npc_near = 0 &amp;&amp; global.left_change = 0 &amp;&amp; global.block = 0)
 {
-instance_create(Mx,My,obj_mouseclick);
-if instance_number(obj_dlg1) &gt; 0
-    {
-    with(obj_dlg1)
-        {
-        instance_destroy();
-        }
-    }
+    instance_create(Mx,My,obj_mouseclick);
+    if instance_number(obj_dlg1) &gt; 0 {kill(obj_dlg1)}
 }
 }
 
@@ -382,35 +359,23 @@ if instance_number(obj_dlg1) &gt; 0
 if global.control = 1 {
 My = mouse_y;
 Mx = mouse_x;
-if instance_number(obj_dlg1) &gt; 0
-    {
-    with(obj_dlg1)
-        {
-        instance_destroy();
-      }
-    }
-if (instance_number(obj_dlg2) = 0 &amp;&amp; global.block = 0){
+if instance_number(obj_dlg1) &gt; 0 {kill(obj_dlg1);}
+if (global.block = 0 &amp;&amp; instance_number(obj_dlg2) = 0){
 if instance_number(obj_mouseclick) &gt; 0
     {
-    with (obj_mouseclick)
-        {
-        instance_destroy();
-        }
+    kill(obj_mouseclick);
     instance_create(Mx,My,obj_mouseclick);
     }
-else
-{
-xxx = abs(Mx - global.player.x);
-yyy = abs(My - global.player.y);
-if (xxx &gt; 40 || yyy &gt; 50)
+    else
     {
-    instance_create(Mx,My,obj_mouseclick);
-    with(global.player)
+    xxx = abs(Mx - global.player.x);
+    yyy = abs(My - global.player.y);
+    if (xxx &gt; 30 || yyy &gt; 35)
         {
-        image_index = 1;
+        instance_create(Mx,My,obj_mouseclick);
+        with(global.player) {image_index = 1;}
         }
     }
-}
 }
 }
 </string>
@@ -483,7 +448,7 @@ global.attack = 1;
 else
 {
 global.attack = 0;
-window_set_cursor(cr_default);
+if global.usable = 0 {window_set_cursor(cr_default);}
 }
 }
 </string>
