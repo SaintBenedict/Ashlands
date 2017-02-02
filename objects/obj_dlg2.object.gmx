@@ -169,7 +169,7 @@ if ((global.npc_i = 1) &amp;&amp; (global.npc_1q = 0))
     if q_check = 100
         {
         global.npc_1q = 1;
-        with(obj_npc_2)
+        with(obj_npc_1)
             {
             alarm[0] = 30;
             }
@@ -177,7 +177,7 @@ if ((global.npc_i = 1) &amp;&amp; (global.npc_1q = 0))
     if q_check = 200
         {
         global.npc_1q = 2;
-        with(obj_npc_2)
+        with(obj_npc_1)
             {
             alarm[1] = 1;
             }

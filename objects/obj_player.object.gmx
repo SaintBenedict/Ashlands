@@ -417,7 +417,7 @@ case 2002: global.magic_helmet_baf = 20; global.hp_helmet_baf = 0; break;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_npc_2">
+    <event eventtype="4" ename="obj_npc_1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -466,7 +466,7 @@ image_speed = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_npc_1">
+    <event eventtype="4" ename="obj_npc_0">
       <action>
         <libid>1</libid>
         <id>603</id>

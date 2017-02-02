@@ -62,7 +62,6 @@ trade_index = 4;
             <kind>1</kind>
             <string>///Переменные
 activate = 0;
-global.attack = 1;
 image_speed = 0;
 image_index = default_index;
 </string>

@@ -167,13 +167,11 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\healthbar.gml</script>
-    <script>scripts\use.gml</script>
     <scripts name="items">
       <script>scripts\drop.gml</script>
       <script>scripts\pick_up.gml</script>
       <script>scripts\lets_draw_inventory.gml</script>
       <script>scripts\item_use.gml</script>
-      <script>scripts\item_names.gml</script>
       <script>scripts\container.gml</script>
     </scripts>
     <scripts name="prettylight">
@@ -210,6 +208,8 @@
       <script>scripts\kill.gml</script>
       <script>scripts\sw.gml</script>
     </scripts>
+    <script>scripts\_id.gml</script>
+    <script>scripts\_type.gml</script>
   </scripts>
   <shaders name="shaders">
     <shaders name="prettylight">
@@ -226,6 +226,10 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_init</object>
+    <object>objects\obj_no_attack</object>
+    <object>objects\obj_items</object>
+    <object>objects\obj_once</object>
+    <object>objects\obj_npc</object>
     <objects name="map">
       <object>objects\obj_light</object>
       <object>objects\obj_solidspace</object>
@@ -247,7 +251,6 @@
       <object>objects\obj_block</object>
       <object>objects\obj_mouseclick</object>
       <object>objects\obj_dlg1</object>
-      <object>objects\obj_options</object>
       <object>objects\obj_dlg2</object>
       <object>objects\obj_menu_new</object>
       <object>objects\obj_menu_save</object>
@@ -270,35 +273,27 @@
       </objects>
     </objects>
     <objects name="npc">
+      <object>objects\obj_npc_0</object>
       <object>objects\obj_npc_1</object>
-      <object>objects\obj_npc_2</object>
     </objects>
     <objects name="items">
       <objects name="usable">
-        <object>objects\obj_i_u_apple</object>
-        <object>objects\obj_i_u_carrot</object>
+        <object>objects\obj_i_apple_1</object>
+        <object>objects\obj_i_carrot_2</object>
       </objects>
       <objects name="equipment">
-        <objects name="chests">
-          <object>objects\obj_i_e_c_valk</object>
-          <object>objects\obj_i_e_c_bobr</object>
-        </objects>
-        <objects name="hands">
-          <object>objects\obj_i_e_h_lady</object>
-          <object>objects\obj_i_e_h_man</object>
-        </objects>
-        <objects name="helmets">
-          <object>objects\obj_i_e_he_allhat</object>
-          <object>objects\obj_i_e_he_fox</object>
-        </objects>
-        <objects name="legs">
-          <object>objects\obj_i_e_l_bad</object>
-          <object>objects\obj_i_e_l_rabbit</object>
-        </objects>
+        <object>objects\obj_i_valk_501</object>
+        <object>objects\obj_i_bobr_502</object>
+        <object>objects\obj_i_bad_1001</object>
+        <object>objects\obj_i_rabbit_1002</object>
+        <object>objects\obj_i_lady_1501</object>
+        <object>objects\obj_i_man_1502</object>
+        <object>objects\obj_i_allhat_2001</object>
+        <object>objects\obj_i_fox_2002</object>
       </objects>
     </objects>
     <objects name="usable">
-      <object>objects\obj_chest_once</object>
+      <object>objects\obj_o_chest_1</object>
       <object>objects\obj_chest_perm</object>
     </objects>
   </objects>

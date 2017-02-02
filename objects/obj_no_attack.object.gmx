@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,15 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Код для размеров экрана
-window_set_size(1024,768); // Указываем начальный размер окна
-window_set_position(250,50); //Выравниваем окно по центру экрана
+            <string>///Usable = 0; cursor = default
+global.usable = 0;
+window_set_cursor(cr_default);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="6" enumb="11">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,21 +50,15 @@ window_set_position(250,50); //Выравниваем окно по центру
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Код для размеров экрана
-view_wview[0] = window_get_width();
-view_hview[0] = window_get_height();
-view_wport[0] = view_wview[0];
-view_hport[0] = view_hview[0];
-
-if window_get_height() &gt; 10{
-surface_resize(application_surface,view_wport[0],view_hport[0])}
-
+            <string>///Usable = 0; cursor = default
+window_set_cursor(cr_default);
+global.usable = 0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="6" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -81,12 +75,9 @@ surface_resize(application_surface,view_wport[0],view_hport[0])}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Уменьшает изначальный порт, если ДИСПЛЕЙ меньше чем 768 в высоту. Ебать умная прога.
-proportion = view_hport[0]/view_wport[0]; // Пропорции экрана (высоту делить на ширину порта)
-
-if display_get_height() &lt; view_hport[0] // Высота порта вида по умолчанию. Если монитор меньше, происходит уменьшение
-{view_hport[0] = display_get_height();
- view_wport[0] = view_hport[0]/proportion;}
+            <string>///Usable = 1; cursor = default
+window_set_cursor(cr_handpoint);
+global.usable = 1;
 </string>
           </argument>
         </arguments>
