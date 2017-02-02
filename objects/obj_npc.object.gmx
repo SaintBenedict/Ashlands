@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Назначение спрайта
+            <string>///npc_id; speed 0
 npc_id = _id(object_get_name(object_index));
 image_speed = 0;
 </string>

@@ -230,6 +230,7 @@
     <object>objects\obj_items</object>
     <object>objects\obj_once</object>
     <object>objects\obj_npc</object>
+    <object>objects\obj_npc_patrol</object>
     <objects name="map">
       <object>objects\obj_light</object>
       <object>objects\obj_solidspace</object>
