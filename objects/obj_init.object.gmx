@@ -49,12 +49,12 @@ window_set_position(250,50); //Выравниваем окно по центру
           <argument>
             <kind>1</kind>
             <string>///Глобал нпц
-npc_n = 2;
-global.npc[0] = obj_npc_0;
+//npc_n = 2;
+//global.npc[0] = obj_npc_0;
 global.npc_trade[0] = 0;
 global.npc_name[0] = "Алиса";
 global.npc_portrait[0] = spr_portrait_1;
-global.npc[1] = obj_npc_1;
+//global.npc[1] = obj_npc_1;
 global.npc_trade[1] = 1;
 global.npc_name[1] = "Дженни";
 global.npc_portrait[1] = spr_portrait_2;
@@ -345,7 +345,6 @@ if (global.usable = 0 &amp;&amp; global.block = 0 &amp;&amp; instance_number(obj
 if global.control = 1 {
 My = mouse_y;
 Mx = mouse_x;
-if instance_number(obj_dlg1) &gt; 0 {kill(obj_dlg1);}
 if (global.block = 0 &amp;&amp; instance_number(obj_dlg2) = 0){
 if instance_number(obj_mouseclick) &gt; 0
     {

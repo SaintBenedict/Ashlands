@@ -67,8 +67,6 @@ charlist_activated = 0;
 touch = 0; // переменная для перетаскивания предметов. Используется в скрипте летс драу
 
 global.player = obj_player;
-global.npc_click = 0; //Разрешение открыть диалог 1 (при нпц рядом)
-global.npc_near = 0; //Рядом есть нпц
 global.player_invincible = 0;
 global.left_change = 0;
 global.block = 0;
